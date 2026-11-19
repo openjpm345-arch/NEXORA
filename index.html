@@ -27,9 +27,8 @@ footer{border-top:1px solid #242634;margin-top:34px;padding-top:17px;color:#8585
 <body><main class="shell">
 <header class="topbar"><a class="brand" href="#"><span class="brandmark">N</span><span>NEXORA<small>SERVER TRADING</small></span></a><div class="topright"><a class="toplink" href="#game">Game</a><a class="toplink" href="#traders">Traders</a><span class="account-chip"><i class="account-dot"></i> Roblox trading hub</span></div></header>
 <section class="hero"><div class="hero-copy"><div class="kicker">NEXORA · PLAYER TO PLAYER</div><h1>Find your next<br><span>trading partner.</span></h1><p>Pilih game, tentukan trader, lalu masuk ke server Roblox yang sesuai. Pertukaran item dilakukan langsung di dalam game.</p><div class="hero-actions"><a class="btn btn-primary" href="#game">Choose a game ↗</a><a class="btn btn-primary" href="#traders">View traders</a></div></div></section>
-<section class="section" id="game"><div class="section-head"><div><div class="section-index">01 / GAME SELECTION</div><h2>Choose your game</h2></div><p>Game trading yang tersedia.</p></div><div class="trader-grid game-grid">
-<button class="game-card game-choice selected" data-game="adoptme" type="button"><div class="game-art"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me" loading="lazy"></div><div class="game-shade"></div><div class="game-content"><span class="game-label">ADOPT ME</span><h3>Adopt Me Trading</h3><p>Trade room Adopt Me</p></div></button>
-<button class="game-card game-choice" data-game="mm2" type="button"><div class="game-art mm2-art"></div><div class="game-shade"></div><div class="game-content"><span class="game-label">MURDER MYSTERY 2</span><h3>MM2 Trading</h3><p>Trade room Murder Mystery 2</p></div></button>
+<section class="section" id="game"><div class="section-head"><div><div class="section-index">01 / GAME SELECTION</div><h2>Choose your game</h2></div><p>Game trading yang tersedia.</p></div><div class="trader-grid game-grid" style="grid-template-columns:1fr">
+<div class="game-card game-choice selected" aria-label="Adopt Me selected"><div class="game-art"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me" loading="lazy"></div><div class="game-shade"></div><div class="game-content"><span class="game-label">ADOPT ME ONLY</span><h3>Adopt Me Trading</h3><p>Trade room khusus Adopt Me</p></div></div>
 </div></section>
 <section class="section" id="traders"><div class="section-head"><div><div class="section-index">02 / LIVE TRADE ROOM</div><h2>Trading room</h2></div><p id="game-label">Game dipilih: Adopt Me</p></div>
 <div class="trader-section">
@@ -58,7 +57,7 @@ import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/1
 import { getDatabase, ref, set, get, push, onValue, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
 const firebaseConfig={apiKey:"AIzaSyAkDGyqIHl73vEl6P1ajnYRngQjX-Or_O4",authDomain:"only-adoptme.firebaseapp.com",databaseURL:"https://only-adoptme-default-rtdb.firebaseio.com",projectId:"only-adoptme",storageBucket:"only-adoptme.firebasestorage.app",messagingSenderId:"76326649822",appId:"1:76326649822:web:d94878317bf8dcbe7fe74f"};
 const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase(app);
-let uid=null,activeRoom=null,roomUnsub=null,selectedGame="adoptme";
+let uid=null,activeRoom=null,roomUnsub=null;\nconst selectedGame="adoptme";
 const $=id=>document.getElementById(id);
 function status(t){$("connection-status").textContent=t;}
 function validName(n){return /^[A-Za-z0-9_]{3,20}$/.test(n);}
@@ -116,9 +115,5 @@ $("send-message").addEventListener("click",async()=>{
  try{await push(ref(db,"rooms/"+activeRoom+"/messages"),{uid,username:$("roblox-name").value.trim(),text:t,createdAt:serverTimestamp()});$("message-input").value="";}catch(e){status("Pesan gagal dikirim: "+e.message);}
 });
 $("copy-code").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(activeRoom||"");status("Kode room disalin.");}catch{status("Salin kode ini: "+activeRoom);}});
-document.querySelectorAll("[data-game]").forEach(card=>card.addEventListener("click",()=>{
- selectedGame=card.dataset.game;document.querySelectorAll("[data-game]").forEach(el=>el.classList.toggle("selected",el===card));
- $("game-label").textContent="Game dipilih: "+(selectedGame==="mm2"?"Murder Mystery 2":"Adopt Me");
-}));
 init();
 </script></body></html>
