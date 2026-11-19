@@ -30,90 +30,23 @@ footer{border-top:1px solid #242634;margin-top:34px;padding-top:17px;color:#8585
 <section class="section" id="game"><div class="section-head"><div><div class="section-index">01 / GAME SELECTION</div><h2>Choose your game</h2></div><p>Game trading yang tersedia.</p></div><div class="trader-grid game-grid" style="grid-template-columns:1fr">
 <div class="game-card game-choice selected" aria-label="Adopt Me selected"><div class="game-art"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me" loading="lazy"></div><div class="game-shade"></div><div class="game-content"><span class="game-label">ADOPT ME ONLY</span><h3>Adopt Me Trading</h3><p>Trade room khusus Adopt Me</p></div></div>
 </div></section>
-<section class="section" id="traders"><div class="section-head"><div><div class="section-index">02 / LIVE TRADE ROOM</div><h2>Trading room</h2></div><p id="game-label">Game dipilih: Adopt Me</p></div>
-<div class="trader-section">
-<div class="trader-grid">
-<label class="info-card"><strong>Roblox username</strong><input id="roblox-name" maxlength="20" autocomplete="off" placeholder="Masukkan username Roblox" style="display:block;width:100%;margin-top:10px;background:#090a10;border:1px solid #39394a;border-radius:9px;padding:12px;color:white"></label>
-<div class="info-card"><strong>Room code</strong><input id="room-code" maxlength="6" autocapitalize="characters" autocomplete="off" placeholder="Contoh: A1B2C3" style="display:block;width:100%;margin-top:10px;background:#090a10;border:1px solid #39394a;border-radius:9px;padding:12px;color:white;text-transform:uppercase"></div>
-</div>
-<div class="hero-actions" style="margin-top:14px"><button class="btn btn-primary" id="create-room" type="button">Create room</button><button class="btn btn-primary" id="join-room" type="button">Join room</button></div>
-<p id="connection-status" style="color:#b8b1c5;font-size:12px;margin:14px 0 0">Connecting to Firebase…</p>
-<div id="room-panel" hidden style="margin-top:18px;border-top:1px solid #343047;padding-top:18px">
-<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center"><div><div class="section-index">ACTIVE ROOM</div><h3 style="font:700 22px 'Space Grotesk';margin:4px 0">Code: <span id="active-code">------</span></h3></div><button class="btn" id="copy-code" type="button" style="background:#30283e">Copy code</button></div>
-<div id="members-list" style="color:#d7cde8;font-size:13px;margin:12px 0"></div>
-<div class="trader-grid" style="align-items:start">
-<div class="info-card"><h3>Your offer</h3><input id="offer-items" maxlength="300" placeholder="Nama item dan jumlah" style="width:100%;background:#090a10;border:1px solid #39394a;border-radius:9px;padding:12px;color:white"><button class="btn btn-primary" id="save-offer" style="margin-top:10px" type="button">Update offer</button></div>
-<div class="info-card"><h3>Partner offer</h3><p id="partner-offer">Menunggu pemain lain…</p></div>
-</div>
-<div class="join-panel" style="margin-top:14px"><div class="join-copy"><h3>Trade confirmation</h3><p>Konfirmasi hanya berarti kedua pemain setuju melanjutkan pertukaran di Roblox. Website tidak memindahkan item.</p><div class="join-state"><span class="state-dot"></span><span id="confirm-state">Belum ada konfirmasi</span></div></div><button class="btn btn-primary" id="confirm-trade" type="button" disabled>I'm ready</button></div>
-<div style="margin-top:14px"><h3 style="font:700 16px 'Space Grotesk'">Room messages</h3><div id="messages" style="max-height:180px;overflow:auto;background:#0b0d15;border:1px solid #292c3b;border-radius:12px;padding:10px;margin:8px 0;color:#d7d2e2;font-size:12px">Belum ada pesan.</div><div style="display:flex;gap:8px"><input id="message-input" maxlength="250" placeholder="Tulis pesan…" style="min-width:0;flex:1;background:#090a10;border:1px solid #39394a;border-radius:9px;padding:11px;color:white"><button class="btn btn-primary" id="send-message" type="button">Send</button></div></div>
-</div></div></section>
+<section class="section" id="traders"><div class="section-head"><div><div class="section-index">02 / CHOOSE TRADER</div><h2>Pilih pemain untuk trading</h2></div><p>Tanpa kode room dan tanpa chat perantara.</p></div>
+<div class="trader-section"><div class="trader-grid">
+<button class="trader-card selected" type="button" data-trader="CRAZYMADDOG01"><span class="avatar">C1</span><span class="trader-info"><strong>CRAZYMADDOG01</strong><small>Adopt Me trader</small></span><span class="select-mark">✓</span></button>
+<button class="trader-card" type="button" data-trader="CRAZYMADDOG"><span class="avatar">C</span><span class="trader-info"><strong>CRAZYMADDOG</strong><small>Adopt Me trader</small></span><span class="select-mark">✓</span></button>
+</div><div class="join-panel"><div class="join-copy"><h3 id="selected-trader">Target: CRAZYMADDOG01</h3><p>Tekan tombol untuk membuka Adopt Me di Roblox. Trade item tetap dilakukan di dalam game.</p><div class="join-state"><span class="state-dot"></span><span>ADOPT ME · ONE CLICK</span></div></div><div class="join-actions"><button class="btn btn-primary" id="join-adoptme" type="button">Join Adopt Me ↗</button></div></div><p id="join-note" style="color:#b8b1c5;font-size:11px;margin:12px 0 0">Link Private Server khusus belum dipasang karena belum kamu kirim. Tombol sementara membuka halaman game Adopt Me.</p></div></section>
 <div class="bottom-grid"><section class="info-card"><h3>How it works</h3><p>Pilih trader yang dituju. Setelah tautan private server tersedia, tekan Join Roblox server untuk membuka Roblox.</p><div class="steps"><div class="step"><b>01 · SELECT</b><span>Pilih trader.</span></div><div class="step"><b>02 · CONNECT</b><span>Periksa username.</span></div><div class="step"><b>03 · JOIN</b><span>Buka server Roblox.</span></div></div></section><section class="info-card"><h3>Trading takes place in Roblox</h3><p>Website ini mengarahkan pemain ke server. Konfirmasi item dan pertukaran dilakukan langsung di jendela trade Roblox. Jangan bagikan password atau kode login.</p></section></div>
 <footer><span>NEXORA · SERVER TRADING</span><span>Independent community hub · Not affiliated with Roblox or the game creators.</span></footer>
 </main>
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
-import { getDatabase, ref, set, get, push, onValue, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
-const firebaseConfig={apiKey:"AIzaSyAkDGyqIHl73vEl6P1ajnYRngQjX-Or_O4",authDomain:"only-adoptme.firebaseapp.com",databaseURL:"https://only-adoptme-default-rtdb.firebaseio.com",projectId:"only-adoptme",storageBucket:"only-adoptme.firebasestorage.app",messagingSenderId:"76326649822",appId:"1:76326649822:web:d94878317bf8dcbe7fe74f"};
-const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase(app);
-let uid=null,activeRoom=null,roomUnsub=null;\nconst selectedGame="adoptme";
-const $=id=>document.getElementById(id);
-function status(t){$("connection-status").textContent=t;}
-function validName(n){return /^[A-Za-z0-9_]{3,20}$/.test(n);}
-function renderRoom(data){
- const members=data.members||{},ids=Object.keys(members);
- $("members-list").textContent="Players: "+ids.map(id=>members[id].username+(id===uid?" (you)":"")).join(" · ");
- const partner=ids.find(id=>id!==uid);
- $("partner-offer").textContent=partner?(data.offers?.[partner]?.items||"Belum membuat offer"):"Menunggu pemain lain…";
- const ready=Object.values(data.confirmations||{}).filter(Boolean).length;
- $("confirm-state").textContent=ready+" / 2 pemain siap";
- $("confirm-trade").disabled=ids.length!==2;
- const messages=Object.values(data.messages||{}).slice(-35);
- $("messages").replaceChildren();
- if(!messages.length){$("messages").textContent="Belum ada pesan.";}
- messages.forEach(m=>{const p=document.createElement("p");p.textContent=(m.username||"Player")+": "+(m.text||"");p.style.margin="5px 0";$("messages").appendChild(p);});
-}
-function watchRoom(code){
- activeRoom=code;$("room-panel").hidden=false;$("active-code").textContent=code;
- if(roomUnsub)roomUnsub();
- roomUnsub=onValue(ref(db,"rooms/"+code),snap=>{
-  if(!snap.exists()){status("Room sudah tidak tersedia.");$("room-panel").hidden=true;activeRoom=null;if(roomUnsub)roomUnsub();return;}
-  renderRoom(snap.val());
- },err=>status("Room error: "+err.message));
-}
-async function init(){try{const cred=await signInAnonymously(auth);uid=cred.user.uid;status("Connected to Firebase. Pilih game lalu buat atau masuk room.");}catch(e){status("Firebase auth error: "+e.message);}}
-$("create-room").addEventListener("click",async()=>{
- const n=$("roblox-name").value.trim();if(!validName(n)){status("Masukkan username Roblox valid (3–20 huruf, angka, underscore).");return;}
- if(!uid){status("Masih menghubungkan Firebase…");return;}
- try{let code;do{code=Math.random().toString(36).slice(2,8).toUpperCase();}while((await get(ref(db,"rooms/"+code))).exists());
- const data={game:selectedGame,hostUid:uid,createdAt:serverTimestamp(),members:{[uid]:{username:n,joinedAt:serverTimestamp()}},offers:{},confirmations:{},messages:{}};
- await set(ref(db,"rooms/"+code),data);watchRoom(code);status("Room dibuat. Bagikan kode "+code+" kepada partner.");
- }catch(e){status("Gagal membuat room: "+e.message);}
+<script>
+const GAME_URL="https://www.roblox.com/games/920587237/Adopt-Me";
+let selectedTrader="CRAZYMADDOG01";
+document.querySelectorAll("[data-trader]").forEach(card=>card.addEventListener("click",()=>{
+ selectedTrader=card.dataset.trader;
+ document.querySelectorAll("[data-trader]").forEach(item=>item.classList.toggle("selected",item===card));
+ document.getElementById("selected-trader").textContent="Target: "+selectedTrader;
+}));
+document.getElementById("join-adoptme").addEventListener("click",()=>{
+ window.open(GAME_URL,"_blank","noopener,noreferrer");
 });
-$("join-room").addEventListener("click",async()=>{
- const n=$("roblox-name").value.trim(),code=$("room-code").value.trim().toUpperCase();
- if(!validName(n)){status("Masukkan username Roblox valid (3–20 huruf, angka, underscore).");return;}
- if(!/^[A-Z0-9]{6}$/.test(code)){status("Masukkan kode room 6 karakter.");return;}
- if(!uid){status("Masih menghubungkan Firebase…");return;}
- try{const snap=await get(ref(db,"rooms/"+code));if(!snap.exists()){status("Room tidak ditemukan.");return;}
- const data=snap.val(),members=data.members||{};
- if(data.game!==selectedGame){status("Room ini untuk game berbeda.");return;}
- if(!members[uid]&&Object.keys(members).length>=2){status("Room sudah penuh.");return;}
- await set(ref(db,"rooms/"+code+"/members/"+uid),{username:n,joinedAt:serverTimestamp()});
- watchRoom(code);status("Berhasil masuk room.");
- }catch(e){status("Gagal masuk room: "+e.message);}
-});
-$("save-offer").addEventListener("click",async()=>{
- if(!activeRoom)return;try{await set(ref(db,"rooms/"+activeRoom+"/offers/"+uid),{items:$("offer-items").value.trim(),updatedAt:serverTimestamp()});await set(ref(db,"rooms/"+activeRoom+"/confirmations/"+uid),false);status("Offer diperbarui.");}catch(e){status("Gagal memperbarui offer: "+e.message);}
-});
-$("confirm-trade").addEventListener("click",async()=>{
- if(!activeRoom)return;try{await set(ref(db,"rooms/"+activeRoom+"/confirmations/"+uid),true);status("Konfirmasi tersimpan. Pastikan item benar sebelum trade di Roblox.");}catch(e){status("Konfirmasi gagal: "+e.message);}
-});
-$("send-message").addEventListener("click",async()=>{
- const t=$("message-input").value.trim();if(!activeRoom||!t)return;
- try{await push(ref(db,"rooms/"+activeRoom+"/messages"),{uid,username:$("roblox-name").value.trim(),text:t,createdAt:serverTimestamp()});$("message-input").value="";}catch(e){status("Pesan gagal dikirim: "+e.message);}
-});
-$("copy-code").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(activeRoom||"");status("Kode room disalin.");}catch{status("Salin kode ini: "+activeRoom);}});
-init();
 </script></body></html>
