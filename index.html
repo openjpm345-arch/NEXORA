@@ -30,23 +30,53 @@ footer{border-top:1px solid #242634;margin-top:34px;padding-top:17px;color:#8585
 <section class="section" id="game"><div class="section-head"><div><div class="section-index">01 / GAME SELECTION</div><h2>Choose your game</h2></div><p>Game trading yang tersedia.</p></div><div class="trader-grid game-grid" style="grid-template-columns:1fr">
 <div class="game-card game-choice selected" aria-label="Adopt Me selected"><div class="game-art"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me" loading="lazy"></div><div class="game-shade"></div><div class="game-content"><span class="game-label">ADOPT ME ONLY</span><h3>Adopt Me Trading</h3><p>Trade room khusus Adopt Me</p></div></div>
 </div></section>
-<section class="section" id="traders"><div class="section-head"><div><div class="section-index">02 / CHOOSE TRADER</div><h2>Pilih pemain untuk trading</h2></div><p>Tanpa kode room dan tanpa chat perantara.</p></div>
-<div class="trader-section"><div class="trader-grid">
+<section class="section" id="traders"><div class="section-head"><div><div class="section-index">02 / SELECT PLAYER</div><h2>Pilih user tujuan</h2></div><p>Pilih pemain untuk membuka halaman trade.</p></div>
+<div class="trader-section" id="player-select"><div class="trader-grid">
 <button class="trader-card selected" type="button" data-trader="CRAZYMADDOG01"><span class="avatar">C1</span><span class="trader-info"><strong>CRAZYMADDOG01</strong><small>Adopt Me trader</small></span><span class="select-mark">✓</span></button>
 <button class="trader-card" type="button" data-trader="CRAZYMADDOG"><span class="avatar">C</span><span class="trader-info"><strong>CRAZYMADDOG</strong><small>Adopt Me trader</small></span><span class="select-mark">✓</span></button>
-</div><div class="join-panel"><div class="join-copy"><h3 id="selected-trader">Target: CRAZYMADDOG01</h3><p>Tekan tombol untuk membuka Adopt Me di Roblox. Trade item tetap dilakukan di dalam game.</p><div class="join-state"><span class="state-dot"></span><span>ADOPT ME · ONE CLICK</span></div></div><div class="join-actions"><button class="btn btn-primary" id="join-adoptme" type="button">Join Adopt Me ↗</button></div></div><p id="join-note" style="color:#b8b1c5;font-size:11px;margin:12px 0 0">Link Private Server khusus belum dipasang karena belum kamu kirim. Tombol sementara membuka halaman game Adopt Me.</p></div></section>
+</div><div class="join-panel"><div class="join-copy"><h3 id="selected-trader">Target: CRAZYMADDOG01</h3><p>Masuk ke halaman trade dengan pemain pilihanmu.</p></div><button class="btn btn-primary" id="open-trade" type="button">Open Trade ↗</button></div></div>
+<section id="trade-page" class="trader-section" hidden style="margin-top:16px">
+<div class="section-head"><div><div class="section-index">03 / ADOPT ME TRADE</div><h2>Trade with <span id="trade-target">CRAZYMADDOG01</span></h2></div><button class="btn" id="back-players" type="button" style="background:#30283e">← Ganti user</button></div>
+<p style="color:#b8b1c5;font-size:12px;margin:0 0 16px">Susun penawaran kedua pihak. Setelah trade selesai, lanjutkan ke Private Server Roblox.</p>
+<div class="trader-grid">
+<div class="info-card"><div class="avatar" style="margin-bottom:10px">YOU</div><h3>YOUR OFFER</h3><textarea id="my-offer" rows="4" maxlength="500" placeholder="Tulis pet/item yang kamu tawarkan…" style="width:100%;resize:vertical;background:#090a10;border:1px solid #39394a;border-radius:9px;padding:12px;color:white"></textarea><p style="margin-top:7px">Penawaranmu</p></div>
+<div class="info-card"><div class="avatar" style="margin-bottom:10px">TR</div><h3 id="target-offer-title">CRAZYMADDOG01'S OFFER</h3><textarea id="their-offer" rows="4" maxlength="500" placeholder="Penawaran pemain tujuan…" style="width:100%;resize:vertical;background:#090a10;border:1px solid #39394a;border-radius:9px;padding:12px;color:white"></textarea><p style="margin-top:7px">Isi penawaran yang kamu lihat dari partner.</p></div>
+</div>
+<div class="join-panel"><div class="join-copy"><h3>Trade status</h3><p id="trade-status">Belum diselesaikan. Pastikan kedua penawaran sudah sesuai.</p></div><button class="btn btn-primary" id="finish-trade" type="button">Trade completed</button></div>
+<div id="ps-panel" class="join-panel" hidden><div class="join-copy"><h3>Next step: Join Private Server</h3><p>Trade sudah kamu tandai selesai. Sekarang lanjut ke PS untuk proses di Adopt Me.</p></div><button class="btn btn-primary" id="join-ps" type="button">Join Private Server ↗</button></div>
+<p id="ps-note" style="color:#b8b1c5;font-size:11px;margin:12px 0 0">Link PS belum dipasang. Tombol Join Private Server aktif setelah link PS dari kamu ditambahkan.</p>
+</section></section>
 <div class="bottom-grid"><section class="info-card"><h3>How it works</h3><p>Pilih trader yang dituju. Setelah tautan private server tersedia, tekan Join Roblox server untuk membuka Roblox.</p><div class="steps"><div class="step"><b>01 · SELECT</b><span>Pilih trader.</span></div><div class="step"><b>02 · CONNECT</b><span>Periksa username.</span></div><div class="step"><b>03 · JOIN</b><span>Buka server Roblox.</span></div></div></section><section class="info-card"><h3>Trading takes place in Roblox</h3><p>Website ini mengarahkan pemain ke server. Konfirmasi item dan pertukaran dilakukan langsung di jendela trade Roblox. Jangan bagikan password atau kode login.</p></section></div>
 <footer><span>NEXORA · SERVER TRADING</span><span>Independent community hub · Not affiliated with Roblox or the game creators.</span></footer>
 </main>
 <script>
-const GAME_URL="https://www.roblox.com/games/920587237/Adopt-Me";
+const PRIVATE_SERVER_URL="";
 let selectedTrader="CRAZYMADDOG01";
 document.querySelectorAll("[data-trader]").forEach(card=>card.addEventListener("click",()=>{
  selectedTrader=card.dataset.trader;
  document.querySelectorAll("[data-trader]").forEach(item=>item.classList.toggle("selected",item===card));
  document.getElementById("selected-trader").textContent="Target: "+selectedTrader;
 }));
-document.getElementById("join-adoptme").addEventListener("click",()=>{
- window.open(GAME_URL,"_blank","noopener,noreferrer");
+document.getElementById("open-trade").addEventListener("click",()=>{
+ document.getElementById("trade-target").textContent=selectedTrader;
+ document.getElementById("target-offer-title").textContent=selectedTrader+"'S OFFER";
+ document.getElementById("trade-page").hidden=false;
+ document.getElementById("trade-page").scrollIntoView({behavior:"smooth",block:"start"});
+});
+document.getElementById("back-players").addEventListener("click",()=>{
+ document.getElementById("trade-page").hidden=true;
+ document.getElementById("player-select").scrollIntoView({behavior:"smooth",block:"center"});
+});
+document.getElementById("finish-trade").addEventListener("click",()=>{
+ const mine=document.getElementById("my-offer").value.trim();
+ const theirs=document.getElementById("their-offer").value.trim();
+ if(!mine||!theirs){document.getElementById("trade-status").textContent="Isi penawaran kedua pihak terlebih dahulu.";return;}
+ document.getElementById("trade-status").textContent="Ditandai selesai di halaman ini. Konfirmasi pertukaran sebenarnya tetap dilakukan di Roblox.";
+ document.getElementById("ps-panel").hidden=false;
+ document.getElementById("ps-panel").scrollIntoView({behavior:"smooth",block:"center"});
+});
+document.getElementById("join-ps").addEventListener("click",()=>{
+ if(!PRIVATE_SERVER_URL){document.getElementById("ps-note").textContent="Link Private Server dari pemilik belum dipasang.";return;}
+ window.open(PRIVATE_SERVER_URL,"_blank","noopener,noreferrer");
 });
 </script></body></html>
