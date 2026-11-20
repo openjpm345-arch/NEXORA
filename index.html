@@ -62,7 +62,7 @@ body{letter-spacing:.005em}
 <header class="topbar"><a class="brand" href="#"><span class="brandmark">N</span><span>NEXORA<small>ADOPT ME TRADING</small></span></a><span class="chip">● COMMUNITY TRADE ROOM</span></header>
 <section class="hero"><div class="kicker">NEXORA · ADOPT ME</div><h1>Trade with<br><span>YOUR TRADER.</span></h1><p>Pilih trader Adopt Me dan susun penawaranmu di ruang trading.</p></section>
 <section class="section" id="game"><div class="section-head"><div><div class="eyebrow">01 / GAME</div><h2>Choose your game</h2></div><span class="muted">Game yang tersedia</span></div><button class="game-card" id="enter-adopt" type="button" style="width:100%;text-align:left"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me"><div class="game-shade"></div><div class="game-copy"><span class="tag">OPEN GAME</span><h3>Adopt Me Trading ↗</h3></div></button></section>
-<section class="section panel" id="traders"><div class="section-head"><div><div class="eyebrow">02 / TRADERS</div><h2>Choose a trader</h2></div><span class="muted">Verified trader</span></div><div class="trader-grid"><a class="trader-card" href="adoptme.html?trader=CRAZYMADDOG01"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/assets/crazymaddog01.webp" width="96" height="96" loading="eager" decoding="sync" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/openjpm345-arch/NEXORA/main/assets/crazymaddog01.webp'" alt="CRAZYMADDOG01 avatar"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">Active trader</span></span></a></div></section>
+<section class="section panel" id="traders"><div class="section-head"><div><div class="eyebrow">02 / TRADERS</div><h2>Choose a trader</h2></div><span class="muted">Verified trader</span></div><div class="trader-grid"><a class="trader-card" href="adoptme.html?trader=CRAZYMADDOG01"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/assets/crazymaddog01.webp" width="96" height="96" loading="eager" decoding="sync" onerror="loadTraderAvatar(this)" alt="CRAZYMADDOG01 avatar"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">Active trader</span></span></a></div></section>
 <section class="section panel" id="trade-history"><div class="section-head"><div><div class="eyebrow">TRADE LOG</div><h2>Trade History</h2></div><span class="muted" id="history-count">0 trades</span></div><div id="history-list" class="muted">Belum ada trade selesai.</div></section>
 <section class="section panel" id="trade-page" hidden>
 <div class="trade-top"><div><div class="eyebrow">02 / ADOPT ME TRADE ROOM</div><h2>Trading with <span id="target-name">CRAZYMADDOG01</span></h2> </div><button class="btn" id="back">← Dashboard</button></div><div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/assets/crazymaddog01.webp" style="display:block!important;visibility:visible!important;opacity:1!important;width:100%;height:100%;object-fit:cover" alt="CRAZYMADDOG01 avatar"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">Active trader · Adopt Me Trader</span></span></div>
@@ -86,6 +86,25 @@ const pets=[
 ["Dog","Common",1],["Cat","Common",1],["Unicorn","Legendary",12],["Dragon","Legendary",10],["Frost Dragon","Legendary",90],["Shadow Dragon","Legendary",110],["Bat Dragon","Legendary",105],["Giraffe","Legendary",80],["Owl","Legendary",68],["Parrot","Legendary",62],["Crow","Legendary",48],["Evil Unicorn","Legendary",52],["Frost Fury","Legendary",28],["Turtle","Legendary",35],["Kangaroo","Legendary",32],["Hedgehog","Ultra-Rare",42],["Dalmatian","Ultra-Rare",38],["Arctic Reindeer","Legendary",40]
 ].map(([name,rarity,value])=>({name,rarity,value,img:"https://adoptme.fandom.com/wiki/Special:FilePath/"+name.replaceAll(" ","_")+".png"}));
 let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="All";
+async function loadTraderAvatar(img){
+ if(!img||img.dataset.robloxTried)return;
+ img.dataset.robloxTried="1";
+ try{
+  const response=await fetch("https://users.roblox.com/v1/usernames/users",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({usernames:["CRAZYMADDOG01"],excludeBannedUsers:false})});
+  if(!response.ok)throw new Error("username lookup failed");
+  const userData=await response.json(),user=userData.data&&userData.data[0];
+  if(!user||!user.id)throw new Error("username not found");
+  const thumbResponse=await fetch("https://thumbnails.roblox.com/v1/users/avatar?userIds="+user.id+"&size=150x150&format=Png&isCircular=false");
+  if(!thumbResponse.ok)throw new Error("thumbnail lookup failed");
+  const thumbData=await thumbResponse.json(),url=thumbData.data&&thumbData.data[0]&&thumbData.data[0].imageUrl;
+  if(!url)throw new Error("thumbnail unavailable");
+  img.onerror=null;img.src=url;
+ }catch(error){
+  img.onerror=null;
+  img.alt="Avatar CRAZYMADDOG01 tidak dapat dimuat";
+  img.style.background="#29283a";
+ }
+}
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
 function image(p){return '<img class="pet-img" src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="this.onerror=null;this.src=\'https://placehold.co/120x100/28243a/e9ddff?text='+encodeURIComponent(p.name)+'\'">'}
 function slots(id,list,remove){$(id).innerHTML=Array.from({length:9},(_,i)=>{let p=list[i];return '<div class="slot '+(p?'filled':'')+'">'+(p?image(p)+'<span class="pet-name">'+p.name+'</span><span class="pet-rarity">'+p.rarity+'</span>'+(remove?'<button class="remove-pet" data-remove="'+p.name+'">×</button>':''):'<span class="slot-empty">＋ Empty</span>')+'</div>'}).join("");}
