@@ -91,8 +91,35 @@ let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="All";
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
 function image(p){let fallback=p.img.replace("https://ironbabatekkral.github.io/adoptme-values/","https://raw.githubusercontent.com/ironbabatekkral/adoptme-values/main/");return '<img class="pet-img" src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="if(!this.dataset.fallback){this.dataset.fallback=1;this.src=\''+fallback+'\'}else{this.style.visibility=\'hidden\'}">'}
 function slots(id,list,remove){$(id).innerHTML=Array.from({length:9},(_,i)=>{let p=list[i];return '<div class="slot '+(p?'filled':'')+'">'+(p?image(p)+'<span class="pet-name">'+p.name+'</span><span class="pet-rarity">'+p.rarity+'</span>'+(remove?'<button class="remove-pet" data-remove="'+p.name+'">×</button>':''):'<span class="slot-empty">＋ Empty</span>')+'</div>'}).join("");}
-function balance(){let need=sum(myOffer);botOffer=[];if(!myOffer.length)return;let n=0;for(let p of [...pets].sort((a,b)=>b.value-a.value)){if(n>need||botOffer.length===9)break;botOffer.push(p);n+=p.value}}
-function render(){slots("my-slots",myOffer,true);slots("bot-slots",botOffer,false);$("my-count").textContent=myOffer.length+" / 9 ITEMS";$("my-value").textContent=sum(myOffer);$("bot-value").textContent=sum(botOffer);let d=sum(botOffer)-sum(myOffer);$("overpay-label").textContent=d>0?"OVERPAY +"+d+" POINTS":(myOffer.length?"TAMBAH PET LAIN":"PILIH PET UNTUK MEMULAI OFFER");}
+function balance(){
+ botOffer=[];
+ if(!myOffer.length)return;
+ const need=Math.round(sum(myOffer)*100),limit=need+500;
+ const pool=pets.filter(p=>!myOffer.some(x=>x.name===p.name)&&Number.isFinite(Number(p.value))&&Number(p.value)>0)
+  .map(p=>({pet:p,value:Math.round(Number(p.value)*100)}))
+  .filter(x=>x.value<=limit)
+  .sort((a,b)=>a.value-b.value);
+ const dp=Array.from({length:10},()=>new Map());
+ dp[0].set(0,[]);
+ for(const item of pool){
+  for(let count=9;count>=1;count--){
+   for(const [total,chosen] of dp[count-1]){
+    const next=total+item.value;
+    if(next>limit||dp[count].has(next))continue;
+    dp[count].set(next,[...chosen,item.pet]);
+   }
+  }
+ }
+ let best=null,bestOver=Infinity;
+ for(let count=1;count<=9;count++){
+  for(const [total,chosen] of dp[count]){
+   const over=total-need;
+   if(over>=1&&over<=500&&over<bestOver){best=chosen;bestOver=over;}
+  }
+ }
+ if(best)botOffer=best;
+}
+function render(){slots("my-slots",myOffer,true);slots("bot-slots",botOffer,false);$("my-count").textContent=myOffer.length+" / 9 ITEMS";$("my-value").textContent=sum(myOffer);$("bot-value").textContent=sum(botOffer);let d=sum(botOffer)-sum(myOffer);$("overpay-label").textContent=d>0&&d<=5?"OVERPAY TIPIS +"+Number(d.toFixed(2))+" VALUE":(myOffer.length?(botOffer.length?"MENYESUAIKAN OFFER":"BELUM ADA KOMBINASI OVERPAY 1–5 VALUE"):"PILIH PET UNTUK MEMULAI OFFER");}
 function catalog(){let q=$("pet-search").value.toLowerCase();$("pet-catalog").innerHTML=pets.filter(p=>(filter==="All"||p.rarity===filter)&&p.name.toLowerCase().includes(q)).map(p=>'<button class="pet-card" data-pet="'+p.name+'">'+image(p)+'<strong>'+p.name+'</strong><small>'+p.rarity+'</small><span class="add-label">'+(myOffer.includes(p)?'✓ ADDED':'+ ADD')+'</span></button>').join("");document.querySelectorAll("[data-pet]").forEach(b=>b.onclick=()=>{let p=pet(b.dataset.pet);myOffer=myOffer.includes(p)?myOffer.filter(x=>x!==p):myOffer.length<9?[...myOffer,p]:myOffer;balance();render();catalog()})}
 function history(){let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");$("history-count").textContent=h.length+" trades";$("history-list").innerHTML=h.length?h.slice(0,10).map(x=>'<div class="history-row"><b>'+x.trader+'</b><span>'+x.pets+'</span><strong>OVERPAY +'+x.over+'</strong><time>'+x.date+'</time></div>').join(""):"Belum ada trade selesai."}
 function enter(){ document.body.classList.add("trading-view"); $("trade-page").hidden=false;$("players").hidden=true;myOffer=[];balance();render();history.pushState({view:"trade"},"","#trade");window.scrollTo(0,0)}
