@@ -84,12 +84,10 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 </main>
 <script>
 const PRIVATE_SERVER_URL="";
-const pets=[
-["Dog","Common",1],["Cat","Common",1],["Unicorn","Legendary",12],["Dragon","Legendary",10],["Frost Dragon","Legendary",90],["Shadow Dragon","Legendary",110],["Bat Dragon","Legendary",105],["Giraffe","Legendary",80],["Owl","Legendary",68],["Parrot","Legendary",62],["Crow","Legendary",48],["Evil Unicorn","Legendary",52],["Frost Fury","Legendary",28],["Turtle","Legendary",35],["Kangaroo","Legendary",32],["Hedgehog","Ultra-Rare",42],["Dalmatian","Ultra-Rare",38],["Arctic Reindeer","Legendary",40]
-].map(([name,rarity,value])=>({name,rarity,value,img:"https://adoptme.fandom.com/wiki/Special:FilePath/"+encodeURIComponent(name.replaceAll(" ","_"))+".png?width=180"}));
+let pets=[];
 let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="All";
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
-function image(p){return '<img class="pet-img" src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="this.onerror=null;this.src=\'https://placehold.co/120x100/28243a/e9ddff?text='+encodeURIComponent(p.name)+'\'">'}
+function image(p){return '<img class="pet-img" src="'+p.img+'" alt="'+p.name+'" loading="lazy">'}
 function slots(id,list,remove){$(id).innerHTML=Array.from({length:9},(_,i)=>{let p=list[i];return '<div class="slot '+(p?'filled':'')+'">'+(p?image(p)+'<span class="pet-name">'+p.name+'</span><span class="pet-rarity">'+p.rarity+'</span>'+(remove?'<button class="remove-pet" data-remove="'+p.name+'">×</button>':''):'<span class="slot-empty">＋ Empty</span>')+'</div>'}).join("");}
 function balance(){let need=sum(myOffer);botOffer=[];let n=0;for(let p of [...pets].sort((a,b)=>b.value-a.value)){if(n>need||botOffer.length===9)break;botOffer.push(p);n+=p.value}}
 function render(){slots("my-slots",myOffer,true);slots("bot-slots",botOffer,false);$("my-count").textContent=myOffer.length+" / 9 ITEMS";$("my-value").textContent=sum(myOffer);$("bot-value").textContent=sum(botOffer);let d=sum(botOffer)-sum(myOffer);$("overpay-label").textContent=d>0?"BOT OVERPAY · +"+d+" POINTS ABOVE YOUR OFFER":"BOT CANNOT OVERPAY THIS OFFER";$("bot-status").textContent=d>0?selectedTrader+" offers more value than your pets.":"Your offer is above the bot's available maximum. Remove a pet to enable overpay."}
@@ -108,5 +106,5 @@ $("my-slots").onclick=e=>{let b=e.target.closest("[data-remove]");if(b){myOffer=
 $("reset-offer").onclick=()=>{myOffer=[];balance();render();$("trade-message").textContent="Offer reset."};
 $("accept-trade").onclick=()=>{let over=sum(botOffer)-sum(myOffer);if(!myOffer.length){$("trade-message").textContent="Pilih minimal satu pet.";return}if(over<=0){$("trade-message").textContent="Bot belum bisa overpay offer ini. Kurangi pet yang kamu tawarkan.";return}let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");h.unshift({trader:selectedTrader,pets:myOffer.map(p=>p.name).join(", "),over,date:new Date().toLocaleString("id-ID")});localStorage.setItem("nexoraTradeHistory",JSON.stringify(h.slice(0,50)));history();$("trade-message").textContent="Trade simulasi selesai. Riwayat tersimpan di dashboard."; $("ps-panel").hidden=false};
 $("join-ps").onclick=()=>{if(PRIVATE_SERVER_URL)window.open(PRIVATE_SERVER_URL,"_blank");else $("ps-note").textContent="Link Private Server belum dipasang."};
-history();balance();render();
+fetch("pets.json").then(r=>r.json()).then(data=>{pets=data;balance();render()}).catch(()=>{$("trade-message").textContent="Katalog pet gagal dimuat."});history();balance();render();
 </script></body></html>
