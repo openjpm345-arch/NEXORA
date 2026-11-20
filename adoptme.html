@@ -69,12 +69,12 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 <section class="section" id="game"><div class="section-head"><div><div class="eyebrow">01 / GAME</div><h2>Choose your game</h2></div><span class="muted">Game yang tersedia</span></div><button class="game-card" id="enter-adopt" type="button" style="width:100%;text-align:left"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me"><div class="game-shade"></div><div class="game-copy"><span class="tag">OPEN GAME</span><h3>Adopt Me Trading ↗</h3></div></button></section>
 <section class="section panel" id="trade-history"><div class="section-head"><div><div class="eyebrow">TRADE LOG</div><h2>Trade History</h2></div><span class="muted" id="history-count">0 trades</span></div><div id="history-list" class="muted">Belum ada trade selesai.</div></section>
 <section class="section panel" id="trade-page" hidden>
-<div class="trade-top"><div><div class="eyebrow">02 / ADOPT ME TRADE ROOM</div><h2>Trading with <span id="target-name">CRAZYMADDOG01</span></h2></div><button class="btn" id="back">← Dashboard</button></div><div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/assets/crazymaddog01.webp" style="display:block!important;visibility:visible!important;opacity:1!important;width:100%;height:100%;object-fit:cover" alt="CRAZYMADDOG01 avatar"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">Can overpay · Adopt Me Trader</span></span></div>
+<div class="trade-top"><div><div class="eyebrow">02 / ADOPT ME TRADE ROOM</div><h2>Trading with <span id="target-name">CRAZYMADDOG01</span></h2></div><button class="btn" id="back">← Dashboard</button></div><div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/assets/crazymaddog01.webp" width="96" height="96" loading="eager" decoding="sync" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/openjpm345-arch/NEXORA/main/assets/crazymaddog01.webp'" alt="CRAZYMADDOG01 avatar"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">Adopt Me Trader</span></span></div>
 <div class="trade-board">
 <div class="offer-panel"><div class="offer-head"><strong>YOUR OFFER</strong><span class="status" id="my-count">0 / 9 ITEMS</span></div><div class="slots" id="my-slots"></div><div class="value-row"><span>Estimated offer points</span><b id="my-value">0</b></div></div>
 <div class="offer-panel"><div class="offer-head"><strong id="bot-title">CRAZYMADDOG01</strong></div><div class="slots" id="bot-slots"></div><div class="value-row"><span>Offer points</span><b id="bot-value">—</b></div></div>
 </div>
-<div class="overpay-banner"><span id="overpay-label">OFFER LEBIH TINGGI</span></div>
+
 <div class="catalog"><div class="catalog-head"><div><div class="eyebrow">YOUR INVENTORY</div><h3>Pilih pet untuk offer kamu</h3></div><button class="btn btn-primary" id="open-catalog">＋ Add Pets</button></div></div><div class="catalog-modal" id="catalog-modal" hidden><div class="catalog-dialog"><div class="catalog-head"><div><div class="eyebrow">YOUR INVENTORY</div><h3>Pet Collection</h3></div><button class="btn" id="close-catalog">✕ Close</button></div><input id="pet-search" class="pet-search" placeholder="Search pets..."><div class="filter-row"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Common">Common</button><button class="filter" data-filter="Ultra-Rare">Ultra-Rare</button><button class="filter" data-filter="Legendary">Legendary</button></div><div class="pet-grid" id="pet-catalog"></div></div></div>
 
 <div class="trade-actions"><button class="btn" id="reset-offer">Reset offer</button><button class="btn btn-primary" id="accept-trade">Accept Trade ✓</button></div>
@@ -94,7 +94,7 @@ function slots(id,list,remove){$(id).innerHTML=Array.from({length:9},(_,i)=>{let
 function balance(){
  botOffer=[];
  if(!myOffer.length)return;
- const need=Math.round(sum(myOffer)*100),limit=need+500;
+ const need=Math.round(sum(myOffer)*100),limit=need+1000;
  const pool=pets.filter(p=>!myOffer.some(x=>x.name===p.name)&&Number.isFinite(Number(p.value))&&Number(p.value)>0)
   .map(p=>({pet:p,value:Math.round(Number(p.value)*100)}))
   .filter(x=>x.value<=limit)
@@ -114,14 +114,14 @@ function balance(){
  for(let count=1;count<=9;count++){
   for(const [total,chosen] of dp[count]){
    const over=total-need;
-   if(over>=1&&over<=500&&over<bestOver){best=chosen;bestOver=over;}
+   if(over>=500&&over<=1000&&over<bestOver){best=chosen;bestOver=over;}
   }
  }
  if(best)botOffer=best;
 }
-function render(){slots("my-slots",myOffer,true);slots("bot-slots",botOffer,false);$("my-count").textContent=myOffer.length+" / 9 ITEMS";$("my-value").textContent=sum(myOffer);$("bot-value").textContent=sum(botOffer);let d=sum(botOffer)-sum(myOffer);$("overpay-label").textContent=d>0&&d<=5?"OFFER LEBIH TINGGI":(myOffer.length?(botOffer.length?"MENYESUAIKAN OFFER":"BELUM ADA KOMBINASI YANG SESUAI"):"PILIH PET UNTUK MEMULAI OFFER");}
+function render(){slots("my-slots",myOffer,true);slots("bot-slots",botOffer,false);$("my-count").textContent=myOffer.length+" / 9 ITEMS";$("my-value").textContent=sum(myOffer);$("bot-value").textContent=sum(botOffer);}
 function catalog(){let q=$("pet-search").value.toLowerCase();$("pet-catalog").innerHTML=pets.filter(p=>(filter==="All"||p.rarity===filter)&&p.name.toLowerCase().includes(q)).map(p=>'<button class="pet-card" data-pet="'+p.name+'">'+image(p)+'<strong>'+p.name+'</strong><small>'+p.rarity+'</small><span class="add-label">'+(myOffer.includes(p)?'✓ ADDED':'+ ADD')+'</span></button>').join("");document.querySelectorAll("[data-pet]").forEach(b=>b.onclick=()=>{let p=pet(b.dataset.pet);myOffer=myOffer.includes(p)?myOffer.filter(x=>x!==p):myOffer.length<9?[...myOffer,p]:myOffer;balance();render();catalog()})}
-function history(){let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");$("history-count").textContent=h.length+" trades";$("history-list").innerHTML=h.length?h.slice(0,10).map(x=>'<div class="history-row"><b>'+x.trader+'</b><span>'+x.pets+'</span><strong>OVERPAY +'+x.over+'</strong><time>'+x.date+'</time></div>').join(""):"Belum ada trade selesai."}
+function history(){let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");$("history-count").textContent=h.length+" trades";$("history-list").innerHTML=h.length?h.slice(0,10).map(x=>'<div class="history-row"><b>'+x.trader+'</b><span>'+x.pets+'</span><strong>SELISIH +'+x.over+'</strong><time>'+x.date+'</time></div>').join(""):"Belum ada trade selesai."}
 function enter(){ document.body.classList.add("trading-view"); $("trade-page").hidden=false;$("players").hidden=true;myOffer=[];balance();render();history.pushState({view:"trade"},"","#trade");window.scrollTo(0,0)}
 $("enter-adopt").onclick=enter;
 $("back").onclick=()=>{document.body.classList.remove("trading-view");$("trade-page").hidden=true;$("players").hidden=true;history.pushState({view:"dashboard"},"",location.pathname);$("game").scrollIntoView({behavior:"smooth"})};
