@@ -5,7 +5,7 @@
     "sourceChecked": "2026-11-22",
     "valuesSnapshot": "Supreme Values page date displayed: 2026-11-11",
     "note": "MM2 펫 84종 목록입니다. 숫자 기준값은 커뮤니티 참고 자료이며 공식 가격이 아닙니다. T1 단위 항목은 임의로 환산하지 않았으므로 직접 기준값을 입력해 주세요. 거래 불가 4종은 선택할 수 없습니다.",
-    "imageNote": "Gambar pet yang cocok ditambahkan dari katalog Supreme Values. Pet yang belum memiliki aset cocok tetap menggunakan ikon; gambar Tankie/Mechbug dan varian Chroma Fire tidak dipasang karena aset yang cocok/bersih belum terverifikasi."
+    "imageNote": "Semua 84 pet memiliki gambar. 75 aset Supreme Values dan 9 aset pet yang diverifikasi dari halaman RBLX GUIDE yang merujuk ke MM2 Wiki."
   },
   "items": [
     {
@@ -17,7 +17,9 @@
       "icon": "🌈🦇",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 갓리"
+      "valueNote": "×7 T1 갓리",
+      "image": "https://tgaylapgankrdavwpebz.supabase.co/storage/v1/object/public/game-images/mm2_pets/chroma-fire-bat.webp",
+      "imageSource": "RBLX GUIDE / MM2 Wiki image"
     },
     {
       "id": "chroma-fire-bear",
@@ -28,7 +30,9 @@
       "icon": "🌈🐻",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 갓리"
+      "valueNote": "×7 T1 갓리",
+      "image": "https://tgaylapgankrdavwpebz.supabase.co/storage/v1/object/public/game-images/mm2_pets/chroma-fire-bear.webp",
+      "imageSource": "RBLX GUIDE / MM2 Wiki image"
     },
     {
       "id": "chroma-fire-bunny",
@@ -39,7 +43,9 @@
       "icon": "🌈🐰",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 갓리"
+      "valueNote": "×7 T1 갓리",
+      "image": "https://tgaylapgankrdavwpebz.supabase.co/storage/v1/object/public/game-images/mm2_pets/chroma-fire-bunny.webp",
+      "imageSource": "RBLX GUIDE / MM2 Wiki image"
     },
     {
       "id": "chroma-fire-cat",
@@ -50,7 +56,9 @@
       "icon": "🌈🐱",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 갓리"
+      "valueNote": "×7 T1 갓리",
+      "image": "https://tgaylapgankrdavwpebz.supabase.co/storage/v1/object/public/game-images/mm2_pets/chroma-fire-cat.webp",
+      "imageSource": "RBLX GUIDE / MM2 Wiki image"
     },
     {
       "id": "chroma-fire-dog",
@@ -61,7 +69,9 @@
       "icon": "🌈🐶",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 갓리"
+      "valueNote": "×7 T1 갓리",
+      "image": "https://tgaylapgankrdavwpebz.supabase.co/storage/v1/object/public/game-images/mm2_pets/chroma-fire-dog.webp",
+      "imageSource": "RBLX GUIDE / MM2 Wiki image"
     },
     {
       "id": "chroma-fire-fox",
@@ -72,7 +82,9 @@
       "icon": "🌈🦊",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 갓리"
+      "valueNote": "×7 T1 갓리",
+      "image": "https://tgaylapgankrdavwpebz.supabase.co/storage/v1/object/public/game-images/mm2_pets/chroma-fire-fox.webp",
+      "imageSource": "RBLX GUIDE / MM2 Wiki image"
     },
     {
       "id": "chroma-fire-pig",
@@ -83,7 +95,9 @@
       "icon": "🌈🐷",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 갓리"
+      "valueNote": "×7 T1 갓리",
+      "image": "https://tgaylapgankrdavwpebz.supabase.co/storage/v1/object/public/game-images/mm2_pets/chroma-fire-pig.webp",
+      "imageSource": "RBLX GUIDE / MM2 Wiki image"
     },
     {
       "id": "deathspeaker",
@@ -509,7 +523,9 @@
       "value": 3,
       "icon": "🪲",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://tgaylapgankrdavwpebz.supabase.co/storage/v1/object/public/game-images/mm2_pets/mechbug.webp",
+      "imageSource": "RBLX GUIDE / MM2 Wiki image"
     },
     {
       "id": "mr-reindeer",
@@ -568,7 +584,9 @@
       "value": 3,
       "icon": "🐢",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://tgaylapgankrdavwpebz.supabase.co/storage/v1/object/public/game-images/mm2_pets/tankie.webp",
+      "imageSource": "RBLX GUIDE / MM2 Wiki image"
     },
     {
       "id": "blue-pumpkin-2019",
