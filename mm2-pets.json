@@ -923,7 +923,9 @@
       "icon": "🎃",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×1 T1 일반"
+      "valueNote": "×1 T1 일반",
+      "image": "https://supremevalues.com/media/mm2pets/Pumpkin_2021.webp",
+      "imageSource": "Supreme Values MM2 Pets"
     },
     {
       "id": "purple-pumpkin-2018",
