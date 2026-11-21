@@ -1,8 +1,16 @@
 {
   "meta": {
-    "title": "Blade Ball 비무기 코스메틱 목록",
-    "source": "https://bladeball.fandom.com/wiki/Emotes | https://bladeball.fandom.com/wiki/Explosion_Skins | https://bladeball.fandom.com/wiki/Trading",
-    "note": "토큰은 내부 계산에서 1개당 1 기준점입니다. 이모트와 시각 효과는 확인되지 않은 시세를 만들지 않았으므로 기준값을 직접 입력할 수 있습니다."
+    "title": "Blade Ball 거래 토큰·이모트·폭발 효과 카탈로그",
+    "sources": [
+      "https://bladeball.fandom.com/wiki/Emotes",
+      "https://bladeball.fandom.com/wiki/Explosion_Skins",
+      "https://bladeballwiki.com/wiki/winter-event-2023/",
+      "https://bladeballwiki.com/wiki/christmas-event-2023/",
+      "https://bladeballwiki.com/wiki/battle-pass/samurai/",
+      "https://bladeballwiki.com/wiki/battle-pass/easter/",
+      "https://bladeballwiki.com/wiki/battle-pass/halloween-haunted/"
+    ],
+    "note": "토큰은 1개당 내부 기준값 1로 계산합니다. 이모트와 폭발 효과는 공식 가치표가 확인되지 않아 시세를 임의로 넣지 않았습니다. 거래 전에 게임 내 인덱스의 실제 RAP를 확인하고 직접 기준값을 입력하세요. 이 페이지에는 검 아이템을 포함하지 않습니다."
   },
   "items": [
     {
@@ -16,1132 +24,2102 @@
       "quantity": true
     },
     {
-      "id": "emote-clap",
-      "name": "Clap",
+      "id": "emote-0-penguin-walk",
+      "name": "Penguin Walk",
       "category": "emote",
-      "rarity": "코스메틱",
+      "rarity": "이모트",
       "value": null,
-      "icon": "👏",
+      "icon": "🎭",
       "tradable": true,
       "quantity": false
     },
     {
-      "id": "emote-meditate",
-      "name": "Meditate",
+      "id": "emote-1-make-it-snow",
+      "name": "Make It Snow",
       "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🧘",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-natural-meditate",
-      "name": "Natural Meditate",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌿",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-water-meditate",
-      "name": "Water Meditate",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "💧",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-flame-meditate",
-      "name": "Flame Meditate",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🔥",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-electric-meditate",
-      "name": "Electric Meditate",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "⚡",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-sparkling-clap",
-      "name": "Sparkling Clap",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "✨",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-frosty-clap",
-      "name": "Frosty Clap",
-      "category": "emote",
-      "rarity": "코스메틱",
+      "rarity": "이모트",
       "value": null,
       "icon": "❄️",
       "tradable": true,
       "quantity": false
     },
     {
-      "id": "emote-heart-clap",
-      "name": "Heart Clap",
+      "id": "emote-2-snowball",
+      "name": "Snowball",
       "category": "emote",
-      "rarity": "코스메틱",
+      "rarity": "이모트",
       "value": null,
-      "icon": "💖",
+      "icon": "❄️",
       "tradable": true,
       "quantity": false
     },
     {
-      "id": "emote-snow-angel",
+      "id": "emote-3-snow-angel",
       "name": "Snow Angel",
       "category": "emote",
-      "rarity": "코스메틱",
+      "rarity": "이모트",
       "value": null,
-      "icon": "☃️",
+      "icon": "❄️",
       "tradable": true,
       "quantity": false
     },
     {
-      "id": "emote-dark-angel",
-      "name": "Dark Angel",
+      "id": "emote-4-globe-dance",
+      "name": "Globe Dance",
       "category": "emote",
-      "rarity": "코스메틱",
+      "rarity": "이모트",
       "value": null,
-      "icon": "🖤",
+      "icon": "❄️",
       "tradable": true,
       "quantity": false
     },
     {
-      "id": "emote-water-angel",
-      "name": "Water Angel",
+      "id": "emote-5-gift",
+      "name": "Gift",
       "category": "emote",
-      "rarity": "코스메틱",
+      "rarity": "이모트",
       "value": null,
-      "icon": "🌊",
+      "icon": "🎁",
       "tradable": true,
       "quantity": false
     },
     {
-      "id": "emote-cosmic-angel",
-      "name": "Cosmic Angel",
+      "id": "emote-6-super-style",
+      "name": "Super Style",
       "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌌",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-hot-hands",
-      "name": "Hot Hands",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🙌",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-frost-hands",
-      "name": "Frost Hands",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🧊",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-firework-show",
-      "name": "Firework Show",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🎆",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-glitched",
-      "name": "Glitched",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌀",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-rose-quartz",
-      "name": "Rose Quartz",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌸",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-earth-master",
-      "name": "Earth Master",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌍",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-wind-master",
-      "name": "Wind Master",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌬️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-fire-master",
-      "name": "Fire Master",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🔥",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-water-master",
-      "name": "Water Master",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌊",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-solar-charge",
-      "name": "Solar Charge",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "☀️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-cosmic-charge",
-      "name": "Cosmic Charge",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌠",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-evil-summon",
-      "name": "Evil Summon",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌑",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-dimensional-pit",
-      "name": "Dimensional Pit",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🕳️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-matrix-infusion",
-      "name": "Matrix Infusion",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "💠",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-toxic-angel",
-      "name": "Toxic Angel",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🧪",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-elemental-mark",
-      "name": "Elemental Mark",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🔷",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-void-shield",
-      "name": "Void Shield",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🛡️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-celestial-levitation",
-      "name": "Celestial Levitation",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌙",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-tropical-storm",
-      "name": "Tropical Storm",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌴",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-phantom-cloak",
-      "name": "Phantom Cloak",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "👻",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-ballin",
-      "name": "Ballin'",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🏀",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-caramel-dansen",
-      "name": "Caramel Dansen",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "💃",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-christmas-caroling",
-      "name": "Christmas Caroling",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🎄",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-cloud",
-      "name": "Cloud",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "☁️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-criss-cross",
-      "name": "Criss Cross",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "❎",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-eggsplosive-confidence",
-      "name": "Eggsplosive Confidence",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🥚",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-firesmash",
-      "name": "Firesmash",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🔥",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-ghostly-vengeance",
-      "name": "Ghostly Vengeance",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "👻",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-go-crazy",
-      "name": "Go Crazy",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🎉",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-good-guy-bad-guy",
-      "name": "Good Guy, Bad Guy",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "😎",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-hug",
-      "name": "Hug",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🤗",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-it-is-what-it-is",
-      "name": "It Is What It Is",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🤷",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-make-it-snow",
-      "name": "Make It Snow",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🌨️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-penguin-walk",
-      "name": "Penguin Walk",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🐧",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-planetary-orbit",
-      "name": "Planetary Orbit",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🪐",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-popcorn",
-      "name": "Popcorn",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🍿",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-royal-throne",
-      "name": "Royal Throne",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "👑",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-twirl-n-peel",
-      "name": "Twirl n' Peel",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🍌",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-victory-lap",
-      "name": "Victory Lap",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🏆",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "emote-zombie-walk",
-      "name": "Zombie Walk",
-      "category": "emote",
-      "rarity": "코스메틱",
-      "value": null,
-      "icon": "🧟",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-explosion",
-      "name": "Explosion",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💥",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-explosion-blue",
-      "name": "Explosion Blue",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💙",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-explosion-red",
-      "name": "Explosion Red",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "❤️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-explosion-green",
-      "name": "Explosion Green",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💚",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-explosion-purple",
-      "name": "Explosion Purple",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💜",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-explosion-white",
-      "name": "Explosion White",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🤍",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-lightning",
-      "name": "Lightning",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "⚡",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-yellow-lightning",
-      "name": "Yellow Lightning",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "⚡",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-red-lightning",
-      "name": "Red Lightning",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🔴",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-green-lightning",
-      "name": "Green Lightning",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🟢",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-purple-lightning",
-      "name": "Purple Lightning",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🟣",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-white-lightning",
-      "name": "White Lightning",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "⚡",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-waterblast",
-      "name": "Waterblast",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💦",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-red-waterblast",
-      "name": "Red Waterblast",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💧",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-green-waterblast",
-      "name": "Green Waterblast",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💧",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-yellow-waterblast",
-      "name": "Yellow Waterblast",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💧",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-purple-waterblast",
-      "name": "Purple Waterblast",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💧",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-black-waterblast",
-      "name": "Black Waterblast",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌑",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-sakura",
-      "name": "Sakura",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌸",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-blue-sakura",
-      "name": "Blue Sakura",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌸",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-red-sakura",
-      "name": "Red Sakura",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌸",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-green-sakura",
-      "name": "Green Sakura",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌸",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-yellow-sakura",
-      "name": "Yellow Sakura",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌼",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-purple-sakura",
-      "name": "Purple Sakura",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌺",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-blackhole",
-      "name": "Blackhole",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🕳️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-blue-blackhole",
-      "name": "Blue Blackhole",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌌",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-red-blackhole",
-      "name": "Red Blackhole",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌌",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-green-blackhole",
-      "name": "Green Blackhole",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌌",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-yellow-blackhole",
-      "name": "Yellow Blackhole",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌌",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-white-blackhole",
-      "name": "White Blackhole",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌌",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-disco-ball",
-      "name": "Disco Ball",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🪩",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-l-explosion",
-      "name": "L Explosion",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💥",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-rip",
-      "name": "RIP",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🕊️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-dove-scatter",
-      "name": "Dove Scatter",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🕊️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-ufo-abduction",
-      "name": "UFO Abduction",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🛸",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-lightning-smite",
-      "name": "Lightning Smite",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "⚡",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-butterfly-explosion",
-      "name": "Butterfly Explosion",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🦋",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-hacker-explosion",
-      "name": "Hacker Explosion",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💻",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-nuclear-explosion",
-      "name": "Nuclear Explosion",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "☢️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-lantern-glow",
-      "name": "Lantern Glow",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🏮",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-boom-paper",
-      "name": "BOOM Paper",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🎊",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-chained-dragon",
-      "name": "Chained Dragon",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🐉",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-lunar-fireworks",
-      "name": "Lunar Fireworks",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🎆",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-kyoi-pond",
-      "name": "Kyoi Pond",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🐟",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-cloud-puff",
-      "name": "Cloud Puff",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "☁️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-rainbow-starburst",
-      "name": "Rainbow Starburst",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌈",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-nebula-burst",
-      "name": "Nebula Burst",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌌",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-asteroid-burst",
-      "name": "Asteroid Burst",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "☄️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-storm-burst",
-      "name": "Storm Burst",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌩️",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-neon-echo",
-      "name": "Neon Echo",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "💡",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-sonic-boom",
-      "name": "Sonic Boom",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🔊",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-shadow-pulse",
-      "name": "Shadow Pulse",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌑",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-moonlight-mirage",
-      "name": "Moonlight Mirage",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🌙",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-ko-explosion",
-      "name": "KO! Explosion",
-      "category": "effect",
-      "rarity": "시각 효과",
-      "value": null,
-      "icon": "🎯",
-      "tradable": true,
-      "quantity": false
-    },
-    {
-      "id": "effect-divine-punishment",
-      "name": "Divine Punishment",
-      "category": "effect",
-      "rarity": "시각 효과",
+      "rarity": "이모트",
       "value": null,
       "icon": "✨",
       "tradable": true,
       "quantity": false
     },
     {
-      "id": "effect-lost-souls",
+      "id": "emote-7-uptown-downtown",
+      "name": "Uptown Downtown",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🎭",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-8-tip-toe-dance",
+      "name": "Tip Toe Dance",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "💃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-9-leg-kick-shuffle",
+      "name": "Leg Kick Shuffle",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🎭",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-10-runaway",
+      "name": "Runaway",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🎭",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-11-highfive-dance",
+      "name": "Highfive! Dance",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "💃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-12-who-is-u",
+      "name": "Who is u?",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🎭",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-13-confidence",
+      "name": "Confidence",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-14-it-s-fantastic",
+      "name": "It's FANTASTIC",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🎭",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-15-undead",
+      "name": "Undead",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🎭",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-16-super-trendy-dance",
+      "name": "Super Trendy Dance",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "💃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-17-easter-handshake",
+      "name": "Easter Handshake",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🙌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-18-creepy-cackle",
+      "name": "Creepy Cackle",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-19-haunted-dance",
+      "name": "Haunted Dance",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "💃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-20-creeping-chill",
+      "name": "Creeping Chill",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🎭",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-21-crystal-idk",
+      "name": "Crystal Idk",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🎭",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-22-zombie-shake",
+      "name": "Zombie Shake",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-23-zombie-run",
+      "name": "Zombie Run",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-24-zombie-dance",
+      "name": "Zombie Dance",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "💃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-25-rose-gift",
+      "name": "Rose Gift",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🎁",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-26-queen-throne",
+      "name": "Queen Throne",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🎁",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-27-montagem-miau",
+      "name": "Montagem Miau",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "💃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-28-crab-rave",
+      "name": "Crab Rave",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "💃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-29-love-for-you",
+      "name": "Love For You",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "💖",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-30-montagem-tomada",
+      "name": "Montagem Tomada",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "💃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-31-king-throne",
+      "name": "King Throne",
+      "category": "emote",
+      "rarity": "이모트",
+      "value": null,
+      "icon": "🎁",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-0-emberstorm-detonation",
+      "name": "Emberstorm Detonation",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-1-galaxy-shatter",
+      "name": "Galaxy Shatter",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-2-frostflare-barrage",
+      "name": "Frostflare Barrage",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-3-soul-counter",
+      "name": "Soul Counter",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-4-peppermint-candy",
+      "name": "Peppermint Candy",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-5-peppermint-swirl",
+      "name": "Peppermint Swirl",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-6-ornamental-strike",
+      "name": "Ornamental Strike",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-7-bell-light",
+      "name": "Bell Light",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-8-moonbeam-memory",
+      "name": "Moonbeam Memory",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-9-floppy-chicken-explosion",
+      "name": "Floppy Chicken Explosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-10-the-curse-explosion",
+      "name": "The Curse Explosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-11-oceanflow-puddle",
+      "name": "Oceanflow Puddle",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌊",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-12-oceanflow-peak",
+      "name": "Oceanflow Peak",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌊",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-13-meowstruck",
+      "name": "Meowstruck",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-14-catalyzer",
+      "name": "Catalyzer",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-15-nightclaw-portal",
+      "name": "Nightclaw Portal",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-16-giant-egg-explosion",
+      "name": "Giant Egg Explosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-17-slime-egg",
+      "name": "Slime Egg",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-18-storm-burst",
+      "name": "Storm Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "⚡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-19-neon-echo",
+      "name": "Neon Echo",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-20-sonic-boom",
+      "name": "Sonic Boom",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-21-shadow-pulse",
+      "name": "Shadow Pulse",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-22-moonlight-mirage",
+      "name": "Moonlight Mirage",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-23-ko-explosion",
+      "name": "KO! Explosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-24-divine-punishment",
+      "name": "Divine Punishment",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-25-lost-souls",
       "name": "Lost Souls",
       "category": "effect",
-      "rarity": "시각 효과",
+      "rarity": "폭발 효과",
       "value": null,
       "icon": "👻",
       "tradable": true,
       "quantity": false
     },
     {
-      "id": "effect-glorious-exit",
+      "id": "effect-26-glorious-exit",
       "name": "Glorious Exit",
       "category": "effect",
-      "rarity": "시각 효과",
+      "rarity": "폭발 효과",
       "value": null,
-      "icon": "🌟",
+      "icon": "✨",
       "tradable": true,
       "quantity": false
     },
     {
-      "id": "effect-purification-explosion",
+      "id": "effect-27-purification-explosion",
       "name": "Purification Explosion",
       "category": "effect",
-      "rarity": "시각 효과",
+      "rarity": "폭발 효과",
       "value": null,
-      "icon": "🫧",
+      "icon": "💥",
       "tradable": true,
       "quantity": false
     },
     {
-      "id": "effect-banished-explosion",
+      "id": "effect-28-banished-explosion",
       "name": "Banished Explosion",
       "category": "effect",
-      "rarity": "시각 효과",
+      "rarity": "폭발 효과",
       "value": null,
-      "icon": "🌫️",
+      "icon": "💥",
       "tradable": true,
       "quantity": false
     },
     {
-      "id": "effect-ghoul-explosion",
+      "id": "effect-29-ghoul-explosion",
       "name": "Ghoul Explosion",
       "category": "effect",
-      "rarity": "시각 효과",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-30-system-shutdown",
+      "name": "System Shutdown",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💠",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-31-virus-meltdown",
+      "name": "Virus Meltdown",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-32-plasma-surge",
+      "name": "Plasma Surge",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-33-plasma-discharge",
+      "name": "Plasma Discharge",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-34-neon-burst",
+      "name": "Neon Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-35-digital-detonation",
+      "name": "Digital Detonation",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💠",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-36-cyberquake",
+      "name": "Cyberquake",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-37-ashfall",
+      "name": "Ashfall",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-38-dragon-s-fury",
+      "name": "Dragon's Fury",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🐉",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-39-ember-burst",
+      "name": "Ember Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-40-inferno-blast",
+      "name": "Inferno Blast",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-41-inferno-rebirth",
+      "name": "Inferno Rebirth",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-42-phoenix-flare",
+      "name": "Phoenix Flare",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🐉",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-43-specter-s-fury",
+      "name": "Specter's Fury",
+      "category": "effect",
+      "rarity": "폭발 효과",
       "value": null,
       "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-44-spectral-eruption",
+      "name": "Spectral Eruption",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-45-spectral-flash",
+      "name": "Spectral Flash",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-46-iron-blast",
+      "name": "Iron Blast",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-47-hellfire-burst",
+      "name": "Hellfire Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-48-cursed-echo",
+      "name": "Cursed Echo",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-49-dark-requiem",
+      "name": "Dark Requiem",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-50-graveyard-burst",
+      "name": "Graveyard Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-51-cursed-coffin",
+      "name": "Cursed Coffin",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-52-necrotic-burst",
+      "name": "Necrotic Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-53-cursed-sands-eruption",
+      "name": "Cursed Sands Eruption",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-54-azure-phoenix-burst",
+      "name": "Azure Phoenix Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🐉",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-55-haunted-ember",
+      "name": "Haunted Ember",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-56-bone-rattle",
+      "name": "Bone Rattle",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-57-lolplosion",
+      "name": "LOLplosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-58-facepalm-blast",
+      "name": "Facepalm Blast",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-59-witch-fury",
+      "name": "Witch Fury",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-60-witch-s-cackle",
+      "name": "Witch's Cackle",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-61-specter-pop",
+      "name": "Specter Pop",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-62-pumpkin-pop",
+      "name": "Pumpkin Pop",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-63-pumpkin-burst",
+      "name": "Pumpkin Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-64-hellfire-surge",
+      "name": "Hellfire Surge",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-65-headless-eruption",
+      "name": "Headless Eruption",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-66-ghostly-eruption",
+      "name": "Ghostly Eruption",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-67-cursed-inferno",
+      "name": "Cursed Inferno",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-68-cursed-ashes",
+      "name": "Cursed Ashes",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-69-crypt-burst",
+      "name": "Crypt Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-70-banshee-wail",
+      "name": "Banshee Wail",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-71-spectral-detonation",
+      "name": "Spectral Detonation",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-72-phantom-burst",
+      "name": "Phantom Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-73-coffin-eruption",
+      "name": "Coffin Eruption",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-74-banshee-s-cry",
+      "name": "Banshee's Cry",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-75-sands-of-time",
+      "name": "Sands of Time",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-76-jack-o-lantern-blast",
+      "name": "Jack-O-Lantern Blast",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-77-snowfall",
+      "name": "Snowfall",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-78-snowburst",
+      "name": "Snowburst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-79-ice-storm",
+      "name": "Ice Storm",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-80-ice-shards",
+      "name": "Ice Shards",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-81-ice-blast",
+      "name": "Ice Blast",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-82-frozen-flash",
+      "name": "Frozen Flash",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-83-frost-flurry",
+      "name": "Frost Flurry",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-84-crystal-burst",
+      "name": "Crystal Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-85-blizzard-strike",
+      "name": "Blizzard Strike",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-86-snowstorm",
+      "name": "Snowstorm",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-87-radiant-detonation",
+      "name": "Radiant Detonation",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-88-northern-lights",
+      "name": "Northern Lights",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-89-icy-pop",
+      "name": "Icy Pop",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-90-ice-shatter",
+      "name": "Ice Shatter",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-91-frosted-burst",
+      "name": "Frosted Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-92-frost-pop",
+      "name": "Frost Pop",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-93-frost-flare",
+      "name": "Frost Flare",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-94-blizzard-blast",
+      "name": "Blizzard Blast",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-95-aurora-s-explosion",
+      "name": "Aurora's Explosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-96-icy-burst",
+      "name": "Icy Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-97-singularity-shockwave",
+      "name": "Singularity Shockwave",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-98-volcanic-surge",
+      "name": "Volcanic Surge",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-99-flashpoint-detonation",
+      "name": "Flashpoint Detonation",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-100-stormbreaker-burst",
+      "name": "Stormbreaker Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "⚡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-101-iridescent-implosion",
+      "name": "Iridescent Implosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-102-core-disruptor",
+      "name": "Core Disruptor",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-103-omega-collapse",
+      "name": "Omega Collapse",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-104-pollen-burst",
+      "name": "Pollen Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-105-blossom-bomb",
+      "name": "Blossom Bomb",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-106-seed-scatter",
+      "name": "Seed Scatter",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-107-vineburst-pulse",
+      "name": "Vineburst Pulse",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-108-clan-reliquary",
+      "name": "Clan Reliquary",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-109-firecracker-burst",
+      "name": "Firecracker Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-110-pulse-core",
+      "name": "Pulse Core",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-111-ash-bloom",
+      "name": "Ash Bloom",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-112-cascade-break",
+      "name": "Cascade Break",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-113-slipstream-collapse",
+      "name": "Slipstream Collapse",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-114-seafloor-fracture",
+      "name": "Seafloor Fracture",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌊",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-115-crushwave",
+      "name": "Crushwave",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-116-geyser-lash",
+      "name": "Geyser Lash",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-117-pixel-cloud",
+      "name": "Pixel Cloud",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💠",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-118-chunk-pop",
+      "name": "Chunk Pop",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-119-pixel-detonate",
+      "name": "Pixel Detonate",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💠",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-120-mini-glitch",
+      "name": "Mini Glitch",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💠",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-121-volcanic-blast",
+      "name": "Volcanic Blast",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-122-slime-pop",
+      "name": "Slime Pop",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-123-zap-burst",
+      "name": "Zap Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-124-shadow-crash",
+      "name": "Shadow Crash",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-125-retro-doom",
+      "name": "Retro Doom",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-126-razamel-s-lightning",
+      "name": "Razamel's Lightning",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "⚡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-127-darkflare",
+      "name": "Darkflare",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-128-starfall",
+      "name": "Starfall",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-129-blinding-frost",
+      "name": "Blinding Frost",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-130-polar-explosion",
+      "name": "Polar Explosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-131-rainbow-frost",
+      "name": "Rainbow Frost",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-132-avalanche",
+      "name": "Avalanche",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-133-smoke-screen",
+      "name": "Smoke Screen",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-134-frost-trap",
+      "name": "Frost Trap",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-135-heavenly-barrier",
+      "name": "Heavenly Barrier",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-136-icarus-fall",
+      "name": "Icarus Fall",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-137-frost-dragon-beam",
+      "name": "Frost Dragon Beam",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-138-explosive-presents",
+      "name": "Explosive Presents",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-139-candy-cane-trap",
+      "name": "Candy Cane Trap",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-140-snowflake",
+      "name": "Snowflake",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-141-coal",
+      "name": "Coal",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-142-evil-blast",
+      "name": "Evil Blast",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-143-candy-cane-explosion",
+      "name": "Candy Cane Explosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-144-gift-explosion",
+      "name": "Gift Explosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-145-christmas-tree",
+      "name": "Christmas Tree",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-146-christmas-rift",
+      "name": "Christmas Rift",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-147-santa-beam",
+      "name": "Santa Beam",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-148-lantern-pop",
+      "name": "Lantern Pop",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-149-bamboo-crackle",
+      "name": "Bamboo Crackle",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-150-ink-snap",
+      "name": "Ink Snap",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-151-cliffside-echo",
+      "name": "Cliffside Echo",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-152-blossom-shatter",
+      "name": "Blossom Shatter",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🌸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-153-heaven-splitter",
+      "name": "Heaven Splitter",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-154-bubbleburst-blast",
+      "name": "Bubbleburst Blast",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-155-eggstorm-swarm",
+      "name": "Eggstorm Swarm",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "⚡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-156-golden-egg-implosion",
+      "name": "Golden Egg Implosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-157-springlight-bloom",
+      "name": "Springlight Bloom",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-158-chick-pop",
+      "name": "Chick Pop",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-159-eggroll-detonation",
+      "name": "Eggroll Detonation",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-160-springburst-bloom",
+      "name": "Springburst Bloom",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-161-pastel-pulse",
+      "name": "Pastel Pulse",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-162-nova-burst",
+      "name": "Nova Burst",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-163-mythical-meltdown",
+      "name": "Mythical Meltdown",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-164-disco-ball",
+      "name": "Disco Ball",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🪩",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-165-l-explosion",
+      "name": "L Explosion",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-166-rip",
+      "name": "RIP",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-167-dove-scatter",
+      "name": "Dove Scatter",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-168-ufo-abduction",
+      "name": "UFO Abduction",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🛸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-169-lightning-smite",
+      "name": "Lightning Smite",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "⚡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-170-periastron-s-ending",
+      "name": "Periastron's Ending",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-171-ferocitus-awakening",
+      "name": "Ferocitus' Awakening",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-172-rally-winner",
+      "name": "Rally Winner",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-173-phoenix-s-wake",
+      "name": "Phoenix's Wake",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🐉",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-174-soul-siphon",
+      "name": "Soul Siphon",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-175-beach-party",
+      "name": "Beach Party",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "🪩",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-176-feeding-frenzy",
+      "name": "Feeding Frenzy",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-177-kraken-s-revenge",
+      "name": "Kraken's Revenge",
+      "category": "effect",
+      "rarity": "폭발 효과",
+      "value": null,
+      "icon": "✨",
       "tradable": true,
       "quantity": false
     }
