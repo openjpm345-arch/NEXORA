@@ -128,7 +128,7 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 <div class="deal-chat" id="deal-chat" hidden aria-label="거래 채팅">
   <div class="deal-chat-head">
     <span class="deal-chat-avatar" aria-hidden="true">CM</span>
-    <div class="deal-chat-identity"><strong>CRAZYMADDOG01</strong><small>거래 채팅</small></div>
+    <div class="deal-chat-identity"><strong>CRAZYMADDOG01</strong><small>사이트 자동 안내 · Roblox 게임 채팅과 별도</small></div>
     <span class="deal-chat-context">거래 확인</span>
   </div>
   <div class="deal-chat-messages" id="deal-chat-messages" role="log" aria-live="polite" aria-relevant="additions"></div>
@@ -140,7 +140,7 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
     <input class="deal-chat-input" id="deal-chat-input" type="text" maxlength="160" placeholder="메시지를 입력하세요..." aria-label="메시지 입력" disabled>
     <button class="deal-chat-send" id="deal-chat-send" type="submit" disabled>전송</button>
   </form>
-  <p class="deal-chat-hint">DEAL 또는 딜이라고 답장하면 거래 안내가 이어집니다.</p>
+  <p class="deal-chat-hint">거래에 동의하면 DEAL 또는 딜이라고 답장하세요. 이 채팅은 웹사이트 안에서만 작동합니다.</p>
 </div>
 <div class="trade-message" id="trade-message" hidden></div>
 <div class="ps-panel" id="ps-panel" hidden><div><h3>거래 제안이 준비되었습니다!</h3><p>거래를 계속하려면 프라이빗 서버에 입장하세요.</p></div><button class="btn btn-primary" id="join-ps">프라이빗 서버 입장 ↗</button></div>
@@ -149,7 +149,7 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 <footer><span>NEXORA · 거래 서버</span><span>팬 제작 커뮤니티 인터페이스 · Roblox 및 Uplift Games와 제휴하지 않습니다.</span></footer>
 </main>
 <script>
-const PRIVATE_SERVER_URL="https://www.roblox.com.ss/games/920587237/3H-Adopt-Me?privateServerLinkCode=48791062562440976530803344833389";
+const PRIVATE_SERVER_URL="https://www.roblox.com/games/920587237/3H-Adopt-Me?privateServerLinkCode=48791062562440976530803344833389";
 let pets=[];
 let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="all";
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
@@ -216,7 +216,7 @@ async function playDealChat(){
   $("ps-note").hidden=true;
   setDealComposerEnabled(false);
   if(!await waitForTrader(run,440))return;
-  if(!await typeDealChatLine("이 제안으로 거래할까요?",run,"trader"))return;
+  if(!await typeDealChatLine("Deal",run,"trader"))return;
   dealChatBusy=false;
   setDealComposerEnabled(true);
 }
@@ -233,7 +233,7 @@ async function handleDealChatSubmit(event){
   const isNo=/\b(no|nope|cancel)\b/.test(normalized)||/(아니|취소|싫|안 할|안해|안 할래)/.test(normalized);
   const isDeal=!isNo&&(/\b(deal|yes|ok|okay)\b/.test(normalized)||/(딜|좋아|네|거래할게|거래해요|할게요|ㅇㅇ|ㄱㄱ)/.test(normalized));
   const reply=isDeal
-    ?"좋아요! 딜이에요. 거래를 계속하려면 프라이빗 서버에 입장해 주세요."
+    ?"딜 확인했습니다! 거래를 계속하려면 아래 공식 Roblox 프라이빗 서버 링크로 입장해 주세요."
     :isNo
       ?"알겠습니다. 거래를 취소할게요. 제안을 다시 확인한 뒤 편하게 답장해 주세요."
       :"메시지를 확인했어요. 거래하려면 DEAL 또는 딜이라고 답장해 주세요.";
