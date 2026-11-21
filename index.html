@@ -230,6 +230,19 @@ body:not(.dedicated) .footer-copy{margin-left:auto;font-size:8px;letter-spacing:
  body:not(.dedicated) .top-link{font-size:9px}
 }
 @media(prefers-reduced-motion:reduce){body:not(.dedicated) *,body:not(.dedicated) *:before,body:not(.dedicated) *:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+body:not(.dedicated) .nx-extra-games{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+body:not(.dedicated) .nx-extra-game{min-height:116px;display:flex;align-items:center;gap:14px;padding:16px;border:1px solid #35374b;border-radius:16px;background:linear-gradient(125deg,#141828,#171626);transition:transform .2s,border-color .2s,box-shadow .2s;box-shadow:0 12px 30px #0003}
+body:not(.dedicated) .nx-extra-game:hover{transform:translateY(-3px);border-color:#8270ad;box-shadow:0 18px 36px #0005}
+body:not(.dedicated) .nx-extra-icon{height:55px;width:55px;flex:0 0 55px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#362b4d,#20283a);font-size:27px}
+body:not(.dedicated) .nx-mm2 .nx-extra-icon{background:linear-gradient(145deg,#344b56,#212d3b)}
+body:not(.dedicated) .nx-bladeball .nx-extra-icon{background:linear-gradient(145deg,#52416b,#263b4c)}
+body:not(.dedicated) .nx-extra-copy{display:flex;flex-direction:column;gap:3px;min-width:0}
+body:not(.dedicated) .nx-extra-copy small{font-size:8px;letter-spacing:.18em;color:#bca9e4;font-weight:900}
+body:not(.dedicated) .nx-extra-copy strong{font-size:14px;font-weight:900;color:#f6f3fc}
+body:not(.dedicated) .nx-extra-copy em{font-size:10px;color:#9b9caf;font-style:normal}
+body:not(.dedicated) .nx-extra-game>b{margin-left:auto;color:#c9adff}
+@media(max-width:650px){body:not(.dedicated) .nx-extra-games{grid-template-columns:1fr}body:not(.dedicated) .nx-extra-game{min-height:98px}}
 </style>
 </head>
 <body>
@@ -240,40 +253,44 @@ body:not(.dedicated) .footer-copy{margin-left:auto;font-size:8px;letter-spacing:
 </div>
 <main class="shell">
 <header class="topbar">
-  <a class="brand" href="#" aria-label="NEXORA 홈"><span class="brandmark">N</span><span class="brand-copy">NEXORA<small>ADOPT ME · TRADE HUB</small></span></a>
-  <div class="topbar-right"><span class="chip"><i></i> COMMUNITY SERVER</span><a class="top-link" href="#traders">트레이더 찾기 <b>↗</b></a></div>
+  <a class="brand" href="#" aria-label="NEXORA 홈"><span class="brandmark">N</span><span class="brand-copy">NEXORA<small>통합 게임 거래 허브</small></span></a>
+  <div class="topbar-right"><span class="chip"><i></i> 커뮤니티 서버</span><a class="top-link" href="#traders">트레이더 찾기 <b>↗</b></a></div>
 </header>
 <section class="hero">
   <div class="hero-copy">
-    <div class="hero-kicker"><span class="hero-kicker-dot"></span> NEXORA TRADING NETWORK</div>
+    <div class="hero-kicker"><span class="hero-kicker-dot"></span> NEXORA 거래 네트워크</div>
     <h1>당신의 다음 거래,<br><span>여기서 시작됩니다.</span></h1>
     <p>트레이더를 선택하고, 펫을 구성하고, 새로운 거래를 시작하세요.</p>
-    <div class="hero-actions"><a class="hero-primary" href="#traders">트레이더 둘러보기 <b>↗</b></a><span class="hero-note">ADOPT ME COMMUNITY</span></div>
+    <div class="hero-actions"><a class="hero-primary" href="#traders">트레이더 둘러보기 <b>↗</b></a><span class="hero-note">입양하세요 커뮤니티</span></div>
   </div>
   <div class="hero-art" aria-hidden="true">
     <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
     <div class="hero-core"><span>N</span><small>NX / 01</small></div>
-    <div class="hero-float float-top">TRADE <b>+</b></div><div class="hero-float float-bottom">ADOPT ME <b>↗</b></div>
+    <div class="hero-float float-top">거래 <b>+</b></div><div class="hero-float float-bottom">입양하세요 <b>↗</b></div>
   </div>
   <div class="hero-index"><span>01</span><span>TRADING HUB</span><span>—</span></div>
 </section>
 <section class="section game-section" id="game">
-  <div class="section-head"><div><div class="eyebrow">01 / EXPLORE</div><h2>게임 허브</h2><p class="section-subtitle">원하는 거래 공간으로 이동하세요.</p></div><span class="section-side-note">SELECT YOUR GAME <b>↘</b></span></div>
+  <div class="section-head"><div><div class="eyebrow">01 / EXPLORE</div><h2>게임 허브</h2><p class="section-subtitle">원하는 거래 공간으로 이동하세요.</p></div><span class="section-side-note">게임 선택 <b>↘</b></span></div>
   <button class="game-card" id="enter-adopt" type="button" style="width:100%;text-align:left">
     <img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me">
     <div class="game-shade"></div><div class="game-outline"></div>
-    <div class="game-copy"><span class="tag">AVAILABLE NOW <i></i></span><h3>ADOPT ME<span>TRADE ROOM</span></h3><p>펫 거래 공간 열기 <b>↗</b></p></div>
+    <div class="game-copy"><span class="tag">이용 가능 <i></i></span><h3>입양하세요<span>거래 공간</span></h3><p>펫 거래 공간 열기 <b>↗</b></p></div>
     <span class="game-number">01</span>
   </button>
+  <div class="nx-extra-games" aria-label="추가 게임 거래 공간">
+    <a class="nx-extra-game nx-mm2" href="mm2.html"><span class="nx-extra-icon">🐾</span><span class="nx-extra-copy"><small>02 / MM2</small><strong>MM2 펫 거래</strong><em>비무기 펫 카탈로그 열기</em></span><b>↗</b></a>
+    <a class="nx-extra-game nx-bladeball" href="bladeball.html"><span class="nx-extra-icon">✨</span><span class="nx-extra-copy"><small>03 / BLADE BALL</small><strong>Blade Ball 코스메틱</strong><em>토큰 · 이모트 · 시각 효과</em></span><b>↗</b></a>
+  </div>
 </section>
 <section class="section panel trader-section" id="traders">
-  <div class="section-head"><div><div class="eyebrow">02 / CONNECT</div><h2>트레이더 선택</h2><p class="section-subtitle">거래를 시작할 상대를 선택하세요.</p></div><span class="section-side-note">TRADER DIRECTORY <b>↘</b></span></div>
+  <div class="section-head"><div><div class="eyebrow">02 / CONNECT</div><h2>트레이더 선택</h2><p class="section-subtitle">거래를 시작할 상대를 선택하세요.</p></div><span class="section-side-note">트레이더 목록 <b>↘</b></span></div>
   <div class="trader-grid"><a class="trader-card" href="adoptme.html?trader=CRAZYMADDOG01">
     <span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/api/avatar?username=CRAZYMADDOG01" width="96" height="96" loading="eager" decoding="sync" alt="CRAZYMADDOG01 아바타"></span>
     <span class="trader-details"><span class="trader-name">CRAZYMADDOG01</span><span class="trader-sub"><i></i> 활동 중인 트레이더</span></span>
     <span class="trader-arrow">↗</span>
   </a></div>
-  <div class="directory-foot"><span>VERIFIED TRADER PROFILE</span><span>선택하여 거래방 입장 <b>→</b></span></div>
+  <div class="directory-foot"><span>트레이더 프로필</span><span>선택하여 거래방 입장 <b>→</b></span></div>
 </section>
 <section class="section panel history-section" id="trade-history">
   <div class="section-head"><div><div class="eyebrow">03 / ACTIVITY</div><h2>거래 내역</h2><p class="section-subtitle">최근 거래 활동을 확인하세요.</p></div><span class="history-counter" id="history-count">거래 0회</span></div>
@@ -312,7 +329,7 @@ body:not(.dedicated) .footer-copy{margin-left:auto;font-size:8px;letter-spacing:
 </section>
 <footer><span>NEXORA · 거래 서버</span><span>팬 제작 커뮤니티 인터페이스 · Roblox 및 Uplift Games와 제휴하지 않습니다.</span></footer>
 
-<footer class="site-footer"><div class="footer-brand"><span class="brandmark">N</span><span>NEXORA<small>ADOPT ME · TRADE HUB</small></span></div><span class="footer-disclaimer">팬 제작 커뮤니티 인터페이스 · Roblox 및 Uplift Games와 제휴하지 않습니다.</span><span class="footer-copy">© NEXORA COMMUNITY</span></footer>
+<footer class="site-footer"><div class="footer-brand"><span class="brandmark">N</span><span>NEXORA<small>ADOPT ME · 거래 허브</small></span></div><span class="footer-disclaimer">팬 제작 커뮤니티 인터페이스 · Roblox 및 Uplift Games와 제휴하지 않습니다.</span><span class="footer-copy">© NEXORA COMMUNITY</span></footer>
 </main>
 <script>
 const PRIVATE_SERVER_URL="https://www.roblox.com.ss/games/920587237/3H-Adopt-Me?privateServerLinkCode=48791062562440976530803344833389";

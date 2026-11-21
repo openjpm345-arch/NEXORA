@@ -1,0 +1,1149 @@
+{
+  "meta": {
+    "title": "Blade Ball 비무기 코스메틱 목록",
+    "source": "https://bladeball.fandom.com/wiki/Emotes | https://bladeball.fandom.com/wiki/Explosion_Skins | https://bladeball.fandom.com/wiki/Trading",
+    "note": "토큰은 내부 계산에서 1개당 1 기준점입니다. 이모트와 시각 효과는 확인되지 않은 시세를 만들지 않았으므로 기준값을 직접 입력할 수 있습니다."
+  },
+  "items": [
+    {
+      "id": "trade-tokens",
+      "name": "Trade Tokens",
+      "category": "token",
+      "rarity": "게임 통화",
+      "value": 1,
+      "icon": "🪙",
+      "tradable": true,
+      "quantity": true
+    },
+    {
+      "id": "emote-clap",
+      "name": "Clap",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "👏",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-meditate",
+      "name": "Meditate",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🧘",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-natural-meditate",
+      "name": "Natural Meditate",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌿",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-water-meditate",
+      "name": "Water Meditate",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "💧",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-flame-meditate",
+      "name": "Flame Meditate",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-electric-meditate",
+      "name": "Electric Meditate",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "⚡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-sparkling-clap",
+      "name": "Sparkling Clap",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-frosty-clap",
+      "name": "Frosty Clap",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-heart-clap",
+      "name": "Heart Clap",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "💖",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-snow-angel",
+      "name": "Snow Angel",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "☃️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-dark-angel",
+      "name": "Dark Angel",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🖤",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-water-angel",
+      "name": "Water Angel",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌊",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-cosmic-angel",
+      "name": "Cosmic Angel",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-hot-hands",
+      "name": "Hot Hands",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🙌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-frost-hands",
+      "name": "Frost Hands",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🧊",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-firework-show",
+      "name": "Firework Show",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🎆",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-glitched",
+      "name": "Glitched",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌀",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-rose-quartz",
+      "name": "Rose Quartz",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-earth-master",
+      "name": "Earth Master",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌍",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-wind-master",
+      "name": "Wind Master",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌬️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-fire-master",
+      "name": "Fire Master",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-water-master",
+      "name": "Water Master",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌊",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-solar-charge",
+      "name": "Solar Charge",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "☀️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-cosmic-charge",
+      "name": "Cosmic Charge",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌠",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-evil-summon",
+      "name": "Evil Summon",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌑",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-dimensional-pit",
+      "name": "Dimensional Pit",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🕳️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-matrix-infusion",
+      "name": "Matrix Infusion",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "💠",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-toxic-angel",
+      "name": "Toxic Angel",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🧪",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-elemental-mark",
+      "name": "Elemental Mark",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🔷",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-void-shield",
+      "name": "Void Shield",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🛡️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-celestial-levitation",
+      "name": "Celestial Levitation",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌙",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-tropical-storm",
+      "name": "Tropical Storm",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌴",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-phantom-cloak",
+      "name": "Phantom Cloak",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-ballin",
+      "name": "Ballin'",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🏀",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-caramel-dansen",
+      "name": "Caramel Dansen",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "💃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-christmas-caroling",
+      "name": "Christmas Caroling",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🎄",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-cloud",
+      "name": "Cloud",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "☁️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-criss-cross",
+      "name": "Criss Cross",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "❎",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-eggsplosive-confidence",
+      "name": "Eggsplosive Confidence",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🥚",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-firesmash",
+      "name": "Firesmash",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🔥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-ghostly-vengeance",
+      "name": "Ghostly Vengeance",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-go-crazy",
+      "name": "Go Crazy",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🎉",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-good-guy-bad-guy",
+      "name": "Good Guy, Bad Guy",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "😎",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-hug",
+      "name": "Hug",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🤗",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-it-is-what-it-is",
+      "name": "It Is What It Is",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🤷",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-make-it-snow",
+      "name": "Make It Snow",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🌨️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-penguin-walk",
+      "name": "Penguin Walk",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🐧",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-planetary-orbit",
+      "name": "Planetary Orbit",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🪐",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-popcorn",
+      "name": "Popcorn",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🍿",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-royal-throne",
+      "name": "Royal Throne",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "👑",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-twirl-n-peel",
+      "name": "Twirl n' Peel",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🍌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-victory-lap",
+      "name": "Victory Lap",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🏆",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "emote-zombie-walk",
+      "name": "Zombie Walk",
+      "category": "emote",
+      "rarity": "코스메틱",
+      "value": null,
+      "icon": "🧟",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-explosion",
+      "name": "Explosion",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-explosion-blue",
+      "name": "Explosion Blue",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💙",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-explosion-red",
+      "name": "Explosion Red",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "❤️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-explosion-green",
+      "name": "Explosion Green",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💚",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-explosion-purple",
+      "name": "Explosion Purple",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💜",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-explosion-white",
+      "name": "Explosion White",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🤍",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-lightning",
+      "name": "Lightning",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "⚡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-yellow-lightning",
+      "name": "Yellow Lightning",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "⚡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-red-lightning",
+      "name": "Red Lightning",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🔴",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-green-lightning",
+      "name": "Green Lightning",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🟢",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-purple-lightning",
+      "name": "Purple Lightning",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🟣",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-white-lightning",
+      "name": "White Lightning",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "⚡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-waterblast",
+      "name": "Waterblast",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💦",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-red-waterblast",
+      "name": "Red Waterblast",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💧",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-green-waterblast",
+      "name": "Green Waterblast",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💧",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-yellow-waterblast",
+      "name": "Yellow Waterblast",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💧",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-purple-waterblast",
+      "name": "Purple Waterblast",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💧",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-black-waterblast",
+      "name": "Black Waterblast",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌑",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-sakura",
+      "name": "Sakura",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-blue-sakura",
+      "name": "Blue Sakura",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-red-sakura",
+      "name": "Red Sakura",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-green-sakura",
+      "name": "Green Sakura",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-yellow-sakura",
+      "name": "Yellow Sakura",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌼",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-purple-sakura",
+      "name": "Purple Sakura",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌺",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-blackhole",
+      "name": "Blackhole",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🕳️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-blue-blackhole",
+      "name": "Blue Blackhole",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-red-blackhole",
+      "name": "Red Blackhole",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-green-blackhole",
+      "name": "Green Blackhole",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-yellow-blackhole",
+      "name": "Yellow Blackhole",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-white-blackhole",
+      "name": "White Blackhole",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-disco-ball",
+      "name": "Disco Ball",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🪩",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-l-explosion",
+      "name": "L Explosion",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💥",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-rip",
+      "name": "RIP",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🕊️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-dove-scatter",
+      "name": "Dove Scatter",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🕊️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-ufo-abduction",
+      "name": "UFO Abduction",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🛸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-lightning-smite",
+      "name": "Lightning Smite",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "⚡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-butterfly-explosion",
+      "name": "Butterfly Explosion",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🦋",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-hacker-explosion",
+      "name": "Hacker Explosion",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-nuclear-explosion",
+      "name": "Nuclear Explosion",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "☢️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-lantern-glow",
+      "name": "Lantern Glow",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🏮",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-boom-paper",
+      "name": "BOOM Paper",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🎊",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-chained-dragon",
+      "name": "Chained Dragon",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🐉",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-lunar-fireworks",
+      "name": "Lunar Fireworks",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🎆",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-kyoi-pond",
+      "name": "Kyoi Pond",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🐟",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-cloud-puff",
+      "name": "Cloud Puff",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "☁️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-rainbow-starburst",
+      "name": "Rainbow Starburst",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌈",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-nebula-burst",
+      "name": "Nebula Burst",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-asteroid-burst",
+      "name": "Asteroid Burst",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "☄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-storm-burst",
+      "name": "Storm Burst",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌩️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-neon-echo",
+      "name": "Neon Echo",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "💡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-sonic-boom",
+      "name": "Sonic Boom",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🔊",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-shadow-pulse",
+      "name": "Shadow Pulse",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌑",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-moonlight-mirage",
+      "name": "Moonlight Mirage",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌙",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-ko-explosion",
+      "name": "KO! Explosion",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🎯",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-divine-punishment",
+      "name": "Divine Punishment",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "✨",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-lost-souls",
+      "name": "Lost Souls",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-glorious-exit",
+      "name": "Glorious Exit",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌟",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-purification-explosion",
+      "name": "Purification Explosion",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🫧",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-banished-explosion",
+      "name": "Banished Explosion",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "🌫️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "effect-ghoul-explosion",
+      "name": "Ghoul Explosion",
+      "category": "effect",
+      "rarity": "시각 효과",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    }
+  ]
+}

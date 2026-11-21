@@ -1,0 +1,840 @@
+{
+  "meta": {
+    "title": "MM2 거래 가능 펫 목록",
+    "source": "https://bloxodes.com/wiki/murder-mystery-2/pets",
+    "sourceUpdated": "2026-10-21",
+    "note": "참고값이 확인된 항목에만 숫자를 입력했습니다. 나머지는 시세를 임의로 만들지 않았으며, 직접 기준값을 입력할 수 있습니다. 거래 불가로 확인된 네 항목은 선택할 수 없습니다."
+  },
+  "items": [
+    {
+      "id": "cat",
+      "name": "Cat",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🐱",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "dog",
+      "name": "Dog",
+      "category": "pet",
+      "rarity": "일반",
+      "value": 1,
+      "icon": "🐶",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "fox",
+      "name": "Fox",
+      "category": "pet",
+      "rarity": "흔하지 않음",
+      "value": 2,
+      "icon": "🦊",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "pig",
+      "name": "Pig",
+      "category": "pet",
+      "rarity": "흔하지 않음",
+      "value": 2,
+      "icon": "🐷",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "bear",
+      "name": "Bear",
+      "category": "pet",
+      "rarity": "희귀",
+      "value": 2,
+      "icon": "🐻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "bunny",
+      "name": "Bunny",
+      "category": "pet",
+      "rarity": "일반",
+      "value": 4,
+      "icon": "🐰",
+      "tradable": false,
+      "quantity": false
+    },
+    {
+      "id": "bat",
+      "name": "Bat",
+      "category": "pet",
+      "rarity": "전설",
+      "value": 165,
+      "icon": "🦇",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "fire-cat",
+      "name": "Fire Cat",
+      "category": "pet",
+      "rarity": "갓리",
+      "value": 2,
+      "icon": "🔥🐱",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "fire-dog",
+      "name": "Fire Dog",
+      "category": "pet",
+      "rarity": "갓리",
+      "value": 2,
+      "icon": "🔥🐶",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "fire-fox",
+      "name": "Fire Fox",
+      "category": "pet",
+      "rarity": "갓리",
+      "value": 2,
+      "icon": "🔥🦊",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "fire-pig",
+      "name": "Fire Pig",
+      "category": "pet",
+      "rarity": "갓리",
+      "value": 2,
+      "icon": "🔥🐷",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "fire-bear",
+      "name": "Fire Bear",
+      "category": "pet",
+      "rarity": "갓리",
+      "value": 2,
+      "icon": "🔥🐻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "fire-bat",
+      "name": "Fire Bat",
+      "category": "pet",
+      "rarity": "갓리",
+      "value": 2,
+      "icon": "🔥🦇",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "chroma-fire-cat",
+      "name": "Chroma Fire Cat",
+      "category": "pet",
+      "rarity": "크로마",
+      "value": 7,
+      "icon": "🌈🐱",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "chroma-fire-dog",
+      "name": "Chroma Fire Dog",
+      "category": "pet",
+      "rarity": "크로마",
+      "value": 7,
+      "icon": "🌈🐶",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "chroma-fire-fox",
+      "name": "Chroma Fire Fox",
+      "category": "pet",
+      "rarity": "크로마",
+      "value": 7,
+      "icon": "🌈🦊",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "chroma-fire-pig",
+      "name": "Chroma Fire Pig",
+      "category": "pet",
+      "rarity": "크로마",
+      "value": 7,
+      "icon": "🌈🐷",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "chroma-fire-bear",
+      "name": "Chroma Fire Bear",
+      "category": "pet",
+      "rarity": "크로마",
+      "value": 7,
+      "icon": "🌈🐻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "chroma-fire-bat",
+      "name": "Chroma Fire Bat",
+      "category": "pet",
+      "rarity": "크로마",
+      "value": 7,
+      "icon": "🌈🦇",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "chroma-fire-bunny",
+      "name": "Chroma Fire Bunny",
+      "category": "pet",
+      "rarity": "크로마",
+      "value": 3,
+      "icon": "🌈🐰",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "dogey",
+      "name": "Dogey",
+      "category": "pet",
+      "rarity": "흔하지 않음",
+      "value": 110,
+      "icon": "🐕",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "piggy",
+      "name": "Piggy",
+      "category": "pet",
+      "rarity": "일반",
+      "value": 15,
+      "icon": "🐽",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "nobledragon",
+      "name": "Nobledragon",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🐉",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "seahorsey",
+      "name": "Seahorsey",
+      "category": "pet",
+      "rarity": "흔하지 않음",
+      "value": 8,
+      "icon": "🪸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "chilly",
+      "name": "Chilly",
+      "category": "pet",
+      "rarity": "흔하지 않음",
+      "value": 7,
+      "icon": "🐧",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "pengy",
+      "name": "Pengy",
+      "category": "pet",
+      "rarity": "일반",
+      "value": 7,
+      "icon": "🐧",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "badger",
+      "name": "Badger",
+      "category": "pet",
+      "rarity": "일반",
+      "value": 1,
+      "icon": "🦡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "ufo",
+      "name": "UFO",
+      "category": "pet",
+      "rarity": "일반",
+      "value": 3,
+      "icon": "🛸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "mechbug",
+      "name": "Mechbug",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🪲",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "tankie",
+      "name": "Tankie",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🐢",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "deathspeaker",
+      "name": "Deathspeaker",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "👻",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "fairy",
+      "name": "Fairy",
+      "category": "pet",
+      "rarity": "흔하지 않음",
+      "value": 8,
+      "icon": "🧚",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "eyeball",
+      "name": "Eyeball",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "👁️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "jetstream",
+      "name": "Jetstream",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🌬️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "zombie-dog",
+      "name": "Zombie Dog",
+      "category": "pet",
+      "rarity": "일반",
+      "value": 1000,
+      "icon": "🐕‍🦺",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "black-cat",
+      "name": "Black Cat",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🐈‍⬛",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "blue-pumpkin-2018",
+      "name": "Blue Pumpkin (2018)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "red-pumpkin-2018",
+      "name": "Red Pumpkin (2018)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "green-pumpkin-2018",
+      "name": "Green Pumpkin (2018)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "purple-pumpkin-2018",
+      "name": "Purple Pumpkin (2018)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "pumpkin-2017",
+      "name": "Pumpkin (2017)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "pumpkin-2018",
+      "name": "Pumpkin (2018)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "vampire-bat",
+      "name": "Vampire Bat",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🦇",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "red-pumpkin-2019",
+      "name": "Red Pumpkin (2019)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "green-pumpkin-2019",
+      "name": "Green Pumpkin (2019)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "blue-pumpkin-2019",
+      "name": "Blue Pumpkin (2019)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "pumpkin-2019",
+      "name": "Pumpkin (2019)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "scarecrow",
+      "name": "Scarecrow",
+      "category": "pet",
+      "rarity": "희귀",
+      "value": 1,
+      "icon": "🌾",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "red-pumpkin-2020",
+      "name": "Red Pumpkin (2020)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "green-pumpkin-2020",
+      "name": "Green Pumpkin (2020)",
+      "category": "pet",
+      "rarity": "희귀",
+      "value": 2,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "blue-pumpkin-2020",
+      "name": "Blue Pumpkin (2020)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "pumpkin-2020",
+      "name": "Pumpkin (2020)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "red-pumpkin-2021",
+      "name": "Red Pumpkin (2021)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "green-pumpkin-2021",
+      "name": "Green Pumpkin (2021)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "shadow-pumpkin",
+      "name": "Shadow Pumpkin",
+      "category": "pet",
+      "rarity": "흔하지 않음",
+      "value": 2,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "skully",
+      "name": "Skully",
+      "category": "pet",
+      "rarity": "전설",
+      "value": 4,
+      "icon": "💀",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "pumpkin-2021",
+      "name": "Pumpkin (2021)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🎃",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "lil-alien",
+      "name": "Lil' Alien",
+      "category": "pet",
+      "rarity": "일반",
+      "value": 3,
+      "icon": "👽",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "elf-2019",
+      "name": "Elf (2019)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🧝",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "mr-reindeer",
+      "name": "Mr. Reindeer",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🦌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "elf-2016",
+      "name": "Elf (2016)",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🧝",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "reindeer",
+      "name": "Reindeer",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🦌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "rudolph",
+      "name": "Rudolph",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🦌",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "mr-snowman",
+      "name": "Mr. Snowman",
+      "category": "pet",
+      "rarity": "일반",
+      "value": 2,
+      "icon": "⛄",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "snowbear",
+      "name": "Snowbear",
+      "category": "pet",
+      "rarity": "일반",
+      "value": 3,
+      "icon": "🐻‍❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "santa-dog",
+      "name": "Santa Dog",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🐶",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "frostbird",
+      "name": "Frostbird",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🐦",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "snowman",
+      "name": "Snowman",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "⛄",
+      "tradable": false,
+      "quantity": false
+    },
+    {
+      "id": "santa-2019",
+      "name": "Santa (2019)",
+      "category": "pet",
+      "rarity": "희귀",
+      "value": null,
+      "icon": "🎅",
+      "tradable": false,
+      "quantity": false
+    },
+    {
+      "id": "heart-pet",
+      "name": "<3",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "💗",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "carrot-bunny",
+      "name": "Carrot Bunny",
+      "category": "pet",
+      "rarity": "일반",
+      "value": 3,
+      "icon": "🥕🐰",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "teddy",
+      "name": "Teddy",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🧸",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "ghosty",
+      "name": "Ghosty",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "👻",
+      "tradable": false,
+      "quantity": false
+    },
+    {
+      "id": "traveller",
+      "name": "Traveller",
+      "category": "pet",
+      "rarity": "갓리",
+      "value": 3,
+      "icon": "🧳",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "icey",
+      "name": "Icey",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "❄️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "skelly",
+      "name": "Skelly",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "💀",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "phoenix",
+      "name": "Phoenix",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🦅",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "sammy",
+      "name": "Sammy",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🐍",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "electro",
+      "name": "Electro",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "⚡",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "steambird",
+      "name": "Steambird",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "🐦",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "ice-phoenix",
+      "name": "Ice Phoenix",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "❄️🦅",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "overseer-eye",
+      "name": "Overseer Eye",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "👁️",
+      "tradable": true,
+      "quantity": false
+    },
+    {
+      "id": "elitey",
+      "name": "Elitey",
+      "category": "pet",
+      "rarity": "미확인",
+      "value": null,
+      "icon": "⭐",
+      "tradable": true,
+      "quantity": false
+    }
+  ]
+}
