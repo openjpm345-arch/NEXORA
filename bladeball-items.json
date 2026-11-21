@@ -11,7 +11,7 @@
       "https://bladeballwiki.com/wiki/battle-pass/halloween-haunted/"
     ],
     "note": "토큰은 1개당 내부 기준값 1로 계산합니다. 이모트와 폭발 효과는 공식 가치표가 확인되지 않아 시세를 임의로 넣지 않았습니다. 거래 전에 게임 내 인덱스의 실제 RAP를 확인하고 직접 기준값을 입력하세요. 이 페이지에는 검 아이템을 포함하지 않습니다.",
-    "imageNote": "Gambar yang tersedia dan cocok dengan nama item telah ditambahkan dari halaman Blade Ball Wiki. Item tanpa gambar sumber yang cocok tetap memakai ikon pengganti; tidak ada gambar yang ditebak."
+    "imageNote": "Gambar item yang cocok telah ditambahkan dari aset Blade Ball Wiki. Item tanpa gambar sumber yang cocok tetap memakai ikon pengganti; tidak ada gambar yang ditebak."
   },
   "items": [
     {
@@ -102,7 +102,9 @@
       "value": null,
       "icon": "🎭",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/be8ee0e7441cd9bcfcef9dbc9639a8c3.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "emote-8-tip-toe-dance",
@@ -170,7 +172,9 @@
       "value": null,
       "icon": "✨",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/9e9023869e435f77765e9c47a3839b51.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "emote-14-it-s-fantastic",
@@ -180,7 +184,9 @@
       "value": null,
       "icon": "🎭",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/cd042b86912911cbd19b7a4dd870ab3c.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "emote-15-undead",
@@ -190,7 +196,9 @@
       "value": null,
       "icon": "🎭",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/bcbc600a93d186409cea388874b48e3c.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "emote-16-super-trendy-dance",
@@ -200,7 +208,9 @@
       "value": null,
       "icon": "💃",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/88650e1a9aca5197cc1ce950fda0e8f0.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "emote-17-easter-handshake",
@@ -210,7 +220,9 @@
       "value": null,
       "icon": "🙌",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/e4d57b9770b9a981d8941de3ac61e649.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "emote-18-creepy-cackle",
@@ -230,7 +242,9 @@
       "value": null,
       "icon": "💃",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/c129351172289a03355cb061f13567e6.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "emote-20-creeping-chill",
@@ -240,7 +254,9 @@
       "value": null,
       "icon": "🎭",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/4a3a1750966cae36ab97bdb9ac08d93a.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "emote-21-crystal-idk",
@@ -790,7 +806,9 @@
       "value": null,
       "icon": "👻",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/2f0117b33e8aedab80b7c290b1d03d35.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "effect-44-spectral-eruption",
@@ -830,7 +848,9 @@
       "value": null,
       "icon": "🔥",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/a19a922e0ddf0f62d603a5dd31922a4c.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "effect-48-cursed-echo",
@@ -910,7 +930,9 @@
       "value": null,
       "icon": "🔥",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/b6da157060ed1c7b01854f8aa97ea713.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "effect-56-bone-rattle",
@@ -920,7 +942,9 @@
       "value": null,
       "icon": "✨",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/25d7ad7748f95ce38657a293b750b374.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "effect-57-lolplosion",
