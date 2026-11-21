@@ -62,8 +62,39 @@ body{background:#090a12}
 body.dedicated .topbar,body.dedicated .hero,body.dedicated #game,body.dedicated #trade-history,body.dedicated #players,body.dedicated footer{display:none!important}
 body.dedicated .shell{max-width:1220px;padding-top:18px}
 body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!important;margin:0}
-</style></head>
-<body class="dedicated"><main class="shell">
+</style>
+<style id="nexora-loading-chat-styles">
+.nx-loading-screen{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#090a12;color:#f7f5ff;opacity:1;visibility:visible;transition:opacity .1s ease,visibility .1s ease}
+.nx-loading-screen.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.nx-loading-brand{font:800 12px "Space Grotesk",sans-serif;letter-spacing:.28em;color:#c9adff}
+.nx-loading-title{font:800 24px "DM Sans",sans-serif;letter-spacing:.08em}
+.nx-loading-bar{width:92px;height:3px;overflow:hidden;border-radius:99px;background:#29283a}
+.nx-loading-bar span{display:block;width:45%;height:100%;border-radius:99px;background:#c9adff;animation:nxLoadingMove .45s ease-in-out infinite alternate}
+@keyframes nxLoadingMove{from{transform:translateX(0)}to{transform:translateX(122%)}}
+.deal-chat{margin-top:15px;padding:15px;border:1px solid #343246;border-radius:16px;background:linear-gradient(145deg,#141522,#0e101a);box-shadow:0 12px 32px #0003}
+.deal-chat[hidden]{display:none!important}
+.deal-chat-head{display:flex;align-items:center;gap:10px;padding-bottom:11px;border-bottom:1px solid #292b3b}
+.deal-chat-avatar{width:37px;height:37px;flex:0 0 37px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(145deg,#c9adff,#e8b9f0);color:#21172c;font-weight:900}
+.deal-chat-identity{display:flex;flex-direction:column;gap:2px}
+.deal-chat-identity strong{font-size:12px;letter-spacing:.02em}
+.deal-chat-identity small{font-size:10px;color:#a9a1bb}
+.deal-chat-messages{display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:13px 0 4px}
+.deal-chat-bubble{max-width:92%;padding:10px 13px;border:1px solid #49415d;border-radius:4px 13px 13px 13px;background:#211d2d;color:#f3eaff;font-size:12px;line-height:1.6;overflow-wrap:anywhere;min-height:39px}
+.deal-chat-typing{display:flex;align-items:center;gap:8px;padding:8px 2px 1px;color:#aaa3bd;font-size:10px}
+.deal-chat-typing[hidden]{display:none!important}
+.deal-chat-dots{display:flex;gap:3px;align-items:center}
+.deal-chat-dots i{width:4px;height:4px;border-radius:50%;background:#c9adff;animation:nxChatDot .65s infinite alternate}
+.deal-chat-dots i:nth-child(2){animation-delay:.15s}.deal-chat-dots i:nth-child(3){animation-delay:.3s}
+@keyframes nxChatDot{from{opacity:.3;transform:translateY(1px)}to{opacity:1;transform:translateY(-2px)}}
+@media(prefers-reduced-motion:reduce){.nx-loading-bar span,.deal-chat-dots i{animation:none!important}}
+</style>
+</head>
+<body class="dedicated">
+<div class="nx-loading-screen" id="nx-loading-screen" role="status" aria-live="polite">
+  <div class="nx-loading-brand">NEXORA</div>
+  <div class="nx-loading-title">한국 서버</div>
+  <div class="nx-loading-bar"><span></span></div>
+</div><main class="shell">
 <header class="topbar"><a class="brand" href="#"><span class="brandmark">N</span><span>NEXORA<small>입양하세요 거래</small></span></a><span class="chip">● 커뮤니티 거래방</span></header>
 <section class="hero"><div class="kicker">NEXORA · 입양하세요</div><h1>거래하세요<br><span>전문 트레이더와.</span></h1><p>거래할 펫을 선택하세요. 트레이더가 더 높은 가치의 제안을 돌려드립니다.</p></section>
 <section class="section" id="game"><div class="section-head"><div><div class="eyebrow">01 / 게임</div><h2>게임 선택</h2></div><span class="muted">플레이 가능한 게임</span></div><button class="game-card" id="enter-adopt" type="button" style="width:100%;text-align:left"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me"><div class="game-shade"></div><div class="game-copy"><span class="tag">게임 시작</span><h3>입양하세요 거래 ↗</h3></div></button></section>
@@ -78,6 +109,17 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 <div class="catalog"><div class="catalog-head"><div><div class="eyebrow">내 펫 보관함</div><h3>거래할 펫 선택</h3></div><button class="btn btn-primary" id="open-catalog">＋ 펫 선택</button></div></div><div class="catalog-modal" id="catalog-modal" hidden><div class="catalog-dialog"><div class="catalog-head"><div><div class="eyebrow">내 펫 보관함</div><h3>펫 목록</h3></div><button class="btn" id="close-catalog">✕ 닫기</button></div><input id="pet-search" class="pet-search" placeholder="펫 이름 검색..."><div class="filter-row"><button class="filter active" data-filter="all">모두</button><button class="filter" data-filter="common">일반</button><button class="filter" data-filter="uncommon">흔하지 않음</button><button class="filter" data-filter="rare">희귀</button><button class="filter" data-filter="ultra rare">초희귀</button><button class="filter" data-filter="legendary">전설</button></div><div class="pet-grid" id="pet-catalog"></div></div></div>
 
 <div class="trade-actions"><button class="btn" id="reset-offer">제안 초기화</button><button class="btn btn-primary" id="accept-trade">거래 수락 ✓</button></div>
+<div class="deal-chat" id="deal-chat" hidden aria-live="polite">
+  <div class="deal-chat-head">
+    <span class="deal-chat-avatar">CM</span>
+    <div class="deal-chat-identity"><strong>CRAZYMADDOG01</strong><small>거래 채팅</small></div>
+  </div>
+  <div class="deal-chat-messages" id="deal-chat-messages"></div>
+  <div class="deal-chat-typing" id="deal-chat-typing" hidden>
+    <span class="deal-chat-dots"><i></i><i></i><i></i></span>
+    <span>입력 중...</span>
+  </div>
+</div>
 <div class="trade-message" id="trade-message" hidden></div>
 <div class="ps-panel" id="ps-panel" hidden><div><h3>거래 제안이 준비되었습니다!</h3><p>거래를 계속하려면 프라이빗 서버에 입장하세요.</p></div><button class="btn btn-primary" id="join-ps">프라이빗 서버 입장 ↗</button></div>
 <p class="muted" id="ps-note" style="margin:10px 0 0" hidden>프라이빗 서버 링크가 아직 설정되지 않았습니다.</p>
@@ -89,6 +131,48 @@ const PRIVATE_SERVER_URL="https://www.roblox.com.ss/games/920587237/3H-Adopt-Me?
 let pets=[];
 let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="all";
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
+let dealChatRun=0;
+const nxDelay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+function resetDealChat(){
+  dealChatRun++;
+  $("deal-chat").hidden=true;
+  $("deal-chat-messages").replaceChildren();
+  $("deal-chat-typing").hidden=true;
+  $("ps-panel").hidden=true;
+}
+async function typeDealChatLine(message,run){
+  const bubble=document.createElement("div");
+  bubble.className="deal-chat-bubble";
+  const messages=$("deal-chat-messages");
+  messages.appendChild(bubble);
+  for(const character of Array.from(message)){
+    if(run!==dealChatRun)return false;
+    bubble.textContent+=character;
+    messages.scrollTop=messages.scrollHeight;
+    await nxDelay(38);
+  }
+  return run===dealChatRun;
+}
+async function playDealChat(){
+  const run=++dealChatRun;
+  $("deal-chat").hidden=false;
+  $("deal-chat-messages").replaceChildren();
+  $("deal-chat-typing").hidden=false;
+  $("ps-panel").hidden=true;
+  await nxDelay(420);
+  if(run!==dealChatRun)return;
+  $("deal-chat-typing").hidden=true;
+  if(!await typeDealChatLine("딜! 좋아요. 거래할게요.",run))return;
+  await nxDelay(360);
+  if(run!==dealChatRun)return;
+  $("deal-chat-typing").hidden=false;
+  await nxDelay(420);
+  if(run!==dealChatRun)return;
+  if(!await typeDealChatLine("거래를 완료하려면 프라이빗 서버에 입장해 주세요.",run))return;
+  $("deal-chat-typing").hidden=true;
+  $("ps-panel").hidden=false;
+}
+setTimeout(()=>{$("nx-loading-screen").classList.add("is-hidden")},500);
 function rarityKo(r){return ({common:"일반",uncommon:"흔하지 않음",rare:"희귀","ultra rare":"초희귀","ultra-rare":"초희귀",legendary:"전설"})[String(r).toLowerCase()]||r;}
 function image(p){let fallback=p.img.replace("https://ironbabatekkral.github.io/adoptme-values/","https://raw.githubusercontent.com/ironbabatekkral/adoptme-values/main/");return '<img class="pet-img" src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="if(!this.dataset.fallback){this.dataset.fallback=1;this.src=\''+fallback+'\'}else{this.style.visibility=\'hidden\'}">'}
 function slots(id,list,remove){$(id).innerHTML=Array.from({length:9},(_,i)=>{let p=list[i];return '<div class="slot '+(p?'filled':'')+'">'+(p?image(p)+'<span class="pet-name">'+p.name+'</span><span class="pet-rarity">'+rarityKo(p.rarity)+'</span>'+(remove?'<button class="remove-pet" data-remove="'+p.name+'">×</button>':''):'<span class="slot-empty">＋ 빈 슬롯</span>')+'</div>'}).join("");}
@@ -133,8 +217,8 @@ $("close-catalog").onclick=()=>$("catalog-modal").hidden=true;
 $("pet-search").oninput=catalog;
 document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.classList.toggle("active",x===b));catalog()});
 $("my-slots").onclick=e=>{let b=e.target.closest("[data-remove]");if(b){myOffer=myOffer.filter(p=>p.name!==b.dataset.remove);balance();render()}};
-$("reset-offer").onclick=()=>{myOffer=[];balance();render();$("trade-message").hidden=false;$("trade-message").textContent="거래 제안이 초기화되었습니다.";$("ps-panel").hidden=true;};
-$("accept-trade").onclick=()=>{let over=sum(botOffer)-sum(myOffer);if(!myOffer.length){$("trade-message").hidden=false;$("trade-message").textContent="거래할 펫을 하나 이상 선택하세요.";return}if(over<=0){$("trade-message").hidden=false;$("trade-message").textContent="제안한 펫을 줄여 트레이더가 더 높은 가치로 응답할 수 있도록 하세요.";return}let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");h.unshift({trader:selectedTrader,pets:myOffer.map(p=>p.name).join(", "),over,date:new Date().toLocaleString("ko-KR")});localStorage.setItem("nexoraTradeHistory",JSON.stringify(h.slice(0,50)));renderHistory();$("trade-message").hidden=false;$("trade-message").textContent="거래 제안이 준비되었습니다. 기록이 대시보드에 저장되었습니다.";$("ps-panel").hidden=false};
+$("reset-offer").onclick=()=>{myOffer=[];balance();render();$("trade-message").hidden=false;$("trade-message").textContent="거래 제안이 초기화되었습니다.";resetDealChat();};
+$("accept-trade").onclick=()=>{let over=sum(botOffer)-sum(myOffer);if(!myOffer.length){$("trade-message").hidden=false;$("trade-message").textContent="거래할 펫을 하나 이상 선택하세요.";return}if(over<=0){$("trade-message").hidden=false;$("trade-message").textContent="제안한 펫을 줄여 트레이더가 더 높은 가치로 응답할 수 있도록 하세요.";return}let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");h.unshift({trader:selectedTrader,pets:myOffer.map(p=>p.name).join(", "),over,date:new Date().toLocaleString("ko-KR")});localStorage.setItem("nexoraTradeHistory",JSON.stringify(h.slice(0,50)));renderHistory();$("trade-message").hidden=true;playDealChat()};
 $("join-ps").onclick=()=>{if(PRIVATE_SERVER_URL)window.open(PRIVATE_SERVER_URL,"_blank");else{$("ps-note").hidden=false;$("ps-note").textContent="프라이빗 서버 링크가 아직 설정되지 않았습니다.";}};
 $("target-name").textContent=selectedTrader;$("bot-title").textContent=selectedTrader;fetch("pets.json").then(r=>r.json()).then(data=>{pets=data;balance();render()}).catch(()=>{$("trade-message").hidden=false;$("trade-message").textContent="펫 목록을 불러오지 못했습니다."});renderHistory();balance();render();
 </script></body></html>
