@@ -4,7 +4,7 @@
     "source": "https://toyboxvalues.com/murder-mystery-2/pets/ | https://supremevalues.com/mm2/pets.php",
     "sourceChecked": "2026-11-22",
     "valuesSnapshot": "Supreme Values page date displayed: 2026-11-11",
-    "note": "MM2 펫 84종 목록입니다. 숫자 기준값은 Supreme Values 참고 스냅샷이며 공식 가격이 아닙니다. T1 단위로만 표시된 항목은 서로 다른 단위의 임의 환산을 피하기 위해 기준값을 비워 두었습니다. 거래 불가 4종은 선택할 수 없습니다."
+    "note": "MM2 펫 84종 목록입니다. 숫자 기준값은 커뮤니티 참고 자료이며 공식 가격이 아닙니다. T1 단위 항목은 임의로 환산하지 않았으므로 직접 기준값을 입력해 주세요. 거래 불가 4종은 선택할 수 없습니다."
   },
   "items": [
     {
@@ -16,7 +16,7 @@
       "icon": "🌈🦇",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 Godly"
+      "valueNote": "×7 T1 갓리"
     },
     {
       "id": "chroma-fire-bear",
@@ -27,7 +27,7 @@
       "icon": "🌈🐻",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 Godly"
+      "valueNote": "×7 T1 갓리"
     },
     {
       "id": "chroma-fire-bunny",
@@ -38,7 +38,7 @@
       "icon": "🌈🐰",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 Godly"
+      "valueNote": "×7 T1 갓리"
     },
     {
       "id": "chroma-fire-cat",
@@ -49,7 +49,7 @@
       "icon": "🌈🐱",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 Godly"
+      "valueNote": "×7 T1 갓리"
     },
     {
       "id": "chroma-fire-dog",
@@ -60,7 +60,7 @@
       "icon": "🌈🐶",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 Godly"
+      "valueNote": "×7 T1 갓리"
     },
     {
       "id": "chroma-fire-fox",
@@ -71,7 +71,7 @@
       "icon": "🌈🦊",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 Godly"
+      "valueNote": "×7 T1 갓리"
     },
     {
       "id": "chroma-fire-pig",
@@ -82,7 +82,7 @@
       "icon": "🌈🐷",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×7 T1 Godly"
+      "valueNote": "×7 T1 갓리"
     },
     {
       "id": "deathspeaker",
@@ -93,7 +93,7 @@
       "icon": "👻",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Legendaries"
+      "valueNote": "×3 T1 전설"
     },
     {
       "id": "electro",
@@ -104,7 +104,7 @@
       "icon": "⚡",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Legendaries"
+      "valueNote": "×3 T1 전설"
     },
     {
       "id": "fire-bat",
@@ -115,7 +115,7 @@
       "icon": "🔥🦇",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Legendaries"
+      "valueNote": "×2 T1 전설"
     },
     {
       "id": "fire-bear",
@@ -126,7 +126,7 @@
       "icon": "🔥🐻",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Legendaries"
+      "valueNote": "×2 T1 전설"
     },
     {
       "id": "fire-bunny",
@@ -137,7 +137,7 @@
       "icon": "🔥🐰",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Legendaries"
+      "valueNote": "×2 T1 전설"
     },
     {
       "id": "fire-cat",
@@ -148,7 +148,7 @@
       "icon": "🔥🐱",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Legendaries"
+      "valueNote": "×2 T1 전설"
     },
     {
       "id": "fire-dog",
@@ -159,7 +159,7 @@
       "icon": "🔥🐶",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Legendaries"
+      "valueNote": "×2 T1 전설"
     },
     {
       "id": "fire-fox",
@@ -170,7 +170,7 @@
       "icon": "🔥🦊",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Legendaries"
+      "valueNote": "×2 T1 전설"
     },
     {
       "id": "fire-pig",
@@ -181,7 +181,7 @@
       "icon": "🔥🐷",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Legendaries"
+      "valueNote": "×2 T1 전설"
     },
     {
       "id": "frostbird",
@@ -192,7 +192,7 @@
       "icon": "🐦‍❄️",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Legendaries"
+      "valueNote": "×3 T1 전설"
     },
     {
       "id": "ghosty",
@@ -213,7 +213,7 @@
       "icon": "❄️🦅",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Legendaries"
+      "valueNote": "×3 T1 전설"
     },
     {
       "id": "icey",
@@ -224,7 +224,7 @@
       "icon": "❄️",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Legendaries"
+      "valueNote": "×3 T1 전설"
     },
     {
       "id": "phoenix",
@@ -235,7 +235,7 @@
       "icon": "🦅",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Legendaries"
+      "valueNote": "×3 T1 전설"
     },
     {
       "id": "sammy",
@@ -246,7 +246,7 @@
       "icon": "🐍",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Legendaries"
+      "valueNote": "×3 T1 전설"
     },
     {
       "id": "skelly",
@@ -257,7 +257,7 @@
       "icon": "💀",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Legendaries"
+      "valueNote": "×3 T1 전설"
     },
     {
       "id": "steambird",
@@ -268,7 +268,7 @@
       "icon": "🐦",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Legendaries"
+      "valueNote": "×3 T1 전설"
     },
     {
       "id": "traveller",
@@ -279,7 +279,7 @@
       "icon": "🧳",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Legendaries"
+      "valueNote": "×3 T1 전설"
     },
     {
       "id": "bat",
@@ -290,7 +290,7 @@
       "icon": "🦇",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Uncommons"
+      "valueNote": "×2 T1 흔하지 않음"
     },
     {
       "id": "elitey",
@@ -301,7 +301,7 @@
       "icon": "⭐",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×1 T1 Uncommon"
+      "valueNote": "×1 T1 흔하지 않음"
     },
     {
       "id": "nobledragon",
@@ -382,7 +382,7 @@
       "icon": "🐻",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Commons"
+      "valueNote": "×3 T1 일반"
     },
     {
       "id": "eyeball",
@@ -483,7 +483,7 @@
       "icon": "🌾",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×1 T1 Legendary"
+      "valueNote": "×1 T1 전설"
     },
     {
       "id": "tankie",
@@ -564,7 +564,7 @@
       "icon": "🦊",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Commons"
+      "valueNote": "×2 T1 일반"
     },
     {
       "id": "pig",
@@ -575,7 +575,7 @@
       "icon": "🐷",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Commons"
+      "valueNote": "×2 T1 일반"
     },
     {
       "id": "seahorsey",
@@ -646,7 +646,7 @@
       "icon": "🥕🐰",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Legendaries"
+      "valueNote": "×3 T1 전설"
     },
     {
       "id": "cat",
@@ -657,7 +657,7 @@
       "icon": "🐱",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×1 T1 Common"
+      "valueNote": "×1 T1 일반"
     },
     {
       "id": "dog",
@@ -668,7 +668,7 @@
       "icon": "🐶",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×1 T1 Common"
+      "valueNote": "×1 T1 일반"
     },
     {
       "id": "elf-2016",
@@ -759,7 +759,7 @@
       "icon": "🎃",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Legendaries"
+      "valueNote": "×2 T1 전설"
     },
     {
       "id": "pumpkin-2019",
@@ -770,7 +770,7 @@
       "icon": "🎃",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×3 T1 Uncommons"
+      "valueNote": "×3 T1 흔하지 않음"
     },
     {
       "id": "pumpkin-2020",
@@ -781,7 +781,7 @@
       "icon": "🎃",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×2 T1 Commons"
+      "valueNote": "×2 T1 일반"
     },
     {
       "id": "pumpkin-2021",
@@ -792,7 +792,7 @@
       "icon": "🎃",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×1 T1 Common"
+      "valueNote": "×1 T1 일반"
     },
     {
       "id": "purple-pumpkin-2018",
@@ -833,7 +833,7 @@
       "icon": "🐶",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×1 T1 Uncommon"
+      "valueNote": "×1 T1 흔하지 않음"
     },
     {
       "id": "snowbear",
@@ -864,7 +864,7 @@
       "icon": "🧸",
       "tradable": true,
       "quantity": false,
-      "valueNote": "×1 T1 Legendary"
+      "valueNote": "×1 T1 전설"
     },
     {
       "id": "ufo",
