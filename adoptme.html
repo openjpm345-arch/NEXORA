@@ -80,7 +80,7 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 <div class="trade-actions"><button class="btn" id="reset-offer">제안 초기화</button><button class="btn btn-primary" id="accept-trade">거래 수락 ✓</button></div>
 <div class="trade-message" id="trade-message" hidden></div>
 <div class="ps-panel" id="ps-panel" hidden><div><h3>거래가 완료되었습니다!</h3><p>거래를 계속하려면 프라이빗 서버에 입장하세요.</p></div><button class="btn btn-primary" id="join-ps">프라이빗 서버 입장 ↗</button></div>
-<p class="muted" id="ps-note" style="margin:10px 0 0">프라이빗 서버 링크가 아직 설정되지 않았습니다.</p>
+<p class="muted" id="ps-note" style="margin:10px 0 0" hidden>프라이빗 서버 링크가 아직 설정되지 않았습니다.</p>
 </section>
 <footer><span>NEXORA · 거래 서버</span><span>팬 제작 커뮤니티 인터페이스 · Roblox 및 Uplift Games와 제휴하지 않습니다.</span></footer>
 </main>
@@ -133,8 +133,8 @@ $("close-catalog").onclick=()=>$("catalog-modal").hidden=true;
 $("pet-search").oninput=catalog;
 document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.classList.toggle("active",x===b));catalog()});
 $("my-slots").onclick=e=>{let b=e.target.closest("[data-remove]");if(b){myOffer=myOffer.filter(p=>p.name!==b.dataset.remove);balance();render()}};
-$("reset-offer").onclick=()=>{myOffer=[];balance();render();$("trade-message").textContent="거래 제안이 초기화되었습니다."};
+$("reset-offer").onclick=()=>{myOffer=[];balance();render();$("trade-message").hidden=false;$("trade-message").textContent="거래 제안이 초기화되었습니다.";$("ps-panel").hidden=true;};
 $("accept-trade").onclick=()=>{let over=sum(botOffer)-sum(myOffer);if(!myOffer.length){$("trade-message").hidden=false;$("trade-message").textContent="거래할 펫을 하나 이상 선택하세요.";return}if(over<=0){$("trade-message").hidden=false;$("trade-message").textContent="제안한 펫을 줄여 트레이더가 더 높은 가치로 응답할 수 있도록 하세요.";return}let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");h.unshift({trader:selectedTrader,pets:myOffer.map(p=>p.name).join(", "),over,date:new Date().toLocaleString("ko-KR")});localStorage.setItem("nexoraTradeHistory",JSON.stringify(h.slice(0,50)));renderHistory();$("trade-message").hidden=false;$("trade-message").textContent="거래가 완료되었습니다. 기록이 대시보드에 저장되었습니다.";$("ps-panel").hidden=false};
-$("join-ps").onclick=()=>{if(PRIVATE_SERVER_URL)window.open(PRIVATE_SERVER_URL,"_blank");else $("ps-note").textContent="프라이빗 서버 링크가 아직 설정되지 않았습니다."};
+$("join-ps").onclick=()=>{if(PRIVATE_SERVER_URL)window.open(PRIVATE_SERVER_URL,"_blank");else{$("ps-note").hidden=false;$("ps-note").textContent="프라이빗 서버 링크가 아직 설정되지 않았습니다.";}};
 $("target-name").textContent=selectedTrader;$("bot-title").textContent=selectedTrader;fetch("pets.json").then(r=>r.json()).then(data=>{pets=data;balance();render()}).catch(()=>{$("trade-message").hidden=false;$("trade-message").textContent="펫 목록을 불러오지 못했습니다."});renderHistory();balance();render();
 </script></body></html>
