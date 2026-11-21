@@ -103,7 +103,7 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 @media(max-width:760px){.deal-chat{padding:14px;margin-top:14px}.deal-chat-messages{min-height:145px;max-height:min(40vh,330px)}.deal-chat-bubble{max-width:90%}.ps-panel{align-items:stretch;flex-direction:column}.ps-panel .btn{width:100%;min-height:47px}}
 @media(max-width:420px){.deal-chat{padding:12px;border-radius:16px;gap:10px}.deal-chat-avatar{width:40px;height:40px;flex-basis:40px}.deal-chat-context{font-size:9px;padding:5px 7px}.deal-chat-messages{min-height:138px;max-height:min(38vh,300px);padding:10px 2px}.deal-chat-bubble{max-width:92%;padding:10px 12px;font-size:14px}.deal-chat-composer{grid-template-columns:minmax(0,1fr) 76px;gap:7px}.deal-chat-input{min-height:49px;padding:0 12px;font-size:16px}.deal-chat-send{min-height:49px}.deal-chat-hint{font-size:10px}.ps-panel{padding:14px}}
 @media(prefers-reduced-motion:reduce){.nx-loading-bar span,.deal-chat-dots i,.deal-chat-row{animation:none!important}.deal-chat-messages{scroll-behavior:auto}}
-</style></style>
+</style>
 </head>
 <body class="dedicated">
 <div class="nx-loading-screen" id="nx-loading-screen" role="status" aria-live="polite">
@@ -142,7 +142,6 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
   </form>
   <p class="deal-chat-hint">DEAL 또는 딜이라고 답장하면 거래 안내가 이어집니다.</p>
 </div>
-<div class="trade-message"
 <div class="trade-message" id="trade-message" hidden></div>
 <div class="ps-panel" id="ps-panel" hidden><div><h3>거래 제안이 준비되었습니다!</h3><p>거래를 계속하려면 프라이빗 서버에 입장하세요.</p></div><button class="btn btn-primary" id="join-ps">프라이빗 서버 입장 ↗</button></div>
 <p class="muted" id="ps-note" style="margin:10px 0 0" hidden>프라이빗 서버 링크가 아직 설정되지 않았습니다.</p>
