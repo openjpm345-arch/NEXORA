@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090a12">
-<title>입양하세요 거래 | NEXORA</title>
+<title>NEXORA | 통합 게임 거래 허브</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -265,15 +265,15 @@ body:not(.dedicated) .nx-extra-game>b{margin-left:auto;color:#c9adff}
   </div>
   <div class="hero-art" aria-hidden="true">
     <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
-    <div class="hero-core"><span>N</span><small>NX / 01</small></div>
+    <div class="hero-core"><span>N</span><small>NEXORA · 01</small></div>
     <div class="hero-float float-top">거래 <b>+</b></div><div class="hero-float float-bottom">입양하세요 <b>↗</b></div>
   </div>
-  <div class="hero-index"><span>01</span><span>TRADING HUB</span><span>—</span></div>
+  <div class="hero-index"><span>01</span><span>거래 허브</span><span>—</span></div>
 </section>
 <section class="section game-section" id="game">
-  <div class="section-head"><div><div class="eyebrow">01 / EXPLORE</div><h2>게임 허브</h2><p class="section-subtitle">원하는 거래 공간으로 이동하세요.</p></div><span class="section-side-note">게임 선택 <b>↘</b></span></div>
+  <div class="section-head"><div><div class="eyebrow">01 / 둘러보기</div><h2>게임 허브</h2><p class="section-subtitle">원하는 거래 공간으로 이동하세요.</p></div><span class="section-side-note">게임 선택 <b>↘</b></span></div>
   <button class="game-card" id="enter-adopt" type="button" style="width:100%;text-align:left">
-    <img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me">
+    <img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="입양하세요">
     <div class="game-shade"></div><div class="game-outline"></div>
     <div class="game-copy"><span class="tag">이용 가능 <i></i></span><h3>입양하세요<span>거래 공간</span></h3><p>펫 거래 공간 열기 <b>↗</b></p></div>
     <span class="game-number">01</span>
@@ -284,7 +284,7 @@ body:not(.dedicated) .nx-extra-game>b{margin-left:auto;color:#c9adff}
   </div>
 </section>
 <section class="section panel trader-section" id="traders">
-  <div class="section-head"><div><div class="eyebrow">02 / CONNECT</div><h2>트레이더 선택</h2><p class="section-subtitle">거래를 시작할 상대를 선택하세요.</p></div><span class="section-side-note">트레이더 목록 <b>↘</b></span></div>
+  <div class="section-head"><div><div class="eyebrow">02 / 연결</div><h2>트레이더 선택</h2><p class="section-subtitle">거래를 시작할 상대를 선택하세요.</p></div><span class="section-side-note">트레이더 목록 <b>↘</b></span></div>
   <div class="trader-grid"><a class="trader-card" href="adoptme.html?trader=CRAZYMADDOG01">
     <span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/api/avatar?username=CRAZYMADDOG01" width="96" height="96" loading="eager" decoding="sync" alt="CRAZYMADDOG01 아바타"></span>
     <span class="trader-details"><span class="trader-name">CRAZYMADDOG01</span><span class="trader-sub"><i></i> 활동 중인 트레이더</span></span>
@@ -293,7 +293,7 @@ body:not(.dedicated) .nx-extra-game>b{margin-left:auto;color:#c9adff}
   <div class="directory-foot"><span>트레이더 프로필</span><span>선택하여 거래방 입장 <b>→</b></span></div>
 </section>
 <section class="section panel history-section" id="trade-history">
-  <div class="section-head"><div><div class="eyebrow">03 / ACTIVITY</div><h2>거래 내역</h2><p class="section-subtitle">최근 거래 활동을 확인하세요.</p></div><span class="history-counter" id="history-count">거래 0회</span></div>
+  <div class="section-head"><div><div class="eyebrow">03 / 활동</div><h2>거래 내역</h2><p class="section-subtitle">최근 거래 활동을 확인하세요.</p></div><span class="history-counter" id="history-count">거래 0회</span></div>
   <div id="history-list" class="muted history-empty"><span class="history-empty-icon">↗</span><span>아직 거래 내역이 없습니다.</span><small>첫 거래를 시작하면 기록이 여기에 표시됩니다.</small></div>
 </section>
 <section class="section panel" id="trade-page" hidden>
@@ -321,7 +321,7 @@ body:not(.dedicated) .nx-extra-game>b{margin-left:auto;color:#c9adff}
     <input class="deal-chat-input" id="deal-chat-input" type="text" maxlength="160" placeholder="메시지를 입력하세요..." aria-label="메시지 입력" disabled>
     <button class="deal-chat-send" id="deal-chat-send" type="submit" disabled>전송</button>
   </form>
-  <p class="deal-chat-hint">DEAL 또는 딜이라고 답장하면 거래 안내가 이어집니다.</p>
+  <p class="deal-chat-hint">딜이라고 답장하면 거래 안내가 이어집니다.</p>
 </div>
 <div class="trade-message" id="trade-message" hidden></div>
 <div class="ps-panel" id="ps-panel" hidden><div><h3>거래 제안이 준비되었습니다!</h3><p>거래를 계속하려면 프라이빗 서버에 입장하세요.</p></div><button class="btn btn-primary" id="join-ps">프라이빗 서버 입장 ↗</button></div>
@@ -329,7 +329,7 @@ body:not(.dedicated) .nx-extra-game>b{margin-left:auto;color:#c9adff}
 </section>
 <footer><span>NEXORA · 거래 서버</span><span>팬 제작 커뮤니티 인터페이스 · Roblox 및 Uplift Games와 제휴하지 않습니다.</span></footer>
 
-<footer class="site-footer"><div class="footer-brand"><span class="brandmark">N</span><span>NEXORA<small>ADOPT ME · 거래 허브</small></span></div><span class="footer-disclaimer">팬 제작 커뮤니티 인터페이스 · Roblox 및 Uplift Games와 제휴하지 않습니다.</span><span class="footer-copy">© NEXORA COMMUNITY</span></footer>
+<footer class="site-footer"><div class="footer-brand"><span class="brandmark">N</span><span>NEXORA<small>입양하세요 · 거래 허브</small></span></div><span class="footer-disclaimer">팬 제작 커뮤니티 인터페이스 · Roblox 및 Uplift Games와 제휴하지 않습니다.</span><span class="footer-copy">© NEXORA 커뮤니티</span></footer>
 </main>
 <script>
 const PRIVATE_SERVER_URL="https://www.roblox.com.ss/games/920587237/3H-Adopt-Me?privateServerLinkCode=48791062562440976530803344833389";
