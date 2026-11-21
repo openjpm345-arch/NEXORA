@@ -33,9 +33,7 @@ async function sendChat(event){event.preventDefault();const input=$("chat-input"
 function loadHistory(){const h=read(historyKey,[]);$("history-count").textContent=h.length+"회";$("history-list").replaceChildren();if(!h.length){$("history-list").appendChild(el("p","nx-muted","아직 거래 기록이 없습니다."));return;}h.slice(0,8).forEach(x=>{const r=el("div","nx-history-row");r.append(el("b","",x.trader||"CRAZYMADDOG01"),el("span","",x.items||""),el("strong","","차이 +"+fmt(x.over||0)),el("time","",x.date||""));$("history-list").appendChild(r);});}
 function saveHistory(){const mine=total(state.myOffer),theirs=total(state.botOffer),h=read(historyKey,[]);h.unshift({trader:"CRAZYMADDOG01",items:state.myOffer.map(x=>x.name+(x.qty>1?" ×"+x.qty:"")).join(", "),over:theirs-mine,date:new Date().toLocaleString("ko-KR")});save(historyKey,h.slice(0,50));loadHistory();}
 $("search-items").addEventListener("input",()=>{state.query=$("search-items").value;renderCatalog();});
-$("open-catalog").addEventListener("click",()=>{$("search-items").focus();$("catalog-grid").scrollIntoView({behavior:"smooth",block:"start"});});
-$("close-catalog").addEventListener("click",()=>{$("catalog-grid").scrollIntoView({behavior:"smooth",block:"start"});});
-$("catalog-modal").hidden=true;
+$("open-catalog").addEventListener("click",()=>{$("catalog-grid").scrollIntoView({behavior:"smooth",block:"start"});$("search-items").focus();});
 $("reset-offer").addEventListener("click",()=>{state.myOffer=[];state.botOffer=[];resetChat();notice("제안을 초기화했습니다.","info");recalc();});
 $("accept-trade").addEventListener("click",()=>{const mine=total(state.myOffer),theirs=total(state.botOffer);if(!mine||!theirs||theirs<mine){notice("가치가 등록된 항목을 담고 상대 제안을 확인해 주세요.","warning");return;}const p=(theirs-mine)/mine*100;if(p>6.01){notice("제안 차이가 6%를 넘습니다. 항목을 다시 조정해 주세요.","warning");return;}saveHistory();notice("","info");startChat();});
 $("chat-form").addEventListener("submit",sendChat);
