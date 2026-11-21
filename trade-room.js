@@ -2,7 +2,7 @@
 (() => {
 "use strict";
 const cfg=window.NEXORA_TRADE_CONFIG||{},$=id=>document.getElementById(id);
-const required=["catalog-grid","search-items","filter-row","my-slots","bot-slots","my-value","bot-value","my-count","bot-count","notice","chat","chat-messages","chat-typing","chat-form","chat-input","chat-send","ps-panel","join-ps","ps-note","history-list","history-count","overpay-value","accept-trade","reset-offer","open-catalog","close-catalog","catalog-modal","data-count","catalog-title","page-title","hero-title","hero-subtitle","data-note","back-to-hub"];
+const required=["catalog-grid","search-items","filter-row","my-slots","bot-slots","my-value","bot-value","my-count","bot-count","notice","chat","chat-messages","chat-typing","chat-form","chat-input","chat-send","ps-panel","join-ps","ps-note","history-list","history-count","overpay-value","accept-trade","reset-offer","open-catalog","data-count","catalog-title","page-title","hero-title","hero-subtitle","data-note","back-to-hub"];
 const missing=required.filter(id=>!$(id));if(missing.length){console.error("필수 요소가 없습니다.",missing);return;}
 const state={items:[],myOffer:[],botOffer:[],filter:"all",query:"",running:0,busy:false,accepted:false,valueOverrides:{}};
 const valueKey="nexora-values-"+cfg.gameKey,historyKey="nexora-history-"+cfg.gameKey,maxSlots=9,delay=ms=>new Promise(r=>setTimeout(r,ms));
