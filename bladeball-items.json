@@ -72,7 +72,9 @@
       "value": null,
       "icon": "❄️",
       "tradable": true,
-      "quantity": false
+      "quantity": false,
+      "image": "https://wikiassets.net/roblox-blade-ball-a8efd2/images/6498822528350edd1ca5af31af6bd10a.webp",
+      "imageSource": "Blade Ball Wiki (wikiassets.net)"
     },
     {
       "id": "emote-5-gift",
