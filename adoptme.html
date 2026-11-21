@@ -71,23 +71,39 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 .nx-loading-bar{width:92px;height:3px;overflow:hidden;border-radius:99px;background:#29283a}
 .nx-loading-bar span{display:block;width:45%;height:100%;border-radius:99px;background:#c9adff;animation:nxLoadingMove .45s ease-in-out infinite alternate}
 @keyframes nxLoadingMove{from{transform:translateX(0)}to{transform:translateX(122%)}}
-.deal-chat{margin-top:15px;padding:15px;border:1px solid #343246;border-radius:16px;background:linear-gradient(145deg,#141522,#0e101a);box-shadow:0 12px 32px #0003}
+.deal-chat{width:100%;max-width:900px;margin:18px 0 4px;padding:17px;border:1px solid #39364d;border-radius:19px;background:radial-gradient(ellipse at 90% 0%,#302640 0,transparent 42%),linear-gradient(145deg,#171824,#10111b);box-shadow:0 16px 42px #0004;display:flex;flex-direction:column;gap:12px}
 .deal-chat[hidden]{display:none!important}
-.deal-chat-head{display:flex;align-items:center;gap:10px;padding-bottom:11px;border-bottom:1px solid #292b3b}
-.deal-chat-avatar{width:37px;height:37px;flex:0 0 37px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(145deg,#c9adff,#e8b9f0);color:#21172c;font-weight:900}
-.deal-chat-identity{display:flex;flex-direction:column;gap:2px}
-.deal-chat-identity strong{font-size:12px;letter-spacing:.02em}
+.deal-chat-head{display:flex;align-items:center;gap:11px;padding-bottom:12px;border-bottom:1px solid #302e41}
+.deal-chat-avatar{width:43px;height:43px;flex:0 0 43px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#c9adff,#e8b9f0);color:#21172c;font:900 14px "Space Grotesk",sans-serif;box-shadow:0 5px 17px #c9adff24}
+.deal-chat-identity{min-width:0;display:flex;flex-direction:column;gap:3px}
+.deal-chat-identity strong{font-size:13px;letter-spacing:.02em}
 .deal-chat-identity small{font-size:10px;color:#a9a1bb}
-.deal-chat-messages{display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:13px 0 4px}
-.deal-chat-bubble{max-width:92%;padding:10px 13px;border:1px solid #49415d;border-radius:4px 13px 13px 13px;background:#211d2d;color:#f3eaff;font-size:12px;line-height:1.6;overflow-wrap:anywhere;min-height:39px}
-.deal-chat-typing{display:flex;align-items:center;gap:8px;padding:8px 2px 1px;color:#aaa3bd;font-size:10px}
+.deal-chat-context{margin-left:auto;padding:6px 9px;border:1px solid #48415b;border-radius:99px;color:#cbb9e6;background:#211d2d;font-size:10px;white-space:nowrap}
+.deal-chat-messages{display:flex;flex-direction:column;align-items:stretch;gap:10px;min-height:156px;max-height:min(42vh,360px);overflow-y:auto;overscroll-behavior:contain;padding:12px 3px;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#54466c transparent}
+.deal-chat-row{display:flex;width:100%;animation:nxChatRise .22s ease-out both}
+.deal-chat-row.is-trader{justify-content:flex-start}
+.deal-chat-row.is-user{justify-content:flex-end}
+.deal-chat-bubble{max-width:min(86%,560px);min-height:39px;padding:11px 14px;border:1px solid #4b435e;border-radius:5px 15px 15px 15px;background:#242033;color:#f4edff;font-size:13px;line-height:1.65;overflow-wrap:anywhere;white-space:pre-wrap}
+.deal-chat-row.is-user .deal-chat-bubble{border-color:#7c68a0;border-radius:15px 5px 15px 15px;background:linear-gradient(120deg,#51406d,#3d3154);color:#fff}
+.deal-chat-typing{display:flex;align-items:center;gap:9px;padding:4px 2px;color:#aaa3bd;font-size:10px}
 .deal-chat-typing[hidden]{display:none!important}
-.deal-chat-dots{display:flex;gap:3px;align-items:center}
-.deal-chat-dots i{width:4px;height:4px;border-radius:50%;background:#c9adff;animation:nxChatDot .65s infinite alternate}
+.deal-chat-dots{display:flex;gap:4px;align-items:center}
+.deal-chat-dots i{width:5px;height:5px;border-radius:50%;background:#c9adff;animation:nxChatDot .65s infinite alternate}
 .deal-chat-dots i:nth-child(2){animation-delay:.15s}.deal-chat-dots i:nth-child(3){animation-delay:.3s}
 @keyframes nxChatDot{from{opacity:.3;transform:translateY(1px)}to{opacity:1;transform:translateY(-2px)}}
-@media(prefers-reduced-motion:reduce){.nx-loading-bar span,.deal-chat-dots i{animation:none!important}}
-</style>
+@keyframes nxChatRise{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.deal-chat-composer{display:grid;grid-template-columns:minmax(0,1fr) 88px;gap:9px;padding-top:12px;border-top:1px solid #302e41}
+.deal-chat-input{width:100%;min-width:0;min-height:47px;padding:0 14px;border:1px solid #39374d;border-radius:12px;outline:none;background:#0d0f18;color:#f7f5ff;font:500 14px "DM Sans",sans-serif;transition:border-color .18s,box-shadow .18s}
+.deal-chat-input::placeholder{color:#77778b}
+.deal-chat-input:focus{border-color:#bda0ef;box-shadow:0 0 0 3px #c9adff18}
+.deal-chat-send{min-height:47px;border:0;border-radius:12px;background:linear-gradient(110deg,#c9adff,#e8b9f0);color:#21172c;font-weight:900;transition:transform .16s,filter .16s}
+.deal-chat-send:active{transform:scale(.97)}
+.deal-chat-send:disabled,.deal-chat-input:disabled{opacity:.45;cursor:not-allowed}
+.deal-chat-hint{margin:0;color:#89879b;font-size:10px;line-height:1.5}
+@media(max-width:760px){.deal-chat{padding:14px;margin-top:14px}.deal-chat-messages{min-height:145px;max-height:min(40vh,330px)}.deal-chat-bubble{max-width:90%}.ps-panel{align-items:stretch;flex-direction:column}.ps-panel .btn{width:100%;min-height:47px}}
+@media(max-width:420px){.deal-chat{padding:12px;border-radius:16px;gap:10px}.deal-chat-avatar{width:40px;height:40px;flex-basis:40px}.deal-chat-context{font-size:9px;padding:5px 7px}.deal-chat-messages{min-height:138px;max-height:min(38vh,300px);padding:10px 2px}.deal-chat-bubble{max-width:92%;padding:10px 12px;font-size:14px}.deal-chat-composer{grid-template-columns:minmax(0,1fr) 76px;gap:7px}.deal-chat-input{min-height:49px;padding:0 12px;font-size:16px}.deal-chat-send{min-height:49px}.deal-chat-hint{font-size:10px}.ps-panel{padding:14px}}
+@media(prefers-reduced-motion:reduce){.nx-loading-bar span,.deal-chat-dots i,.deal-chat-row{animation:none!important}.deal-chat-messages{scroll-behavior:auto}}
+</style></style>
 </head>
 <body class="dedicated">
 <div class="nx-loading-screen" id="nx-loading-screen" role="status" aria-live="polite">
@@ -109,17 +125,24 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 <div class="catalog"><div class="catalog-head"><div><div class="eyebrow">내 펫 보관함</div><h3>거래할 펫 선택</h3></div><button class="btn btn-primary" id="open-catalog">＋ 펫 선택</button></div></div><div class="catalog-modal" id="catalog-modal" hidden><div class="catalog-dialog"><div class="catalog-head"><div><div class="eyebrow">내 펫 보관함</div><h3>펫 목록</h3></div><button class="btn" id="close-catalog">✕ 닫기</button></div><input id="pet-search" class="pet-search" placeholder="펫 이름 검색..."><div class="filter-row"><button class="filter active" data-filter="all">모두</button><button class="filter" data-filter="common">일반</button><button class="filter" data-filter="uncommon">흔하지 않음</button><button class="filter" data-filter="rare">희귀</button><button class="filter" data-filter="ultra rare">초희귀</button><button class="filter" data-filter="legendary">전설</button></div><div class="pet-grid" id="pet-catalog"></div></div></div>
 
 <div class="trade-actions"><button class="btn" id="reset-offer">제안 초기화</button><button class="btn btn-primary" id="accept-trade">거래 수락 ✓</button></div>
-<div class="deal-chat" id="deal-chat" hidden aria-live="polite">
+<div class="deal-chat" id="deal-chat" hidden aria-label="거래 채팅">
   <div class="deal-chat-head">
-    <span class="deal-chat-avatar">CM</span>
+    <span class="deal-chat-avatar" aria-hidden="true">CM</span>
     <div class="deal-chat-identity"><strong>CRAZYMADDOG01</strong><small>거래 채팅</small></div>
+    <span class="deal-chat-context">거래 확인</span>
   </div>
-  <div class="deal-chat-messages" id="deal-chat-messages"></div>
+  <div class="deal-chat-messages" id="deal-chat-messages" role="log" aria-live="polite" aria-relevant="additions"></div>
   <div class="deal-chat-typing" id="deal-chat-typing" hidden>
-    <span class="deal-chat-dots"><i></i><i></i><i></i></span>
+    <span class="deal-chat-dots" aria-hidden="true"><i></i><i></i><i></i></span>
     <span>입력 중...</span>
   </div>
+  <form class="deal-chat-composer" id="deal-chat-form" autocomplete="off">
+    <input class="deal-chat-input" id="deal-chat-input" type="text" maxlength="160" placeholder="메시지를 입력하세요..." aria-label="메시지 입력" disabled>
+    <button class="deal-chat-send" id="deal-chat-send" type="submit" disabled>전송</button>
+  </form>
+  <p class="deal-chat-hint">DEAL 또는 딜이라고 답장하면 거래 안내가 이어집니다.</p>
 </div>
+<div class="trade-message"
 <div class="trade-message" id="trade-message" hidden></div>
 <div class="ps-panel" id="ps-panel" hidden><div><h3>거래 제안이 준비되었습니다!</h3><p>거래를 계속하려면 프라이빗 서버에 입장하세요.</p></div><button class="btn btn-primary" id="join-ps">프라이빗 서버 입장 ↗</button></div>
 <p class="muted" id="ps-note" style="margin:10px 0 0" hidden>프라이빗 서버 링크가 아직 설정되지 않았습니다.</p>
@@ -132,45 +155,101 @@ let pets=[];
 let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="all";
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
 let dealChatRun=0;
+let dealChatBusy=false;
+let dealChatConfirmed=false;
 const nxDelay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+function setDealComposerEnabled(enabled){
+  $("deal-chat-input").disabled=!enabled;
+  $("deal-chat-send").disabled=!enabled;
+}
+function scrollDealChat(){
+  const messages=$("deal-chat-messages");
+  messages.scrollTop=messages.scrollHeight;
+}
 function resetDealChat(){
   dealChatRun++;
+  dealChatBusy=false;
+  dealChatConfirmed=false;
   $("deal-chat").hidden=true;
   $("deal-chat-messages").replaceChildren();
   $("deal-chat-typing").hidden=true;
+  $("deal-chat-input").value="";
+  setDealComposerEnabled(false);
   $("ps-panel").hidden=true;
+  $("ps-note").hidden=true;
 }
-async function typeDealChatLine(message,run){
+function addDealMessage(message,sender){
+  const row=document.createElement("div");
+  row.className="deal-chat-row "+(sender==="user"?"is-user":"is-trader");
   const bubble=document.createElement("div");
   bubble.className="deal-chat-bubble";
-  const messages=$("deal-chat-messages");
-  messages.appendChild(bubble);
+  bubble.textContent=message;
+  row.appendChild(bubble);
+  $("deal-chat-messages").appendChild(row);
+  scrollDealChat();
+  return bubble;
+}
+async function typeDealChatLine(message,run,sender="trader"){
+  const bubble=addDealMessage("",sender);
   for(const character of Array.from(message)){
     if(run!==dealChatRun)return false;
     bubble.textContent+=character;
-    messages.scrollTop=messages.scrollHeight;
-    await nxDelay(38);
+    scrollDealChat();
+    await nxDelay(34);
   }
   return run===dealChatRun;
 }
+async function waitForTrader(run,duration=480){
+  $("deal-chat-typing").hidden=false;
+  await nxDelay(duration);
+  if(run!==dealChatRun)return false;
+  $("deal-chat-typing").hidden=true;
+  return true;
+}
 async function playDealChat(){
   const run=++dealChatRun;
+  dealChatBusy=true;
+  dealChatConfirmed=false;
   $("deal-chat").hidden=false;
   $("deal-chat-messages").replaceChildren();
-  $("deal-chat-typing").hidden=false;
+  $("deal-chat-input").value="";
   $("ps-panel").hidden=true;
-  await nxDelay(420);
-  if(run!==dealChatRun)return;
-  $("deal-chat-typing").hidden=true;
-  if(!await typeDealChatLine("딜! 좋아요. 거래할게요.",run))return;
-  await nxDelay(360);
-  if(run!==dealChatRun)return;
-  $("deal-chat-typing").hidden=false;
-  await nxDelay(420);
-  if(run!==dealChatRun)return;
-  if(!await typeDealChatLine("거래를 완료하려면 프라이빗 서버에 입장해 주세요.",run))return;
-  $("deal-chat-typing").hidden=true;
-  $("ps-panel").hidden=false;
+  $("ps-note").hidden=true;
+  setDealComposerEnabled(false);
+  if(!await waitForTrader(run,440))return;
+  if(!await typeDealChatLine("이 제안으로 거래할까요?",run,"trader"))return;
+  dealChatBusy=false;
+  setDealComposerEnabled(true);
+}
+async function handleDealChatSubmit(event){
+  event.preventDefault();
+  const input=$("deal-chat-input");
+  const message=input.value.trim();
+  if(!message||dealChatBusy||dealChatConfirmed)return;
+  input.value="";
+  addDealMessage(message,"user");
+  dealChatBusy=true;
+  setDealComposerEnabled(false);
+  const normalized=message.toLowerCase().replace(/\s+/g," ");
+  const isNo=/\b(no|nope|cancel)\b/.test(normalized)||/(아니|취소|싫|안 할|안해|안 할래)/.test(normalized);
+  const isDeal=!isNo&&(/\b(deal|yes|ok|okay)\b/.test(normalized)||/(딜|좋아|네|거래할게|거래해요|할게요|ㅇㅇ|ㄱㄱ)/.test(normalized));
+  const reply=isDeal
+    ?"좋아요! 딜이에요. 거래를 계속하려면 프라이빗 서버에 입장해 주세요."
+    :isNo
+      ?"알겠습니다. 거래를 취소할게요. 제안을 다시 확인한 뒤 편하게 답장해 주세요."
+      :"메시지를 확인했어요. 거래하려면 DEAL 또는 딜이라고 답장해 주세요.";
+  const run=dealChatRun;
+  if(!await waitForTrader(run,520))return;
+  if(!await typeDealChatLine(reply,run,"trader"))return;
+  dealChatBusy=false;
+  if(isDeal){
+    dealChatConfirmed=true;
+    $("ps-panel").hidden=false;
+    $("ps-note").hidden=true;
+    setDealComposerEnabled(false);
+  }else{
+    setDealComposerEnabled(true);
+  }
 }
 setTimeout(()=>{$("nx-loading-screen").classList.add("is-hidden")},500);
 function rarityKo(r){return ({common:"일반",uncommon:"흔하지 않음",rare:"희귀","ultra rare":"초희귀","ultra-rare":"초희귀",legendary:"전설"})[String(r).toLowerCase()]||r;}
@@ -218,6 +297,7 @@ $("pet-search").oninput=catalog;
 document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.classList.toggle("active",x===b));catalog()});
 $("my-slots").onclick=e=>{let b=e.target.closest("[data-remove]");if(b){myOffer=myOffer.filter(p=>p.name!==b.dataset.remove);balance();render()}};
 $("reset-offer").onclick=()=>{myOffer=[];balance();render();$("trade-message").hidden=false;$("trade-message").textContent="거래 제안이 초기화되었습니다.";resetDealChat();};
+$("deal-chat-form").addEventListener("submit",handleDealChatSubmit);
 $("accept-trade").onclick=()=>{let over=sum(botOffer)-sum(myOffer);if(!myOffer.length){$("trade-message").hidden=false;$("trade-message").textContent="거래할 펫을 하나 이상 선택하세요.";return}if(over<=0){$("trade-message").hidden=false;$("trade-message").textContent="제안한 펫을 줄여 트레이더가 더 높은 가치로 응답할 수 있도록 하세요.";return}let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");h.unshift({trader:selectedTrader,pets:myOffer.map(p=>p.name).join(", "),over,date:new Date().toLocaleString("ko-KR")});localStorage.setItem("nexoraTradeHistory",JSON.stringify(h.slice(0,50)));renderHistory();$("trade-message").hidden=true;playDealChat()};
 $("join-ps").onclick=()=>{if(PRIVATE_SERVER_URL)window.open(PRIVATE_SERVER_URL,"_blank");else{$("ps-note").hidden=false;$("ps-note").textContent="프라이빗 서버 링크가 아직 설정되지 않았습니다.";}};
 $("target-name").textContent=selectedTrader;$("bot-title").textContent=selectedTrader;fetch("pets.json").then(r=>r.json()).then(data=>{pets=data;balance();render()}).catch(()=>{$("trade-message").hidden=false;$("trade-message").textContent="펫 목록을 불러오지 못했습니다."});renderHistory();balance();render();
