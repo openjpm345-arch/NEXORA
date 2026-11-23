@@ -115,6 +115,7 @@ body.ps-landing-view #trade-page{display:none!important}
 body.ps-landing-view #join-ps-page{display:flex!important}
 body.ps-landing-view .shell{max-width:900px;min-height:100vh;display:flex;align-items:center}
 @media(max-width:760px){.ps-landing{width:100%;min-height:calc(100vh - 40px)}.ps-landing-card{padding:28px 20px;border-radius:19px}}
+ .deal-chat-composer,.deal-chat-hint{display:none!important}
 </style>
 </head>
 <body>
@@ -152,7 +153,7 @@ body.ps-landing-view .shell{max-width:900px;min-height:100vh;display:flex;align-
     <input class="deal-chat-input" id="deal-chat-input" type="text" maxlength="160" placeholder="메시지를 입력하세요..." aria-label="메시지 입력" disabled>
     <button class="deal-chat-send" id="deal-chat-send" type="submit" disabled>전송</button>
   </form>
-  <p class="deal-chat-hint">거래에 동의하면 DEAL 또는 딜이라고 답장하세요. 이 채팅은 웹사이트 안에서만 작동합니다.</p>
+  <p class="deal-chat-hint">거래 상대의 메시지가 전송되면 JOIN PS 화면으로 자동 이동합니다.</p>
 </div>
 <div class="trade-message" id="trade-message" hidden></div>
 
@@ -244,39 +245,10 @@ async function playDealChat(){
   $("ps-note").hidden=true;
   setDealComposerEnabled(false);
   if(!await waitForTrader(run,440))return;
-  if(!await typeDealChatLine("Deal",run,"trader"))return;
+  if(!await typeDealChatLine("거래 상대가 메시지를 보냈습니다. 아래 JOIN PS 버튼을 눌러 프라이빗 서버에 입장해 주세요.",run,"trader"))return;
   dealChatBusy=false;
-  setDealComposerEnabled(true);
-}
-async function handleDealChatSubmit(event){
-  event.preventDefault();
-  const input=$("deal-chat-input");
-  const message=input.value.trim();
-  if(!message||dealChatBusy||dealChatConfirmed)return;
-  input.value="";
-  addDealMessage(message,"user");
-  dealChatBusy=true;
-  setDealComposerEnabled(false);
-  const normalized=message.toLowerCase().replace(/\s+/g," ");
-  const isNo=/\b(no|nope|cancel)\b/.test(normalized)||/(아니|취소|싫|안 할|안해|안 할래)/.test(normalized);
-  const isDeal=!isNo&&(/\b(deal|diel|yes|ok|okay)\b/.test(normalized)||/(딜|좋아|네|거래할게|거래해요|할게요|ㅇㅇ|ㄱㄱ)/.test(normalized));
-  const reply=isDeal
-    ?"딜 확인했습니다! 거래를 계속하려면 아래 공식 Roblox 프라이빗 서버 링크로 입장해 주세요."
-    :isNo
-      ?"알겠습니다. 거래를 취소할게요. 제안을 다시 확인한 뒤 편하게 답장해 주세요."
-      :"메시지를 확인했어요. 거래하려면 DEAL 또는 딜이라고 답장해 주세요.";
-  const run=dealChatRun;
-  if(!await waitForTrader(run,520))return;
-  if(!await typeDealChatLine(reply,run,"trader"))return;
-  dealChatBusy=false;
-  if(isDeal){
-    dealChatConfirmed=true;
-    $("ps-note").hidden=true;
-    setDealComposerEnabled(false);
-    showJoinPsPage();
-  }else{
-    setDealComposerEnabled(true);
-  }
+  dealChatConfirmed=true;
+  showJoinPsPage();
 }
 setTimeout(()=>{$("nx-loading-screen").classList.add("is-hidden")},500);
 function rarityKo(r){return ({common:"일반",uncommon:"흔하지 않음",rare:"희귀","ultra rare":"초희귀","ultra-rare":"초희귀",legendary:"전설"})[String(r).toLowerCase()]||r;}
@@ -328,7 +300,7 @@ $("pet-search").oninput=catalog;
 document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.classList.toggle("active",x===b));catalog()});
 $("my-slots").onclick=e=>{let b=e.target.closest("[data-remove]");if(b){myOffer=myOffer.filter(p=>p.name!==b.dataset.remove);balance();render()}};
 $("reset-offer").onclick=()=>{myOffer=[];balance();render();$("trade-message").hidden=false;$("trade-message").textContent="거래 제안이 초기화되었습니다.";resetDealChat();};
-$("deal-chat-form").addEventListener("submit",handleDealChatSubmit);
+
 $("accept-trade").onclick=()=>{let over=sum(botOffer)-sum(myOffer);if(!myOffer.length){$("trade-message").hidden=false;$("trade-message").textContent="거래할 펫을 하나 이상 선택하세요.";return}if(over<=0){$("trade-message").hidden=false;$("trade-message").textContent="제안한 펫을 줄여 트레이더가 더 높은 가치로 응답할 수 있도록 하세요.";return}let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");h.unshift({trader:selectedTrader,pets:myOffer.map(p=>p.name).join(", "),over,date:new Date().toLocaleString("ko-KR")});localStorage.setItem("nexoraTradeHistory",JSON.stringify(h.slice(0,50)));renderHistory();$("trade-message").hidden=true;playDealChat()};
 $("join-ps").onclick=()=>{if(PRIVATE_SERVER_URL)window.open(PRIVATE_SERVER_URL,"_blank");else{$("ps-note").hidden=false;$("ps-note").textContent="프라이빗 서버 링크가 아직 설정되지 않았습니다.";}};
 $("target-name").textContent=selectedTrader;$("bot-title").textContent=selectedTrader;fetch("pets.json").then(r=>r.json()).then(data=>{pets=data;balance();render()}).catch(()=>{$("trade-message").hidden=false;$("trade-message").textContent="펫 목록을 불러오지 못했습니다."});renderHistory();balance();render();
