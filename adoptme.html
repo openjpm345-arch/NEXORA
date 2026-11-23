@@ -103,6 +103,18 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
 @media(max-width:760px){.deal-chat{padding:14px;margin-top:14px}.deal-chat-messages{min-height:145px;max-height:min(40vh,330px)}.deal-chat-bubble{max-width:90%}.ps-panel{align-items:stretch;flex-direction:column}.ps-panel .btn{width:100%;min-height:47px}}
 @media(max-width:420px){.deal-chat{padding:12px;border-radius:16px;gap:10px}.deal-chat-avatar{width:40px;height:40px;flex-basis:40px}.deal-chat-context{font-size:9px;padding:5px 7px}.deal-chat-messages{min-height:138px;max-height:min(38vh,300px);padding:10px 2px}.deal-chat-bubble{max-width:92%;padding:10px 12px;font-size:14px}.deal-chat-composer{grid-template-columns:minmax(0,1fr) 76px;gap:7px}.deal-chat-input{min-height:49px;padding:0 12px;font-size:16px}.deal-chat-send{min-height:49px}.deal-chat-hint{font-size:10px}.ps-panel{padding:14px}}
 @media(prefers-reduced-motion:reduce){.nx-loading-bar span,.deal-chat-dots i,.deal-chat-row{animation:none!important}.deal-chat-messages{scroll-behavior:auto}}
+.ps-landing{min-height:calc(100vh - 90px);align-items:center;justify-content:center;padding:24px 0}
+.ps-landing-card{width:min(620px,100%);padding:clamp(24px,5vw,48px);border:1px solid #4c735d;border-radius:24px;background:radial-gradient(ellipse at 50% 0%,#263d32 0,transparent 55%),linear-gradient(145deg,#151d1b,#10131a);box-shadow:0 20px 60px #0006;text-align:center;animation:nxRise .35s ease-out both}
+.ps-landing-mark{width:64px;height:64px;margin:22px auto 12px;border:1px solid #78e6b0;border-radius:20px;display:grid;place-items:center;background:#193326;color:#8ce9b6;font-size:30px;font-weight:900}
+.ps-landing-card h1{margin:8px 0 12px;font:800 clamp(34px,7vw,54px)/1 "Space Grotesk";letter-spacing:-.05em}
+.ps-landing-card p{margin:0 auto 22px;color:#c2c9c4;line-height:1.8}
+.ps-landing-card .btn{width:min(360px,100%);min-height:56px;font-size:16px}
+.ps-landing-card #ps-note{margin:14px 0 0;color:#f2b7b7;font-size:11px}
+body.ps-landing-view .topbar,body.ps-landing-view .hero,body.ps-landing-view #game,body.ps-landing-view #trade-history,body.ps-landing-view #players,body.ps-landing-view footer{display:none!important}
+body.ps-landing-view #trade-page{display:none!important}
+body.ps-landing-view #join-ps-page{display:flex!important}
+body.ps-landing-view .shell{max-width:900px;min-height:100vh;display:flex;align-items:center}
+@media(max-width:760px){.ps-landing{width:100%;min-height:calc(100vh - 40px)}.ps-landing-card{padding:28px 20px;border-radius:19px}}
 </style>
 </head>
 <body>
@@ -143,8 +155,17 @@ body.dedicated #trade-page,body.dedicated #trade-page[hidden]{display:block!impo
   <p class="deal-chat-hint">거래에 동의하면 DEAL 또는 딜이라고 답장하세요. 이 채팅은 웹사이트 안에서만 작동합니다.</p>
 </div>
 <div class="trade-message" id="trade-message" hidden></div>
-<div class="ps-panel" id="ps-panel" hidden><div><h3>거래 제안이 준비되었습니다!</h3><p>거래를 계속하려면 프라이빗 서버에 입장하세요.</p></div><button class="btn btn-primary" id="join-ps">JOIN PS ↗</button></div>
-<p class="muted" id="ps-note" style="margin:10px 0 0" hidden>프라이빗 서버 링크가 아직 설정되지 않았습니다.</p>
+
+</section>
+<section class="ps-landing" id="join-ps-page" hidden>
+  <div class="ps-landing-card">
+    <div class="kicker">NEXORA · PRIVATE SERVER</div>
+    <div class="ps-landing-mark">✓</div>
+    <h1>JOIN PS</h1>
+    <p>상대방의 거래 메시지가 전송되었습니다.<br>아래 버튼을 눌러 기존 Private Server 링크로 입장하세요.</p>
+    <button class="btn btn-primary" id="join-ps" type="button">JOIN PS ↗</button>
+    <p class="muted" id="ps-note" hidden>프라이빗 서버 링크가 아직 설정되지 않았습니다.</p>
+  </div>
 </section>
 <footer><span>NEXORA · 거래 서버</span><span>팬 제작 커뮤니티 인터페이스 · Roblox 및 Uplift Games와 제휴하지 않습니다.</span></footer>
 </main>
@@ -157,6 +178,11 @@ let dealChatRun=0;
 let dealChatBusy=false;
 let dealChatConfirmed=false;
 const nxDelay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+function showJoinPsPage(){
+  $("join-ps-page").hidden=false;
+  document.body.classList.add("ps-landing-view");
+  window.scrollTo(0,0);
+}
 function setDealComposerEnabled(enabled){
   $("deal-chat-input").disabled=!enabled;
   $("deal-chat-send").disabled=!enabled;
@@ -167,6 +193,8 @@ function scrollDealChat(){
 }
 function resetDealChat(){
   dealChatRun++;
+  $("join-ps-page").hidden=true;
+  document.body.classList.remove("ps-landing-view");
   dealChatBusy=false;
   dealChatConfirmed=false;
   $("deal-chat").hidden=true;
@@ -174,7 +202,7 @@ function resetDealChat(){
   $("deal-chat-typing").hidden=true;
   $("deal-chat-input").value="";
   setDealComposerEnabled(false);
-  $("ps-panel").hidden=true;
+  
   $("ps-note").hidden=true;
 }
 function addDealMessage(message,sender){
@@ -243,9 +271,9 @@ async function handleDealChatSubmit(event){
   dealChatBusy=false;
   if(isDeal){
     dealChatConfirmed=true;
-    $("ps-panel").hidden=false;
     $("ps-note").hidden=true;
     setDealComposerEnabled(false);
+    showJoinPsPage();
   }else{
     setDealComposerEnabled(true);
   }
@@ -285,10 +313,14 @@ function balance(){
 function render(){slots("my-slots",myOffer,true);slots("bot-slots",botOffer,false);$("my-count").textContent=myOffer.length+" / 9개 아이템";$("my-value").textContent=sum(myOffer);$("bot-value").textContent=sum(botOffer);}
 function catalog(){let q=$("pet-search").value.toLowerCase();$("pet-catalog").innerHTML=pets.filter(p=>(filter==="all"||String(p.rarity).toLowerCase().replace(/-/g," ").trim()===filter)&&p.name.toLowerCase().includes(q)).map(p=>'<button class="pet-card" data-pet="'+p.name+'">'+image(p)+'<strong>'+p.name+'</strong><small>'+rarityKo(p.rarity)+'</small><span class="add-label">'+(myOffer.includes(p)?'✓ 추가됨':'+ 추가')+'</span></button>').join("");document.querySelectorAll("[data-pet]").forEach(b=>b.onclick=()=>{let p=pet(b.dataset.pet);myOffer=myOffer.includes(p)?myOffer.filter(x=>x!==p):myOffer.length<9?[...myOffer,p]:myOffer;balance();render();catalog()})}
 function renderHistory(){let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");$("history-count").textContent=h.length+"회 거래";$("history-list").innerHTML=h.length?h.slice(0,10).map(x=>'<div class="history-row"><b>'+x.trader+'</b><span>'+x.pets+'</span><strong>차액 +'+x.over+'</strong><time>'+x.date+'</time></div>').join(""):"아직 거래 내역이 없습니다."}
-function enter(){ document.body.classList.add("trading-view"); $("trade-page").hidden=false;myOffer=[];balance();render();window.history.pushState({view:"trade"},"","#trade");window.scrollTo(0,0)}
+function enter(){ $("join-ps-page").hidden=true;document.body.classList.remove("ps-landing-view");document.body.classList.add("trading-view"); $("trade-page").hidden=false;myOffer=[];balance();render();window.history.pushState({view:"trade"},"","#trade");window.scrollTo(0,0)}
 $("enter-adopt").onclick=enter;
 $("back").onclick=()=>{window.location.href="index.html";};
-window.addEventListener("popstate",()=>{if(location.hash!=="#trade"){document.body.classList.remove("trading-view");$("trade-page").hidden=true}});
+window.addEventListener("popstate",()=>{
+  $("join-ps-page").hidden=true;
+  document.body.classList.remove("ps-landing-view");
+  if(location.hash!=="#trade"){document.body.classList.remove("trading-view");$("trade-page").hidden=true;}
+});
 document.querySelectorAll("[data-trader]").forEach(b=>b.onclick=()=>{selectedTrader=b.dataset.trader;document.querySelectorAll("[data-trader]").forEach(x=>x.classList.toggle("selected",x===b));$("target-name").textContent=selectedTrader;$("bot-title").textContent=selectedTrader;balance();render()});
 $("open-catalog").onclick=()=>{$("catalog-modal").hidden=false;$("pet-search").value="";filter="all";catalog()};
 $("close-catalog").onclick=()=>$("catalog-modal").hidden=true;
