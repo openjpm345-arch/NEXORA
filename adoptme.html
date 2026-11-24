@@ -55,6 +55,59 @@ body{letter-spacing:.005em}
 @keyframes nxRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes nxFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}@keyframes nxGlow{0%,100%{box-shadow:0 0 0 0 #c9adff00}50%{box-shadow:0 0 22px 2px #c9adff22}}@keyframes nxPop{0%{transform:scale(.92);opacity:.45}75%{transform:scale(1.035)}100%{transform:scale(1);opacity:1}}
 .hero{animation:nxRise .65s both,nxGlow 5s ease-in-out infinite}.section{animation:nxRise .6s both}.brandmark{animation:nxFloat 4s ease-in-out infinite}.trader-profile{width:max-content;max-width:100%;margin:0 0 14px;cursor:default;animation:nxRise .5s both}.avatar img{transition:transform .35s,filter .35s}.trader-profile:hover .avatar img{transform:scale(1.08);filter:brightness(1.12)}.slot.filled{animation:nxPop .24s ease-out}.pet-card{transition:transform .2s,border-color .2s,box-shadow .2s}.pet-card:active,.btn:active{transform:scale(.97)}.btn-primary{box-shadow:0 5px 18px #c9adff22}.catalog-modal:not([hidden]) .catalog-dialog{animation:nxRise .25s ease-out}.trader-card{transition:transform .22s,border-color .22s,box-shadow .22s}.trader-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px #0005}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 .nxAvatarFix{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:100%!important;object-fit:cover!important;position:relative!important;z-index:2!important}.avatar{overflow:hidden!important;isolation:isolate}
+
+/* Trader showcase and avatar-led trade panels */
+.trade-lobby{padding:22px;border:1px solid #383449;border-radius:22px;background:radial-gradient(ellipse at 8% 0%,#4a315c55,transparent 45%),linear-gradient(145deg,#171824,#10121c);overflow:hidden}
+.trade-lobby-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:18px}
+.trade-lobby-head h2{font:700 clamp(22px,3vw,28px) "Space Grotesk";margin:5px 0 0;letter-spacing:-.04em}
+.trade-lobby-head p{margin:5px 0 0;color:#a8a6b8;font-size:12px}
+.trade-lobby-chip,.spotlight-chip{border:1px solid #55466b;background:#211b30;color:#e1cfff;border-radius:99px;padding:7px 11px;font-size:9px;font-weight:800;letter-spacing:.13em;white-space:nowrap}
+.trade-lobby-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:14px}
+.spotlight-card{min-width:0;padding:19px;border:1px solid #50415f;border-radius:17px;background:linear-gradient(145deg,#211a2b,#151622)}
+.spotlight-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.spotlight-title{font:700 19px "Space Grotesk";margin:12px 0 3px}
+.spotlight-copy{margin:0;color:#a9a5b8;font-size:11px}
+.spotlight-stage{display:grid;grid-template-columns:minmax(0,1fr) 58px minmax(0,1fr);align-items:center;gap:8px;margin:20px 0 15px}
+.spotlight-player{display:flex;min-width:0;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.spotlight-avatar{width:clamp(70px,9vw,96px);height:clamp(70px,9vw,96px);border-radius:24px;object-fit:cover;display:block;border:2px solid #78628e;background:#272236;box-shadow:0 9px 24px #0006}
+.spotlight-player strong{display:block;max-width:100%;font-size:12px;overflow-wrap:anywhere}
+.spotlight-player small{display:block;color:#aaa3bb;font-size:10px;overflow-wrap:anywhere}
+.spotlight-role{border:1px solid #524766;background:#2b2238;color:#d8c5ff;padding:4px 8px;border-radius:99px;font-size:8px;font-weight:800;letter-spacing:.1em}
+.spotlight-exchange{display:flex;flex-direction:column;align-items:center;gap:5px;color:#d9c1ff}
+.spotlight-exchange b{width:43px;height:43px;display:grid;place-items:center;border:1px solid #755b91;border-radius:15px;background:#30243f;font-size:25px;box-shadow:0 0 22px #b98aff22}
+.spotlight-exchange small{font-size:8px;font-weight:800;letter-spacing:.13em;color:#bdb2cf}
+.spotlight-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;border-top:1px solid #3b3348;padding-top:12px;color:#aaa5b9;font-size:10px}
+.spotlight-foot strong{color:#e2d3ff}
+.roster-panel{padding:18px;border:1px solid #383449;border-radius:17px;background:#11131e;min-width:0}
+.roster-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:13px}
+.roster-head h3{font:700 16px "Space Grotesk";margin:4px 0 0}
+.roster-count{color:#918ca3;font-size:9px;font-weight:700;letter-spacing:.08em}
+.roster-list{display:flex;flex-direction:column;gap:9px}
+.roster-item{display:flex;align-items:center;gap:10px;min-width:0;padding:9px;border:1px solid #292c3d;border-radius:12px;background:#171925}
+.roster-avatar{width:44px;height:44px;flex:0 0 44px;border-radius:13px;object-fit:cover;display:block;background:#292537;border:1px solid #544563}
+.roster-info{flex:1;min-width:0}
+.roster-info strong{display:block;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.roster-info small{display:block;color:#918ca3;font-size:9px}
+.roster-tag{flex:0 0 auto;border-radius:99px;background:#1c3028;color:#8ce0b1;padding:5px 7px;font-size:8px;font-weight:800;letter-spacing:.08em}
+.offer-owner{display:flex;align-items:center;gap:9px;min-width:0}
+.offer-owner img{width:34px;height:34px;flex:0 0 34px;object-fit:cover;border-radius:11px;border:1px solid #625277;background:#282437}
+.offer-owner span{min-width:0}
+.offer-owner strong{display:block;font:700 12px "Space Grotesk";overflow-wrap:anywhere}
+.offer-owner small{display:block;color:#9995aa;font-size:9px;margin-top:2px}
+.deal-chat-avatar{overflow:hidden;padding:0}
+.deal-chat-avatar img{display:block;width:100%;height:100%;object-fit:cover}
+body.trading-view #trader-showcase,body.ps-landing-view #trader-showcase{display:none!important}
+@media(max-width:760px){
+ .trade-lobby{padding:15px}
+ .trade-lobby-head{align-items:flex-start;flex-direction:column}
+ .trade-lobby-layout{grid-template-columns:1fr}
+ .spotlight-card,.roster-panel{padding:14px}
+ .spotlight-stage{grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr);gap:5px}
+ .spotlight-avatar{width:72px;height:72px;border-radius:19px}
+ .spotlight-exchange b{width:36px;height:36px;font-size:21px}
+ .offer-owner img{width:30px;height:30px;flex-basis:30px}
+}
+
 </style>
 <style>
 .avatar .roblox-avatar{width:100%;height:100%;object-fit:cover;display:block}.trader-card .avatar{overflow:hidden}
@@ -127,12 +180,77 @@ body.ps-landing-view .shell{max-width:900px;min-height:100vh;display:flex;align-
 <header class="topbar"><a class="brand" href="#"><span class="brandmark">N</span><span>NEXORA<small>입양하세요 거래</small></span></a><span class="chip">● 커뮤니티 거래방</span></header>
 <section class="hero"><div class="kicker">NEXORA · 입양하세요</div><h1>거래하세요<br><span>전문 트레이더와.</span></h1><p>거래할 펫을 선택하세요. 트레이더가 더 높은 가치의 제안을 돌려드립니다.</p></section>
 <section class="section" id="game"><div class="section-head"><div><div class="eyebrow">01 / 게임</div><h2>게임 선택</h2></div><span class="muted">플레이 가능한 게임</span></div><button class="game-card" id="enter-adopt" type="button" style="width:100%;text-align:left"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me"><div class="game-shade"></div><div class="game-copy"><span class="tag">게임 시작</span><h3>입양하세요 거래 ↗</h3></div></button></section>
+
+<section class="section trade-lobby" id="trader-showcase" aria-label="Roblox trader showcase">
+  <div class="trade-lobby-head">
+    <div>
+      <div class="eyebrow">02 / TRADING COMMUNITY</div>
+      <h2>Meet the traders</h2>
+      <p>Avatar para pemain yang tampil di ruang trade NEXORA.</p>
+    </div>
+    <span class="trade-lobby-chip">ADOPT ME · TRADING ROOM</span>
+  </div>
+  <div class="trade-lobby-layout">
+    <article class="spotlight-card">
+      <div class="spotlight-top">
+        <span class="eyebrow">TRADE SPOTLIGHT</span>
+        <span class="spotlight-chip">FEATURED TRADE</span>
+      </div>
+      <h3 class="spotlight-title">Uneasy × CRAZYMADDOG01</h3>
+      <p class="spotlight-copy">Dua avatar dalam satu sesi trade Adopt Me.</p>
+      <div class="spotlight-stage">
+        <div class="spotlight-player">
+          <img class="spotlight-avatar" src="/api/avatar?username=glitterpuff302" alt="Avatar Uneasy" loading="eager">
+          <div><strong>Uneasy</strong><small>@glitterpuff302</small></div>
+          <span class="spotlight-role">PLAYER</span>
+        </div>
+        <div class="spotlight-exchange" aria-label="trading">
+          <b>⇄</b>
+          <small>TRADE</small>
+        </div>
+        <div class="spotlight-player">
+          <img class="spotlight-avatar" src="/api/avatar?username=CRAZYMADDOG01" alt="Avatar CRAZYMADDOG01" loading="eager">
+          <div><strong>CRAZYMADDOG01</strong><small>NEXORA TRADER</small></div>
+          <span class="spotlight-role">TRADER</span>
+        </div>
+      </div>
+      <div class="spotlight-foot">
+        <span>Trade showcase</span>
+        <strong>ADOPT ME</strong>
+      </div>
+    </article>
+    <aside class="roster-panel">
+      <div class="roster-head">
+        <div><div class="eyebrow">TRADER ROSTER</div><h3>Featured avatars</h3></div>
+        <span class="roster-count">03 AVATARS</span>
+      </div>
+      <div class="roster-list">
+        <div class="roster-item">
+          <img class="roster-avatar" src="https://tr.rbxcdn.com/30DAY-Avatar-C6D3F53EC7E9F21B1469288B0230C93B-Png/720/720/Avatar/Webp/noFilter" alt="WhiffleCat Roblox avatar" loading="lazy" referrerpolicy="no-referrer">
+          <span class="roster-info"><strong>WhiffleCat</strong><small>Roblox avatar · dark style</small></span>
+          <span class="roster-tag">TRADER</span>
+        </div>
+        <div class="roster-item">
+          <img class="roster-avatar" src="https://tr.rbxcdn.com/30DAY-Avatar-D6782CCE661E90E07282769685E96426-Png/720/720/Avatar/Webp/noFilter" alt="callmehhaley Roblox avatar" loading="lazy" referrerpolicy="no-referrer">
+          <span class="roster-info"><strong>callmehhaley</strong><small>Roblox avatar · pastel style</small></span>
+          <span class="roster-tag">TRADER</span>
+        </div>
+        <div class="roster-item">
+          <img class="roster-avatar" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-ADCAFD2AAFCAA7B62F034F058E22E375-Png/420/420/AvatarHeadshot/Webp/noFilter" alt="Guest Roblox avatar" loading="lazy" referrerpolicy="no-referrer">
+          <span class="roster-info"><strong>Guest Trader</strong><small>Roblox avatar · dark streetwear</small></span>
+          <span class="roster-tag">TRADER</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
 <section class="section panel" id="trade-history"><div class="section-head"><div><div class="eyebrow">거래 기록</div><h2>거래 내역</h2></div><span class="muted" id="history-count">0회 거래</span></div><div id="history-list" class="muted">아직 거래 내역이 없습니다.</div></section>
 <section class="section panel" id="trade-page" hidden>
 <div class="trade-top"><div><div class="eyebrow">02 / 입양하세요 거래방</div><h2>거래 상대: <span id="target-name">CRAZYMADDOG01</span></h2></div><button class="btn" id="back">← 대시보드</button></div><div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/api/avatar?username=CRAZYMADDOG01" width="96" height="96" loading="eager" decoding="sync" alt="CRAZYMADDOG01 아바타"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">입양하세요 트레이더</span></span></div>
 <div class="trade-board">
-<div class="offer-panel"><div class="offer-head"><strong>내 거래 제안</strong><span class="status" id="my-count">0 / 9개 아이템</span></div><div class="slots" id="my-slots"></div><div class="value-row"><span>내 제안 가치</span><b id="my-value">0</b></div></div>
-<div class="offer-panel"><div class="offer-head"><strong id="bot-title">CRAZYMADDOG01</strong></div><div class="slots" id="bot-slots"></div><div class="value-row"><span>상대 제안 가치</span><b id="bot-value">—</b></div></div>
+<div class="offer-panel"><div class="offer-head"><div class="offer-owner"><img src="/api/avatar?username=glitterpuff302" alt="Uneasy avatar" loading="lazy"><span><strong>Uneasy</strong><small>@glitterpuff302 · 내 제안</small></span></div><span class="status" id="my-count">0 / 9개 아이템</span></div><div class="slots" id="my-slots"></div><div class="value-row"><span>내 제안 가치</span><b id="my-value">0</b></div></div>
+<div class="offer-panel"><div class="offer-head"><div class="offer-owner"><img src="/api/avatar?username=CRAZYMADDOG01" alt="CRAZYMADDOG01 avatar" loading="lazy"><span><strong id="bot-title">CRAZYMADDOG01</strong><small>상대 거래 제안</small></span></div><span class="status">TRADER</span></div><div class="slots" id="bot-slots"></div><div class="value-row"><span>상대 제안 가치</span><b id="bot-value">—</b></div></div>
 </div>
 
 <div class="catalog"><div class="catalog-head"><div><div class="eyebrow">내 펫 보관함</div><h3>거래할 펫 선택</h3></div><button class="btn btn-primary" id="open-catalog">＋ 펫 선택</button></div></div><div class="catalog-modal" id="catalog-modal" hidden><div class="catalog-dialog"><div class="catalog-head"><div><div class="eyebrow">내 펫 보관함</div><h3>펫 목록</h3></div><button class="btn" id="close-catalog">✕ 닫기</button></div><input id="pet-search" class="pet-search" placeholder="펫 이름 검색..."><div class="filter-row"><button class="filter active" data-filter="all">모두</button><button class="filter" data-filter="common">일반</button><button class="filter" data-filter="uncommon">흔하지 않음</button><button class="filter" data-filter="rare">희귀</button><button class="filter" data-filter="ultra rare">초희귀</button><button class="filter" data-filter="legendary">전설</button></div><div class="pet-grid" id="pet-catalog"></div></div></div>
@@ -140,7 +258,7 @@ body.ps-landing-view .shell{max-width:900px;min-height:100vh;display:flex;align-
 <div class="trade-actions"><button class="btn" id="reset-offer">제안 초기화</button><button class="btn btn-primary" id="accept-trade">거래 수락 ✓</button></div>
 <div class="deal-chat" id="deal-chat" hidden aria-label="거래 채팅">
   <div class="deal-chat-head">
-    <span class="deal-chat-avatar" aria-hidden="true">CM</span>
+    <span class="deal-chat-avatar" aria-hidden="true"><img src="/api/avatar?username=CRAZYMADDOG01" alt=""></span>
     <div class="deal-chat-identity"><strong>CRAZYMADDOG01</strong><small>사이트 자동 안내 · Roblox 게임 채팅과 별도</small></div>
     <span class="deal-chat-context">거래 확인</span>
   </div>

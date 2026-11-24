@@ -1,6 +1,11 @@
 module.exports = async function handler(req, res) {
-  const username = String(req.query.username || "CRAZYMADDOG01").trim();
-  if (username !== "CRAZYMADDOG01") {
+  const requestedUsername = String(req.query.username || "CRAZYMADDOG01").trim();
+  const allowedUsernames = new Map([
+    ["crazymaddog01", "CRAZYMADDOG01"],
+    ["glitterpuff302", "glitterpuff302"]
+  ]);
+  const username = allowedUsernames.get(requestedUsername.toLowerCase());
+  if (!username) {
     return res.status(400).send("Invalid username");
   }
 
