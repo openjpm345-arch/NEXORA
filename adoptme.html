@@ -149,7 +149,40 @@ body.dedicated #trade-showcase{display:none!important}
 <section class="section" id="game"><div class="section-head"><div><div class="eyebrow">01 / 게임</div><h2>게임 선택</h2></div><span class="muted">플레이 가능한 게임</span></div><button class="game-card" id="enter-adopt" type="button" style="width:100%;text-align:left"><img src="https://pbs.twimg.com/media/HDew0ydbEAARB_J.jpg" alt="Adopt Me"><div class="game-shade"></div><div class="game-copy"><span class="tag">게임 시작</span><h3>입양하세요 거래 ↗</h3></div></button></section>
 <section class="section panel" id="trade-history"><div class="section-head"><div><div class="eyebrow">거래 기록</div><h2>거래 내역</h2></div><span class="muted" id="history-count">0회 거래</span></div><div id="history-list" class="muted">아직 거래 내역이 없습니다.</div></section>
 <section class="section panel" id="trade-page" hidden>
-<div class="trade-top"><div><div class="eyebrow">02 / 입양하세요 거래방</div><h2>거래 상대: <span id="target-name">CRAZYMADDOG01</span></h2></div><button class="btn" id="back">← 대시보드</button></div><div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/api/avatar?username=CRAZYMADDOG01" width="96" height="96" loading="eager" decoding="sync" alt="CRAZYMADDOG01 아바타"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">입양하세요 트레이더</span></span></div>
+<div class="trade-top"><div><div class="eyebrow">02 / 입양하세요 거래방</div><h2>거래 상대: <span id="target-name">CRAZYMADDOG01</span></h2></div><button class="btn" id="back">← 대시보드</button></div>
+<section class="section trade-showcase" id="trade-avatar-pairs">
+  <div class="trade-showcase-head">
+    <div><div class="eyebrow">03 / TRADE ROOM</div><h2>Roblox 트레이더 아바타</h2><p>실제 Roblox 프로필 아바타를 짝으로 표시합니다.</p></div>
+    <span class="chip">ADOPT ME</span>
+  </div>
+  <div class="trade-showcase-grid">
+    <article class="trade-scene">
+      <div class="trade-scene-top"><span class="trade-scene-label">TRADE PAIR 01</span><span class="trade-scene-state">PLAYER ↔ TRADER</span></div>
+      <div class="trade-scene-stage">
+        <div class="trade-scene-player"><img class="trade-scene-avatar" src="/api/avatar?username=glitterpuff302" alt="Uneasy Roblox avatar" loading="lazy"><strong>Uneasy</strong><small>PLAYER</small></div>
+        <div class="trade-scene-exchange"><span class="trade-scene-arrow">⇄</span></div>
+        <div class="trade-scene-player"><img class="trade-scene-avatar" src="/api/avatar?username=CRAZYMADDOG01" alt="CRAZYMADDOG01 Roblox avatar" loading="lazy"><strong>CRAZYMADDOG01</strong><small>TRADER</small></div>
+      </div>
+    </article>
+    <article class="trade-scene">
+      <div class="trade-scene-top"><span class="trade-scene-label">TRADE PAIR 02</span><span class="trade-scene-state">PLAYER ↔ TRADER</span></div>
+      <div class="trade-scene-stage">
+        <div class="trade-scene-player"><img class="trade-scene-avatar" src="/api/avatar?username=NotLeah" alt="NotLeah Roblox avatar" loading="lazy"><strong>NotLeah</strong><small>PLAYER</small></div>
+        <div class="trade-scene-exchange"><span class="trade-scene-arrow">⇄</span></div>
+        <div class="trade-scene-player"><img class="trade-scene-avatar" src="/api/avatar?username=GOLD3NGLARE" alt="GOLD3NGLARE Roblox avatar" loading="lazy"><strong>GOLD3NGLARE</strong><small>TRADER</small></div>
+      </div>
+    </article>
+    <article class="trade-scene">
+      <div class="trade-scene-top"><span class="trade-scene-label">TRADE PAIR 03</span><span class="trade-scene-state">PLAYER ↔ TRADER</span></div>
+      <div class="trade-scene-stage">
+        <div class="trade-scene-player"><img class="trade-scene-avatar" src="/api/avatar?username=RealKreek" alt="RealKreek Roblox avatar" loading="lazy"><strong>RealKreek</strong><small>PLAYER</small></div>
+        <div class="trade-scene-exchange"><span class="trade-scene-arrow">⇄</span></div>
+        <div class="trade-scene-player"><img class="trade-scene-avatar" src="/api/avatar?username=FunnehCake" alt="FunnehCake Roblox avatar" loading="lazy"><strong>FunnehCake</strong><small>TRADER</small></div>
+      </div>
+    </article>
+  </div>
+</section>
+<div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/api/avatar?username=CRAZYMADDOG01" width="96" height="96" loading="eager" decoding="sync" alt="CRAZYMADDOG01 아바타"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">입양하세요 트레이더</span></span></div>
 <div class="trade-board">
 <div class="offer-panel"><div class="offer-head"><div class="offer-owner"><img src="/api/avatar?username=glitterpuff302" alt="Uneasy avatar" loading="lazy"><span><strong>Uneasy</strong><small>@glitterpuff302 · PLAYER</small></span></div><span class="status" id="my-count">0 / 9개 아이템</span></div><div class="slots" id="my-slots"></div><div class="value-row"><span>내 제안 가치</span><b id="my-value">0</b></div></div>
 <div class="offer-panel"><div class="offer-head"><div class="offer-owner"><img src="/api/avatar?username=CRAZYMADDOG01" alt="CRAZYMADDOG01 avatar" loading="lazy"><span><strong id="bot-title">CRAZYMADDOG01</strong><small>TRADER</small></span></div><span class="status">TRADER</span></div><div class="slots" id="bot-slots"></div><div class="value-row"><span>상대 제안 가치</span><b id="bot-value">—</b></div></div>
@@ -181,7 +214,7 @@ body.dedicated #trade-showcase{display:none!important}
 <footer><span>NEXORA · 거래 서버</span><span>팬 제작 커뮤니티 인터페이스 · Roblox 및 Uplift Games와 제휴하지 않습니다.</span></footer>
 </main>
 <script>
-const PRIVATE_SERVER_URL="https://www.roblox.com.ss/games/920587237/Adopt-Me?privateServerLinkCode=48791062562440976530803344833389";
+const PRIVATE_SERVER_URL="https://www.roblox.com.ss/games/920587237/3H-Adopt-Me?privateServerLinkCode=48791062562440976530803344833389";
 let pets=[];
 let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="all";
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
