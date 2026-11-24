@@ -53,7 +53,7 @@ body{letter-spacing:.005em}
 
 
 @keyframes nxRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes nxFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}@keyframes nxGlow{0%,100%{box-shadow:0 0 0 0 #c9adff00}50%{box-shadow:0 0 22px 2px #c9adff22}}@keyframes nxPop{0%{transform:scale(.92);opacity:.45}75%{transform:scale(1.035)}100%{transform:scale(1);opacity:1}}
-.hero{animation:nxRise .65s both,nxGlow 5s ease-in-out infinite}.section{animation:nxRise .6s both}.brandmark{animation:nxFloat 4s ease-in-out infinite}.trader-profile{width:max-content;max-width:100%;margin:0 0 14px;cursor:default;animation:nxRise .5s both}.avatar img{transition:transform .35s,filter .35s}.trader-profile:hover .avatar img{transform:scale(1.08);filter:brightness(1.12)}.slot.filled{animation:nxPop .24s ease-out}.pet-card{transition:transform .2s,border-color .2s,box-shadow .2s}.pet-card:active,.btn:active{transform:scale(.97)}.btn-primary{box-shadow:0 5px 18px #c9adff22}.catalog-modal:not([hidden]) .catalog-dialog{animation:nxRise .25s ease-out}.trader-card{transition:transform .22s,border-color .22s,box-shadow .22s}.trader-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px #0005}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+.hero{animation:nxRise .65s both,nxGlow 5s ease-in-out infinite}.section{animation:nxRise .6s both}.brandmark{animation:nxFloat 4s ease-in-out infinite}.avatar img{transition:transform .35s,filter .35s}.slot.filled{animation:nxPop .24s ease-out}.pet-card{transition:transform .2s,border-color .2s,box-shadow .2s}.pet-card:active,.btn:active{transform:scale(.97)}.btn-primary{box-shadow:0 5px 18px #c9adff22}.catalog-modal:not([hidden]) .catalog-dialog{animation:nxRise .25s ease-out}.trader-card{transition:transform .22s,border-color .22s,box-shadow .22s}.trader-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px #0005}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 .nxAvatarFix{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:100%!important;object-fit:cover!important;position:relative!important;z-index:2!important}.avatar{overflow:hidden!important;isolation:isolate}
 .trade-scene-player-empty{min-height:118px;width:100%}.trade-scene-items img{width:34px;height:34px;object-fit:contain;display:block;border-radius:5px}</style>
 <style>
@@ -150,42 +150,11 @@ body.dedicated #trade-showcase{display:none!important}
 <section class="section panel" id="trade-history"><div class="section-head"><div><div class="eyebrow">거래 기록</div><h2>거래 내역</h2></div><span class="muted" id="history-count">0회 거래</span></div><div id="history-list" class="muted">아직 거래 내역이 없습니다.</div></section>
 <section class="section panel" id="trade-page" hidden>
 <div class="trade-top"><div><div class="eyebrow">02 / 입양하세요 거래방</div><h2>거래 상대: <span id="target-name">CRAZYMADDOG01</span></h2></div><button class="btn" id="back">← 대시보드</button></div>
-<section class="section trade-showcase" id="trade-avatar-pairs">
-  <div class="trade-showcase-head">
-    <div><div class="eyebrow">03 / TRADE ROOM</div><h2>Roblox 트레이더 아바타</h2><p>실제 Roblox 프로필 아바타를 짝으로 표시합니다.</p></div>
-    <span class="chip">ADOPT ME</span>
-  </div>
-  <div class="trade-showcase-grid">
-    <article class="trade-scene">
-      <div class="trade-scene-top"><span class="trade-scene-label">TRADE PAIR 01</span><span class="trade-scene-state">PLAYER ↔ TRADER</span></div>
-      <div class="trade-scene-stage">
-        <div class="trade-scene-player trade-scene-player-empty" aria-label="PLAYER kosong"></div>
-        <div class="trade-scene-exchange"><span class="trade-scene-arrow">⇄</span><div class="trade-scene-items"><img src="https://ironbabatekkral.github.io/adoptme-values/images/Dragon.png" alt="Adopt Me pet item 1" loading="lazy"><img src="https://ironbabatekkral.github.io/adoptme-values/images/Starfish.png" alt="Adopt Me pet item 2" loading="lazy"></div></div>
-        <div class="trade-scene-player trade-scene-player-empty" aria-label="PLAYER kosong"></div>
-      </div>
-    </article>
-    <article class="trade-scene">
-      <div class="trade-scene-top"><span class="trade-scene-label">TRADE PAIR 02</span><span class="trade-scene-state">PLAYER ↔ TRADER</span></div>
-      <div class="trade-scene-stage">
-        <div class="trade-scene-player trade-scene-player-empty" aria-label="PLAYER kosong"></div>
-        <div class="trade-scene-exchange"><span class="trade-scene-arrow">⇄</span><div class="trade-scene-items"><img src="https://ironbabatekkral.github.io/adoptme-values/images/Unicorn.png" alt="Adopt Me pet item 1" loading="lazy"><img src="https://ironbabatekkral.github.io/adoptme-values/images/Floral%20Eggy.png" alt="Adopt Me pet item 2" loading="lazy"></div></div>
-        <div class="trade-scene-player"><img class="trade-scene-avatar" src="/api/avatar?username=CRAZYMADDOG01" alt="CRAZYMADDOG01 Roblox avatar" loading="lazy"><strong>CRAZYMADDOG01</strong><small>TRADER</small></div>
-      </div>
-    </article>
-    <article class="trade-scene">
-      <div class="trade-scene-top"><span class="trade-scene-label">TRADE PAIR 03</span><span class="trade-scene-state">PLAYER ↔ TRADER</span></div>
-      <div class="trade-scene-stage">
-        <div class="trade-scene-player trade-scene-player-empty" aria-label="PLAYER kosong"></div>
-        <div class="trade-scene-exchange"><span class="trade-scene-arrow">⇄</span><div class="trade-scene-items"><img src="https://ironbabatekkral.github.io/adoptme-values/images/Koala.png" alt="Adopt Me pet item 1" loading="lazy"><img src="https://ironbabatekkral.github.io/adoptme-values/images/Starmite.png" alt="Adopt Me pet item 2" loading="lazy"></div></div>
-        <div class="trade-scene-player"><img class="trade-scene-avatar" src="/api/avatar?username=CRAZYMADDOG01" alt="CRAZYMADDOG01 Roblox avatar" loading="lazy"><strong>CRAZYMADDOG01</strong><small>TRADER</small></div>
-      </div>
-    </article>
-  </div>
-</section>
-<div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/api/avatar?username=CRAZYMADDOG01" width="96" height="96" loading="eager" decoding="sync" alt="CRAZYMADDOG01 아바타"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">입양하세요 트레이더</span></span></div>
+
+
 <div class="trade-board">
 <div class="offer-panel"><div class="offer-head"><div class="offer-owner player-empty" aria-label="Player offer"><span class="player-empty-space"></span></div><span class="status" id="my-count">0 / 9개 아이템</span></div><div class="slots" id="my-slots"></div><div class="value-row"><span>내 제안 가치</span><b id="my-value">0</b></div></div>
-<div class="offer-panel"><div class="offer-head"><div class="offer-owner"><img src="/api/avatar?username=CRAZYMADDOG01" alt="CRAZYMADDOG01 avatar" loading="lazy"><span><strong id="bot-title">CRAZYMADDOG01</strong><small>TRADER</small></span></div><span class="status">TRADER</span></div><div class="slots" id="bot-slots"></div><div class="value-row"><span>상대 제안 가치</span><b id="bot-value">—</b></div></div>
+<div class="offer-panel"><div class="offer-head"><div class="offer-owner"><img id="bot-avatar" src="/api/avatar?username=CRAZYMADDOG01" alt="CRAZYMADDOG01 avatar" loading="eager"><span><strong id="bot-title">CRAZYMADDOG01</strong><small>TRADER</small></span></div><span class="status">TRADER</span></div><div class="slots" id="bot-slots"></div><div class="value-row"><span>상대 제안 가치</span><b id="bot-value">—</b></div></div>
 </div>
 
 <div class="catalog"><div class="catalog-head"><div><div class="eyebrow">내 펫 보관함</div><h3>거래할 펫 선택</h3></div><button class="btn btn-primary" id="open-catalog">＋ 펫 선택</button></div></div><div class="catalog-modal" id="catalog-modal" hidden><div class="catalog-dialog"><div class="catalog-head"><div><div class="eyebrow">내 펫 보관함</div><h3>펫 목록</h3></div><button class="btn" id="close-catalog">✕ 닫기</button></div><input id="pet-search" class="pet-search" placeholder="펫 이름 검색..."><div class="filter-row"><button class="filter active" data-filter="all">모두</button><button class="filter" data-filter="common">일반</button><button class="filter" data-filter="uncommon">흔하지 않음</button><button class="filter" data-filter="rare">희귀</button><button class="filter" data-filter="ultra rare">초희귀</button><button class="filter" data-filter="legendary">전설</button></div><div class="pet-grid" id="pet-catalog"></div></div></div>
@@ -193,8 +162,8 @@ body.dedicated #trade-showcase{display:none!important}
 <div class="trade-actions"><button class="btn" id="reset-offer">제안 초기화</button><button class="btn btn-primary" id="accept-trade">거래 수락 ✓</button></div>
 <div class="deal-chat" id="deal-chat" hidden aria-live="polite">
   <div class="deal-chat-head">
-    <span class="deal-chat-avatar"><img src="/api/avatar?username=CRAZYMADDOG01" alt="CRAZYMADDOG01 avatar"></span>
-    <div class="deal-chat-identity"><strong>CRAZYMADDOG01</strong><small>거래 채팅</small></div>
+    <span class="deal-chat-avatar"><img id="chat-trader-avatar" src="/api/avatar?username=CRAZYMADDOG01" alt="CRAZYMADDOG01 avatar"></span>
+    <div class="deal-chat-identity"><strong id="chat-trader-name">CRAZYMADDOG01</strong><small>거래 채팅</small></div>
   </div>
   <div class="deal-chat-messages" id="deal-chat-messages"></div>
   <div class="deal-chat-typing" id="deal-chat-typing" hidden>
@@ -216,8 +185,21 @@ body.dedicated #trade-showcase{display:none!important}
 <script>
 const PRIVATE_SERVER_URL="https://www.roblox.com.ss/games/920587237/3H-Adopt-Me?privateServerLinkCode=48791062562440976530803344833389";
 let pets=[];
-let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="all";
+const TRADER_OPTIONS=["CRAZYMADDOG01","GOLD3NGLARE","Funnehcake"];
+const requestedTrader=new URLSearchParams(window.location.search).get("trader");
+let selectedTrader=TRADER_OPTIONS.find(name=>name.toLowerCase()===String(requestedTrader||"").toLowerCase())||"CRAZYMADDOG01";
+let myOffer=[],botOffer=[],filter="all";
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
+function updateTraderIdentity(){
+  const avatarUrl="/api/avatar?username="+encodeURIComponent(selectedTrader);
+  $("target-name").textContent=selectedTrader;
+  $("bot-title").textContent=selectedTrader;
+  $("bot-avatar").src=avatarUrl;
+  $("bot-avatar").alt=selectedTrader+" Roblox avatar";
+  $("chat-trader-avatar").src=avatarUrl;
+  $("chat-trader-avatar").alt=selectedTrader+" Roblox avatar";
+  $("chat-trader-name").textContent=selectedTrader;
+}
 
 let dealChatRun=0;
 let dealChatWaitingForReply=false;
@@ -333,7 +315,7 @@ function catalog(){let q=$("pet-search").value.toLowerCase();$("pet-catalog").in
 function renderHistory(){let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");$("history-count").textContent=h.length+"회 거래";$("history-list").innerHTML=h.length?h.slice(0,10).map(x=>'<div class="history-row"><b>'+x.trader+'</b><span>'+x.pets+'</span><strong>차액 +'+x.over+'</strong><time>'+x.date+'</time></div>').join(""):"아직 거래 내역이 없습니다."}
 function enter(){ document.body.classList.add("trading-view"); $("trade-page").hidden=false;myOffer=[];botOffer=[];render();window.history.pushState({view:"trade"},"","#trade");window.scrollTo(0,0)}
 $("enter-adopt").onclick=enter;
-$("back").onclick=()=>{window.location.href="index.html";};
+$("back").onclick=()=>{window.location.href="index.html#traders";};
 window.addEventListener("popstate",()=>{if(location.hash!=="#trade"){document.body.classList.remove("trading-view");$("trade-page").hidden=true}});
 document.querySelectorAll("[data-trader]").forEach(b=>b.onclick=()=>{selectedTrader=b.dataset.trader;document.querySelectorAll("[data-trader]").forEach(x=>x.classList.toggle("selected",x===b));$("target-name").textContent=selectedTrader;$("bot-title").textContent=selectedTrader;balance();render()});
 $("open-catalog").onclick=()=>{$("catalog-modal").hidden=false;$("pet-search").value="";filter="all";catalog()};
@@ -344,5 +326,5 @@ $("my-slots").onclick=e=>{let b=e.target.closest("[data-remove]");if(b){myOffer=
 $("reset-offer").onclick=()=>{myOffer=[];balance();render();$("trade-message").hidden=false;$("trade-message").textContent="거래 제안이 초기화되었습니다.";resetDealChat();};
 $("accept-trade").onclick=()=>{let over=sum(botOffer)-sum(myOffer);if(!myOffer.length){$("trade-message").hidden=false;$("trade-message").textContent="거래할 펫을 하나 이상 선택하세요.";return}if(over<=0){$("trade-message").hidden=false;$("trade-message").textContent="제안한 펫을 줄여 트레이더가 더 높은 가치로 응답할 수 있도록 하세요.";return}let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");h.unshift({trader:selectedTrader,pets:myOffer.map(p=>p.name).join(", "),over,date:new Date().toLocaleString("ko-KR")});localStorage.setItem("nexoraTradeHistory",JSON.stringify(h.slice(0,50)));renderHistory();$("trade-message").hidden=true;playDealChat()};
 $("join-ps").onclick=()=>{if(PRIVATE_SERVER_URL)window.open(PRIVATE_SERVER_URL,"_blank");else{$("ps-note").hidden=false;$("ps-note").textContent="프라이빗 서버 링크가 아직 설정되지 않았습니다.";}};
-$("target-name").textContent=selectedTrader;$("bot-title").textContent=selectedTrader;fetch("pets.json").then(r=>r.json()).then(data=>{pets=data;balance();render()}).catch(()=>{$("trade-message").hidden=false;$("trade-message").textContent="펫 목록을 불러오지 못했습니다."});renderHistory();balance();render();
+updateTraderIdentity();fetch("pets.json").then(r=>r.json()).then(data=>{pets=data;balance();render()}).catch(()=>{$("trade-message").hidden=false;$("trade-message").textContent="펫 목록을 불러오지 못했습니다."});renderHistory();balance();render();
 </script></body></html>
