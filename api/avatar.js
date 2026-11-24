@@ -1,6 +1,15 @@
 module.exports = async function handler(req, res) {
-  const username = String(req.query.username || "CRAZYMADDOG01").trim();
-  if (username !== "CRAZYMADDOG01") {
+  const requestedUsername = String(req.query.username || "CRAZYMADDOG01").trim();
+  const allowedUsernames = new Map([
+    ["crazymaddog01", "CRAZYMADDOG01"],
+    ["glitterpuff302", "glitterpuff302"],
+    ["notleah", "NotLeah"],
+    ["gold3nglare", "GOLD3NGLARE"],
+    ["realkreek", "RealKreek"],
+    ["funnehcake", "Funnehcake"]
+  ]);
+  const username = allowedUsernames.get(requestedUsername.toLowerCase());
+  if (!username) {
     return res.status(400).send("Invalid username");
   }
 
@@ -21,7 +30,7 @@ module.exports = async function handler(req, res) {
 
     const thumbnailResponse = await fetch(
       "https://thumbnails.roblox.com/v1/users/avatar?userIds=" +
-      user.id + "&size=150x150&format=Png&isCircular=false"
+      user.id + "&size=420x420&format=Png&isCircular=false"
     );
     if (!thumbnailResponse.ok) throw new Error("Roblox thumbnail lookup failed");
 
