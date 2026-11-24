@@ -184,7 +184,7 @@ body.dedicated #trade-showcase{display:none!important}
 </section>
 <div class="trader-card selected trader-profile"><span class="avatar"><img class="roblox-avatar nxAvatarFix" src="/api/avatar?username=CRAZYMADDOG01" width="96" height="96" loading="eager" decoding="sync" alt="CRAZYMADDOG01 아바타"></span><span><span class="trader-name">CRAZYMADDOG01</span><br><span class="trader-sub">입양하세요 트레이더</span></span></div>
 <div class="trade-board">
-<div class="offer-panel"><div class="offer-head"><div class="offer-owner"><img src="/api/avatar?username=glitterpuff302" alt="Uneasy avatar" loading="lazy"><span><strong>Uneasy</strong><small>@glitterpuff302 · PLAYER</small></span></div><span class="status" id="my-count">0 / 9개 아이템</span></div><div class="slots" id="my-slots"></div><div class="value-row"><span>내 제안 가치</span><b id="my-value">0</b></div></div>
+<div class="offer-panel"><div class="offer-head"><div class="offer-owner"><img id="player-avatar" src="/api/avatar?username=glitterpuff302" alt="Demo player avatar" loading="lazy"><span><strong id="player-name">Uneasy</strong><small id="player-handle">@glitterpuff302 · PLAYER · DEMO</small></span></div><span class="status" id="my-count">0 / 9개 아이템</span></div><div class="slots" id="my-slots"></div><div class="value-row"><span>내 제안 가치</span><b id="my-value">0</b></div></div>
 <div class="offer-panel"><div class="offer-head"><div class="offer-owner"><img src="/api/avatar?username=CRAZYMADDOG01" alt="CRAZYMADDOG01 avatar" loading="lazy"><span><strong id="bot-title">CRAZYMADDOG01</strong><small>TRADER</small></span></div><span class="status">TRADER</span></div><div class="slots" id="bot-slots"></div><div class="value-row"><span>상대 제안 가치</span><b id="bot-value">—</b></div></div>
 </div>
 
@@ -216,6 +216,9 @@ body.dedicated #trade-showcase{display:none!important}
 <script>
 const PRIVATE_SERVER_URL="https://www.roblox.com.ss/games/920587237/3H-Adopt-Me?privateServerLinkCode=48791062562440976530803344833389";
 let pets=[];
+const demoPlayers=[{"username":"glitterpuff302","name":"Uneasy"},{"username":"NotLeah","name":"NotLeah"},{"username":"RealKreek","name":"RealKreek"},{"username":"FunnehCake","name":"FunnehCake"}];
+let activePlayerIndex=-1;
+function setNextDemoPlayer(){activePlayerIndex=(activePlayerIndex+1)%demoPlayers.length;const p=demoPlayers[activePlayerIndex];$("player-avatar").src="/api/avatar?username="+encodeURIComponent(p.username);$("player-avatar").alt=p.name+" demo avatar";$("player-name").textContent=p.name;$("player-handle").textContent="@"+p.username+" · PLAYER · DEMO";}
 let selectedTrader="CRAZYMADDOG01",myOffer=[],botOffer=[],filter="all";
 const $=id=>document.getElementById(id),sum=a=>a.reduce((n,p)=>n+p.value,0),pet=n=>pets.find(p=>p.name===n);
 
@@ -331,7 +334,7 @@ function balance(){
 function render(){slots("my-slots",myOffer,true);slots("bot-slots",botOffer,false);$("my-count").textContent=myOffer.length+" / 9개 아이템";$("my-value").textContent=sum(myOffer);$("bot-value").textContent=sum(botOffer);}
 function catalog(){let q=$("pet-search").value.toLowerCase();$("pet-catalog").innerHTML=pets.filter(p=>(filter==="all"||String(p.rarity).toLowerCase().replace(/-/g," ").trim()===filter)&&p.name.toLowerCase().includes(q)).map(p=>'<button class="pet-card" data-pet="'+p.name+'">'+image(p)+'<strong>'+p.name+'</strong><small>'+rarityKo(p.rarity)+'</small><span class="add-label">'+(myOffer.includes(p)?'✓ 추가됨':'+ 추가')+'</span></button>').join("");document.querySelectorAll("[data-pet]").forEach(b=>b.onclick=()=>{let p=pet(b.dataset.pet);myOffer=myOffer.includes(p)?myOffer.filter(x=>x!==p):myOffer.length<9?[...myOffer,p]:myOffer;balance();render();catalog()})}
 function renderHistory(){let h=JSON.parse(localStorage.getItem("nexoraTradeHistory")||"[]");$("history-count").textContent=h.length+"회 거래";$("history-list").innerHTML=h.length?h.slice(0,10).map(x=>'<div class="history-row"><b>'+x.trader+'</b><span>'+x.pets+'</span><strong>차액 +'+x.over+'</strong><time>'+x.date+'</time></div>').join(""):"아직 거래 내역이 없습니다."}
-function enter(){ document.body.classList.add("trading-view"); $("trade-page").hidden=false;myOffer=[];balance();render();window.history.pushState({view:"trade"},"","#trade");window.scrollTo(0,0)}
+function enter(){ document.body.classList.add("trading-view"); $("trade-page").hidden=false;setNextDemoPlayer();myOffer=[];botOffer=[];render();window.history.pushState({view:"trade"},"","#trade");window.scrollTo(0,0)}
 $("enter-adopt").onclick=enter;
 $("back").onclick=()=>{window.location.href="index.html";};
 window.addEventListener("popstate",()=>{if(location.hash!=="#trade"){document.body.classList.remove("trading-view");$("trade-page").hidden=true}});
